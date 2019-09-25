@@ -11,7 +11,6 @@
 
 	.Texto {
 		padding: 1rem;
-		/* font-family: Fira Sans; */
 		font-style: normal;
 		color: #000;
 
@@ -29,10 +28,10 @@
 		border-radius: 3px;
 	}
 
-	.Texto > .Titulo {
+	.Texto .Titulo {
 		font-weight: 500;
-		font-size: 16px;
-		line-height: 19px;
+		font-size: var(--TextoMediano--font-size);
+		line-height: var(--TextoMediano--line-height);
 	}
 
 	.Texto .Extracto {

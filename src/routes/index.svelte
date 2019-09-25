@@ -20,25 +20,22 @@
 		
 	.Logotipo {
     	padding: 0;
-    	width: 18rem;
+    	width: 12rem;
     	height: 100%;
     	object-fit: contain;
     	object-position: 0 0;
 	}
-
-	
 
 	/* .contenedor-principal {
 	} */
 	.Titulo {
 		color: #72A6AA;
 		font-weight: 500;
-		font-size: 18px;
+		font-size: 28px;
 
 	}
 	
 	.Lateral {
-		font-family: 'Fira Sans', sans-serif;
 		color: #000;
 		height: 100vh;
 		max-width: 260px;
@@ -117,9 +114,14 @@
 
 
 		<section class="Introduccion">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore molestias dicta ex veritatis accusantium ullam impedit praesentium, nulla, nesciunt vero esse quo. Dolores fugiat, distinctio expedita iste debitis excepturi.</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore molestias dicta ex veritatis accusantium ullam impedit praesentium, nulla, nesciunt vero esse quo. Dolores fugiat, distinctio expedita iste debitis excepturi.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nihil aut pariatur voluptatum maiores necessitatibus explicabo totam vero ad sit ex, eligendi ipsum, dignissimos saepe consequatur error officiis optio accusantium.
+			</p>
 		
-			<img class="Logotipo" src="http://fakeimg.pl/244x80?text=logo" alt="img" />
+			<!-- <img class="Logotipo" src="http://fakeimg.pl/244x80?text=logotipos" alt="img" /> -->
 
 		</section>
 	</div>

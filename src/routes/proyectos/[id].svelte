@@ -9,7 +9,10 @@
 
         .ProyectoDetalle {
             display: grid;
-            grid-template-columns: 1fr 1fr;    
+            grid-template-columns: 1fr 1fr;
+            background: #FFFFFF;
+            border: 0.5px solid #72A6AA;
+            box-sizing: border-box;    
         }
 
         .Imagen {
@@ -54,24 +57,57 @@
         width: auto;
         padding: 3rem;
     }
+
+    .Subtitulo {
+        text-align: center;
+    }
+
+    .Titulo {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .Contenido {
+        width: 80%;
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 22px;
+        left: 15px;
+        margin: 25px;
+
+    }
+     
+    .Proyecto {
+        left: 23px;
+    }
+
+    ul {
+        margin-bottom: 30px;
+        margin-top: 25px;
+    }
+    
+    section {
+        margin: 0;
+    }
+
 </style>
 
 
 <article class="ProyectoDetalle ancho_maximo">
     <div class="contenedor-1">
-        <header>
+        <header class="Proyecto">
             <a class="Regresar" href="/">
                 <Boton>
                     Regresar
                 </Boton>
             </a>
             <h1 class="Titulo">
-                Nombre de Proyecto
+                Proyecto
             </h1>
         </header>
 
         <section class="Contenido">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque velit architecto ab illum dignissimos earum, quos eaque asperiores tempore consequuntur? Quia voluptatem exercitationem quos, corrupti nihil modi optio amet.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque velit architecto ab illum dignissimos earum, quos eaque asperiores tempore consequuntur? Quia voluptatem exercitationem quos, corrupti nihil modi optio amet.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque velit architecto ab illum dignissimos earum, quos eaque asperiores tempore consequuntur? Quia voluptatem exercitationem quos, corrupti nihil modi optio amet.</p>
         </section>
@@ -93,7 +129,7 @@
 
 <section>
     
-    <h3>Otros proyectos de Nombre de proyecto</h3>
+    <h3 class="Subtitulo">Otros proyectos de Nombre de proyecto</h3>
     <ul>
         <ProyectoVistaPrevia/>			
         <ProyectoVistaPrevia/>			
@@ -102,7 +138,7 @@
 </section>
 
 <section>
-    <h3>Proyectos similares</h3>
+    <h3 class="Subtitulo">Proyectos similares</h3>
     <ul>
         <ProyectoVistaPrevia/>			
         <ProyectoVistaPrevia/>			
