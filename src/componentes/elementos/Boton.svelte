@@ -9,18 +9,13 @@
     if( !! redondo ) {
         clases += " Redondo"
     }
-    
-    if( !! accion && typeof accion != "function" ) {
-        accion=accion
-    }
+
 
 
     const clickManejar = (e) => {
         
         if (!! accion && typeof accion == 'function') {    
-
             accion(e)
-            
         }
 
     }
@@ -39,10 +34,6 @@
 
 .Boton.Redondo {
 	border-radius: 2rem;
-}
-
-.Boton.Regresar {
-	padding-left: 3rem;
 }
 
 </style>
