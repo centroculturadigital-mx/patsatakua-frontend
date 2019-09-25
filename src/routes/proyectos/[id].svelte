@@ -79,7 +79,7 @@
 
     <div class="contenedor-2">
     
-        <img class="Imagen" src="http://fakeimg.pl/367x347?text=img" alt="img"/>
+    	<img class="Imagen" src={`http://unsplash.it/300/${100+Math.floor(Math.random()*500)}`} alt="img"/>
         
         <footer>            
             <Boton redondo>
