@@ -2,6 +2,12 @@
 	outline: 1px solid lightblue;
 }
 
+
+html, body {
+	width: 100vw;
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -9,6 +15,12 @@ body {
 	line-height: 1.5;
 	color: #333;
 }
+
+body > div {
+	width: 100%;
+	height: 100%;
+}
+
 
 ul {
 	padding: 0;
@@ -53,14 +65,37 @@ code {
 	}
 }
 
-/* Portrait and Landscape */
-@media 
-  (min-device-width: 800px) 
-  and (max-device-width: 1280px) {
 
-	main {
-		padding: 0;
-		margin: 0;
-	}
+	/* .Temporal {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	} */
 
+
+
+.contenedor-ancho_maximo {
+	max-width: 62.5rem;
+	margin: 0 auto;
+
+}
+
+
+
+
+.Boton {
+	background-color: #72A6AA;
+	padding-left: 3rem;
+	border: none;
+	padding: 0.5rem 1rem;
+}
+
+.Boton.Redondo {
+	border-radius: 2rem;
+}
+
+.Boton.Regresar {
+	padding-left: 3rem;
 }
