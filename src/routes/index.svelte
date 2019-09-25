@@ -30,27 +30,33 @@
 
 	/* .contenedor-principal {
 	} */
+	.Titulo {
+		color: #72A6AA;
+		font-weight: 500;
+		font-size: 18px;
 
+	}
 	
-
 	.Lateral {
 		font-family: 'Fira Sans', sans-serif;
+		color: #000;
 		height: 100vh;
 		max-width: 260px;
-        background-color: rgb(198, 198, 198);
-		/* height: calc( 100% - 2rem ); */
+        background-color: rgb(255, 255, 255);
 		padding: 2rem;
 	}
 
-	/* article {
-		padding: 2em;
-		margin: 1em;
-		flex-direction: column;
-  		flex-wrap: wrap;
-  		display: flex;
-  		height: 100vh;
-	} */
+	.Introduccion {
+		font-weight: 200;
+		font-size: 14px;
+		line-height: 17px;
+	}
 
+	.Subtitulo {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 14px;
+	}
 
 	.contenedor-principal {
 		height: 100vh;
@@ -62,7 +68,7 @@
 	.contenedor-principal .Pie {
 		width: 100%;
 		padding: 4rem;
-		background-color: #ccc;
+		background-color: rgb(255, 255, 255);
 		
 	}
 
@@ -108,6 +114,7 @@
 				Purépecha (P’urhépecha) que quiere decir, “en lo que se guarda”
 			</h4>
 		</header>
+
 
 		<section class="Introduccion">
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore molestias dicta ex veritatis accusantium ullam impedit praesentium, nulla, nesciunt vero esse quo. Dolores fugiat, distinctio expedita iste debitis excepturi.</p>

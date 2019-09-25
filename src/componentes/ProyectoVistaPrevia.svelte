@@ -11,6 +11,10 @@
 
 	.Texto {
 		padding: 1rem;
+		/* font-family: Fira Sans; */
+		font-style: normal;
+		color: #000;
+
 	}
 
 	a {
@@ -18,11 +22,32 @@
 		color: #000;
 	}
 
+	.Tarjeta {
+		background: #FFFFFF;
+		mix-blend-mode: normal;
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+		border-radius: 3px;
+	}
+
+	.Texto > .Titulo {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.Texto > .Extracto {
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 14px;
+	}
+
 </style>
 
 <article class="Tarjeta">
 	<a href="/proyectos/666">
-	<img class="Imagen" src={`http://unsplash.it/300/${100+Math.floor(Math.random()*500)}`} alt="img"/>
+		
+		<img class="Imagen" src={`http://unsplash.it/300/${100+Math.floor(Math.random()*500)}`} alt="img"/>
+		
 		<div class="Texto">
 
 			<h2 class="Titulo">
