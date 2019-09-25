@@ -1,3 +1,9 @@
+<script>
+	import Boton from "../../componentes/elementos/Boton.svelte";
+	import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
+
+</script>
+
 <style>
     @media screen and (min-width:768px) {
 
@@ -6,27 +12,36 @@
             grid-template-columns: 1fr 1fr;    
         }
 
-        .ProyectoDetalle .Imagen {
+        .Imagen {
             width: 100%;
             height: 20rem;
             object-fit: cover;
         }
 
+        .ProyectoDetalle + section ul,
+        .ProyectoDetalle + section + section ul {
+            display: flex;
+            flex-direction: row !important;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            height: auto;
+        }
+
     }
 
-    .ProyectoDetalle .contenedor-1 {
+    .contenedor-1 {
         padding: 0 2rem;
     }
     
-    .ProyectoDetalle .contenedor-1 header {
+    .contenedor-1 header {
         position: relative;
     }
 
-    .ProyectoDetalle .contenedor-1 .Boton.Regresar {
+    .contenedor-1 .Regresar {
         margin-left: -3rem;
     }
     
-    .ProyectoDetalle .contenedor-2 footer {
+    .contenedor-2 footer {
         margin-top: 1rem;
     }
 
@@ -42,24 +57,24 @@
 </style>
 
 
-<article class="ProyectoDetalle contenedor-ancho_maximo">
+<article class="ProyectoDetalle ancho_maximo">
     <div class="contenedor-1">
         <header>
-            <a href="/">
-                <button class="Boton Regresar" >
+            <a class="Regresar" href="/">
+                <Boton>
                     Regresar
-                </button>
+                </Boton>
             </a>
             <h1 class="Titulo">
-                Proyecto
+                Nombre de Proyecto
             </h1>
         </header>
 
-        <div class="Contenido">
+        <section class="Contenido">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque velit architecto ab illum dignissimos earum, quos eaque asperiores tempore consequuntur? Quia voluptatem exercitationem quos, corrupti nihil modi optio amet.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque velit architecto ab illum dignissimos earum, quos eaque asperiores tempore consequuntur? Quia voluptatem exercitationem quos, corrupti nihil modi optio amet.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque velit architecto ab illum dignissimos earum, quos eaque asperiores tempore consequuntur? Quia voluptatem exercitationem quos, corrupti nihil modi optio amet.</p>
-        </div>
+        </section>
     </div>
 
     <div class="contenedor-2">
@@ -75,6 +90,26 @@
 
 
 </article>
+
+<section>
+    
+    <h3>Otros proyectos de Nombre de proyecto</h3>
+    <ul>
+        <ProyectoVistaPrevia/>			
+        <ProyectoVistaPrevia/>			
+        <ProyectoVistaPrevia/>			
+    </ul>
+</section>
+
+<section>
+    <h3>Proyectos similares</h3>
+    <ul>
+        <ProyectoVistaPrevia/>			
+        <ProyectoVistaPrevia/>			
+        <ProyectoVistaPrevia/>			
+        <ProyectoVistaPrevia/>			
+    </ul>
+</section>
 
 <footer>
     <div class="temporal">
@@ -92,5 +127,6 @@
         </article>
         <article>
             otra cosa
+  
         </article>
 </footer>

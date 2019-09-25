@@ -25,10 +25,6 @@ body > div {
 ul {
 	padding: 0;
 	margin: 0;
-	flex-direction: column;
-  	flex-wrap: wrap;
-  	display: flex;
-  	height: 100vh;
 }
 
 
@@ -76,7 +72,7 @@ code {
 
 
 
-.contenedor-ancho_maximo {
+.ancho_maximo {
 	max-width: 62.5rem;
 	margin: 0 auto;
 

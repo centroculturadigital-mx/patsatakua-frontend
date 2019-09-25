@@ -1,4 +1,5 @@
 <script>
+
 	import ProyectoVistaPrevia from "../componentes/ProyectoVistaPrevia.svelte";
 
 </script>
@@ -35,7 +36,7 @@
 	.Lateral {
 		font-family: 'Fira Sans', sans-serif;
 		height: 100vh;
-		/* max-width: 320px; */
+		max-width: 260px;
         background-color: rgb(198, 198, 198);
 		/* height: calc( 100% - 2rem ); */
 		padding: 2rem;
@@ -102,6 +103,10 @@
 			<h1 class="Titulo">
 				Patsatakua
 			</h1>
+
+			<h4 class="Subtitulo">
+				Purépecha (P’urhépecha) que quiere decir, “en lo que se guarda”
+			</h4>
 		</header>
 
 		<section class="Introduccion">
