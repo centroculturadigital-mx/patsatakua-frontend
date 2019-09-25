@@ -91,3 +91,19 @@ code {
 .Boton.Regresar {
 	padding-left: 3rem;
 }
+
+
+
+
+/*
+Tipografías
+*/
+
+
+/* Texto Chico */
+:root {
+
+	--TextoChico--font-size: 12px;
+	--TextoChico--line-height: 1.25;
+	
+}

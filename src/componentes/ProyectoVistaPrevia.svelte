@@ -35,10 +35,11 @@
 		line-height: 19px;
 	}
 
-	.Texto > .Extracto {
+	.Texto .Extracto {
 		font-weight: 300;
-		font-size: 12px;
-		line-height: 14px;
+		font-size: var(--TextoChico--font-size);
+		line-height: var(--TextoChico--line-height);
+		
 	}
 
 </style>
