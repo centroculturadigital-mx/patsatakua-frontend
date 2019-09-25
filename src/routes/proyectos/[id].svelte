@@ -82,9 +82,9 @@
         <img class="Imagen" src="http://fakeimg.pl/367x347?text=img" alt="img"/>
         
         <footer>            
-            <button class="Boton Redondo">
+            <Boton redondo>
                 Conocer Proyecto
-            </button>
+            </Boton>
         </footer>
     </div>
 
