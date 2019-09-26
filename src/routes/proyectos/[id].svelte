@@ -91,6 +91,14 @@
         margin: 0;
     }
 
+    .SubProyectos {
+        margin-top: 3em;
+    }
+
+    .Similares {
+        margin-top: 3em;
+    }
+
 </style>
 
 
@@ -127,9 +135,9 @@
 
 </article>
 
-<section>
+<section class="SubProyectos">
     
-    <h3 class="Subtitulo">Otros proyectos de Nombre de proyecto</h3>
+    <h3 class="Subtitulo">Otros proyectos del proyecto</h3>
     <ul>
         <ProyectoVistaPrevia/>			
         <ProyectoVistaPrevia/>			
@@ -137,10 +145,9 @@
     </ul>
 </section>
 
-<section>
+<section class="Similares">
     <h3 class="Subtitulo">Proyectos similares</h3>
     <ul>
-        <ProyectoVistaPrevia/>			
         <ProyectoVistaPrevia/>			
         <ProyectoVistaPrevia/>			
         <ProyectoVistaPrevia/>			
@@ -150,19 +157,19 @@
 <footer>
     <div class="temporal">
         <article>
-            otra cosa
+            otro
         </article>
         <article>
-            otra cosa
+            otro
         </article>
         <article>
-            otra cosa
+            otro
         </article>
         <article>
-            otra cosa
+            otro
         </article>
         <article>
-            otra cosa
+            otro
   
         </article>
 </footer>
