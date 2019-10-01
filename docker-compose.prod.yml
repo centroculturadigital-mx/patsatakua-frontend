@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+
+  patsatakua-frontend:
+    container_name: patsatakua-frontend
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile.prod
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/src/patsatakua-frontend
+
