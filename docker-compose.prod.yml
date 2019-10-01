@@ -10,6 +10,6 @@ services:
       dockerfile: ./Dockerfile.prod
     ports:
       - 3000:3000
-    volumes:
-      - ./:/src/patsatakua-frontend
+    # volumes:
+    #   - ./:/src/patsatakua-frontend
 
