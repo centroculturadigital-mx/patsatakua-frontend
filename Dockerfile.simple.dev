@@ -1,0 +1,17 @@
+FROM node:11
+    
+ENV HOME=/src/patsatakua-frontend
+
+
+WORKDIR $HOME
+
+ENV PORT=4500
+
+EXPOSE 4500
+
+COPY . .
+
+RUN npm install
+RUN npm run build
+
+CMD ["node", "__sapper__/build/"]       
