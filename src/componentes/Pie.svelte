@@ -1,3 +1,10 @@
+<script>
+    let logocultura = 'cultura.svg';
+    let logoccd = 'ccd.svg';
+    let logoinali = 'inali.png';
+   	
+</script>
+
 <style>
 
 .Pie {
@@ -9,9 +16,6 @@
     
     
 }
-
-
-
 
 .Texto  {
     
@@ -46,9 +50,9 @@
 
     <section class="Logos">
         <ul>
-            <img src="https://fakeimg.pl/140x70/eee/fff?text=LOGOTIPO" alt="">
-            <img src="https://fakeimg.pl/140x70/eee/fff?text=LOGOTIPO" alt="">
-            <img src="https://fakeimg.pl/140x70/eee/fff?text=LOGOTIPO" alt="">
+            <img src="{logocultura}"  alt=" cultura">
+            <img src="{logoccd}"  alt="ccd">  
+            <img src="{logoinali}"  alt="ccd">  
         </ul>
     </section>
 </footer>
