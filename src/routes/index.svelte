@@ -65,36 +65,34 @@
 
 	.contenedor-principal .Pie {
 		width: 100%;
-		padding: 2rem;
+		/*padding: 2rem;*/
 		background-color: #F0F0F0;
-
-		display: flex;
+		display: grid;
+		grid-template-columns: 70% 30%;
+		
 		
 	}
 	
 	.TextoPie  {
 		
 		font-size: 0.8rem;
-		padding: 1rem;
-		width: 70%;
+		padding: 2rem;
 		border-right-style: solid;
 		border-right-color: #c4c4c4;
 		border-right-width: 1px;
-
-
 	}
 
 	.LogosPie{
-		width: 30%;
 		padding: 1rem;
-		display: flex;
-	    justify-content: space-evenly;
+		text-align: center;	
 		}
+	
 
 	@media screen and (min-width: 768px ) {
 	
 		.Lista, .Lista ul {
 			height: auto;
+			padding-bottom: 5%;
 		}
 
 		.Lista ul {
