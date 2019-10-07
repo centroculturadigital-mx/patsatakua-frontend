@@ -62,12 +62,34 @@
 		padding: 0;
 	}
 
+
 	.contenedor-principal .Pie {
 		width: 100%;
-		padding: 4rem;
-		background-color: rgb(255, 255, 255);
+		padding: 2rem;
+		background-color: #F0F0F0;
+
+		display: flex;
 		
 	}
+	
+	.TextoPie  {
+		
+		font-size: 0.8rem;
+		padding: 1rem;
+		width: 70%;
+		border-right-style: solid;
+		border-right-color: #c4c4c4;
+		border-right-width: 1px;
+
+
+	}
+
+	.LogosPie{
+		width: 30%;
+		padding: 1rem;
+		display: flex;
+	    justify-content: space-evenly;
+		}
 
 	@media screen and (min-width: 768px ) {
 	
@@ -139,10 +161,27 @@
 		</section>
 
 
-		<footer class="Pie">
-			<div class="Temporal">
-				Pie
-			</div>
+	<footer class="Pie">
+			<section class="TextoPie">
+				Encontramos
+que esta palabra nos acerca a la idea principal de este conjunto de proyectos e iniciativas que,
+desde las comunidades de hablantes, entretejen lengua y tecnología. Esta idea de ser un
+espacio en el que se guarda se aproxima a la idea de un repositorio en esta materialidad
+llamada internet.
+<br>
+<br>
+Lo que aquí presentamos es un conjunto de iniciativas que desde la fuerza de diversas
+comunidades de hablantes de lenguas indígenas, ubicados en diversos puntos del país, buscan
+reescribir las tecnologías. 
+			</section>
+
+			<section class="LogosPie">
+			<ul>
+			<img src="https://source.unsplash.com/user/erondu/140x70" alt="">
+			<img src="https://source.unsplash.com/user/erondu/140x70" alt="">
+			<img src="https://source.unsplash.com/user/erondu/140x70" alt="">
+			</ul>
+			</section>
 		</footer>
 	</div>
 
