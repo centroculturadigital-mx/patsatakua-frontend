@@ -1,0 +1,1 @@
+import{S as s,i as a,s as o,k as r,l as t,f as c,n as e,d as n}from"./index.8a278acc.js";function i(s){var a;return{c(){a=r("proyectos...")},l(s){a=t(s,"proyectos...")},m(s,o){c(s,a,o)},p:e,i:e,o:e,d(s){s&&n(a)}}}export default class extends s{constructor(s){super(),a(this,s,null,i,o,[])}}

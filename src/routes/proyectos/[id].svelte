@@ -1,4 +1,5 @@
 <script>
+	import Pie from "../../componentes/Pie.svelte";
 	import Boton from "../../componentes/elementos/Boton.svelte";
 	import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
 
@@ -154,22 +155,6 @@
     </ul>
 </section>
 
-<footer>
-    <div class="temporal">
-        <article>
-            otro
-        </article>
-        <article>
-            otro
-        </article>
-        <article>
-            otro
-        </article>
-        <article>
-            otro
-        </article>
-        <article>
-            otro
-  
-        </article>
-</footer>
+
+
+<Pie/>
