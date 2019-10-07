@@ -44,11 +44,11 @@
         </p>
     </section>
 
-    <section class="LogosP ¨
+    <section class="Logos">
         <ul>
-            <img src="https://fakeimg.pl/140x70/aaa/fff" alt="">
-            <img src="https://fakeimg.pl/140x70/aaa/fff" alt="">
-            <img src="https://fakeimg.pl/140x70/aaa/fff" alt="">
+            <img src="https://fakeimg.pl/140x70/eee/fff?text=LOGOTIPO" alt="">
+            <img src="https://fakeimg.pl/140x70/eee/fff?text=LOGOTIPO" alt="">
+            <img src="https://fakeimg.pl/140x70/eee/fff?text=LOGOTIPO" alt="">
         </ul>
     </section>
 </footer>
