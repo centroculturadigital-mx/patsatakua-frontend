@@ -56,6 +56,14 @@
 		line-height: 14px;
 	}
 
+	.Creditos {
+		font-weight: 200;
+		font-size: 0.8rem;
+		line-height: 14px;
+		color:#454344;
+		text-align: center;
+	}
+
 	.contenedor-principal {
 		height: 100vh;
 		overflow-y: auto;
@@ -121,6 +129,14 @@
 			<!-- <img class="Logotipo" src="http://fakeimg.pl/244x80?text=logotipos" alt="img" /> -->
 
 		</section>
+
+		<section>
+		<h5 class="Creditos">
+				Créditos proyectos
+			</h5>
+		</section>
+
+
 	</div>
 
 	<div class="contenedor-principal">

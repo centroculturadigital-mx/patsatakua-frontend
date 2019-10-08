@@ -1,7 +1,8 @@
 <script>
 	import Pie from "../../componentes/Pie.svelte";
 	import Boton from "../../componentes/elementos/Boton.svelte";
-	import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
+    import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
+    //import Fa from "../../../../patsatakua-frontend/node_modules/svelte-fa/dist/svelte-fa.mjs"
 
 </script>
 
@@ -108,7 +109,10 @@
         <header class="Proyecto">
             <a class="Regresar" href="/">
                 <Boton>
-                    Regresar
+                    <i class="fas fa-arrow-left"></i>
+                    <span>
+                        Regresar
+                    </span>
                 </Boton>
             </a>
             <h1 class="Titulo">
@@ -154,7 +158,5 @@
         <ProyectoVistaPrevia/>			
     </ul>
 </section>
-
-
 
 <Pie/>

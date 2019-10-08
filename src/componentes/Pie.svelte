@@ -12,9 +12,7 @@
     /*padding: 2rem;*/
     background-color: #F0F0F0;
     display: grid;
-    grid-template-columns: 70% 30%;
-    
-    
+    grid-template-columns: 70% 30%;    
 }
 
 .Texto  {
@@ -29,6 +27,13 @@
 .Logos {
     padding: 1rem;
     text-align: center;	
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.Logos img {
+    max-width: 140px;
+   
 }
 
 </style>
