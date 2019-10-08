@@ -115,6 +115,7 @@
 			<h4 class="Subtitulo">
 				Purépecha (P’urhépecha) que quiere decir, “en lo que se guarda”
 			</h4>
+			<p class="Subtitulo">Cómo se pronuncia ‘patsatakua’:/pa.tsá.ta.kwa/</p>
 		</header>
 
 
@@ -131,7 +132,7 @@
 		</section>
 
 		<section>
-		<h5 class="Creditos">
+		    <h5 class="Creditos">
 				Créditos proyectos
 			</h5>
 		</section>

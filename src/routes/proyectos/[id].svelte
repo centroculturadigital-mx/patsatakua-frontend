@@ -110,11 +110,24 @@
     font-style: normal;
     }
 
+     .fa-home {
+    font-family: "Font Awesome 5 Free";
+    font-size: 2rem;
+    font-style: normal;
+    color:#72A6AA;
+    }
+
+
+
 </style>
 
-
+<header>
+    <a href="/">
+      <i class="fa fa-home"></i>                               
+   </a>
+</header>
 <article class="ProyectoDetalle ancho_maximo">
-    <div class="contenedor-1">
+    <div class="contenedor-1">  
         <header class="Proyecto">
             <a class="Regresar" href="/">
                 <Boton>
