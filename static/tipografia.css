@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400');
+
+* {
+	font-family: "Fira Sans";
+}
+
+i.fa {
+    font-family: 'FontAwesome' !important;
+    font-weight: 200;
+}

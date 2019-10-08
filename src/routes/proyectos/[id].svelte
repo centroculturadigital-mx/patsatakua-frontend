@@ -14,7 +14,9 @@
             grid-template-columns: 1fr 1fr;
             background: #FFFFFF;
             border: 0.5px solid #72A6AA;
-            box-sizing: border-box;    
+            box-sizing: border-box;  
+            max-width: 800px;
+            padding: 3%;  
         }
 
         .Imagen {
@@ -35,7 +37,7 @@
     }
 
     .contenedor-1 {
-        padding: 0 2rem;
+        padding: 0;
     }
     
     .contenedor-1 header {
@@ -43,7 +45,8 @@
     }
 
     .contenedor-1 .Regresar {
-        margin-left: -3rem;
+        /*margin-left: -4rem;*/
+        font-weight: 100;
     }
     
     .contenedor-2 footer {
@@ -76,12 +79,12 @@
         font-size: 16px;
         line-height: 22px;
         left: 15px;
-        margin: 25px;
+       /* margin: 25px;*/
 
     }
      
     .Proyecto {
-        left: 23px;
+       /* left: 23px;*/
     }
 
     ul {
@@ -101,6 +104,12 @@
         margin-top: 3em;
     }
 
+    .fa {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 200;
+    font-style: normal;
+    }
+
 </style>
 
 
@@ -109,9 +118,9 @@
         <header class="Proyecto">
             <a class="Regresar" href="/">
                 <Boton>
-                    <i class="fas fa-arrow-left"></i>
+                    <i class="fa fa-arrow-left"></i>
                     <span>
-                        Regresar
+                        Volver
                     </span>
                 </Boton>
             </a>
