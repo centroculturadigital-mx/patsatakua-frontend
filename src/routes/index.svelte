@@ -121,10 +121,7 @@
 
 		<section class="Introduccion">
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore molestias dicta ex veritatis accusantium ullam impedit praesentium, nulla, nesciunt vero esse quo. Dolores fugiat, distinctio expedita iste debitis excepturi.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nihil aut pariatur voluptatum maiores necessitatibus explicabo totam vero ad sit ex, eligendi ipsum, dignissimos saepe consequatur error officiis optio accusantium.
+				El lenguaje y el internet son tecnologías y territorios enteramente castellanizados en México. Distintos esfuerzos de diversas geografías trabajan en la representación, la difusión y el fortalecimiento de sus lenguas con herramientas tecnológicas, abriendo así sus posibilidades de acceso, reconocimiento, uso e interacción.
 			</p>
 		
 			<!-- <img class="Logotipo" src="http://fakeimg.pl/244x80?text=logotipos" alt="img" /> -->
