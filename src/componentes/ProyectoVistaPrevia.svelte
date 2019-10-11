@@ -1,3 +1,8 @@
+<script>
+	import { fade } from 'svelte/transition';
+
+</script>
+
 <style>
 	article {
 		max-width: 320px;
@@ -43,7 +48,7 @@
 
 </style>
 
-<article class="Tarjeta">
+<article class="Tarjeta" transition:fade>
 	<a href="/proyectos/666">
 		
 		<img class="Imagen" src={`http://unsplash.it/300/${100+Math.floor(Math.random()*500)}`} alt="img"/>

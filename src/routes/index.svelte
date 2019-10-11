@@ -1,7 +1,13 @@
 <script>
 
+	import { fade } from 'svelte/transition';
+
 	import ProyectoVistaPrevia from "../componentes/ProyectoVistaPrevia.svelte";
 	import Pie from "../componentes/Pie.svelte";
+
+	let mostrarLateral = false
+
+	setTimeout(()=>mostrarLateral=true,600)
 
 </script>
 
@@ -105,39 +111,40 @@
 
 
 <section class="Inicio">
-
 	<div class="Lateral">
-		<header>
-			<h1 class="Titulo">
-				Patsatakua
-			</h1>
+		{#if mostrarLateral}
+			<header>
+				<h1 class="Titulo" transition:fade>
+					Patsatakua
+				</h1>
 
-			<h4 class="Subtitulo">
-				Purépecha (P’urhépecha) que quiere decir, “en lo que se guarda”
-			</h4>
-			<p class="Subtitulo">Cómo se pronuncia ‘patsatakua’:/pa.tsá.ta.kwa/</p>
-		</header>
-
-
-		<section class="Introduccion">
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore molestias dicta ex veritatis accusantium ullam impedit praesentium, nulla, nesciunt vero esse quo. Dolores fugiat, distinctio expedita iste debitis excepturi.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nihil aut pariatur voluptatum maiores necessitatibus explicabo totam vero ad sit ex, eligendi ipsum, dignissimos saepe consequatur error officiis optio accusantium.
-			</p>
-		
-			<!-- <img class="Logotipo" src="http://fakeimg.pl/244x80?text=logotipos" alt="img" /> -->
-
-		</section>
-
-		<section>
-		    <h5 class="Creditos">
-				Créditos proyectos
-			</h5>
-		</section>
+				<h4 class="Subtitulo" transition:fade>
+					Purépecha (P’urhépecha) que quiere decir, “en lo que se guarda”
+				</h4>
+				<p class="Subtitulo" transition:fade>Cómo se pronuncia ‘patsatakua’:/pa.tsá.ta.kwa/</p>
+			</header>
 
 
+			<section class="Introduccion" transition:fade>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore molestias dicta ex veritatis accusantium ullam impedit praesentium, nulla, nesciunt vero esse quo. Dolores fugiat, distinctio expedita iste debitis excepturi.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nihil aut pariatur voluptatum maiores necessitatibus explicabo totam vero ad sit ex, eligendi ipsum, dignissimos saepe consequatur error officiis optio accusantium.
+				</p>
+			
+				<!-- <img class="Logotipo" src="http://fakeimg.pl/244x80?text=logotipos" alt="img" /> -->
+
+			</section>
+
+			<section>
+				<h5 class="Creditos">
+					Créditos proyectos
+				</h5>
+			</section>
+
+
+		{/if}
 	</div>
 
 	<div class="contenedor-principal">
