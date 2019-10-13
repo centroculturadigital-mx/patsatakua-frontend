@@ -1,13 +1,21 @@
 <script>
 
+	import { onMount } from 'svelte'
 	import { fade } from 'svelte/transition';
 
 	import ProyectoVistaPrevia from "../componentes/ProyectoVistaPrevia.svelte";
 	import Pie from "../componentes/Pie.svelte";
 
+	let proyectosModule
+	$: proyectos = proyectosModule && proyectosModule.default ? proyectosModule.default : [] 
 	let mostrarLateral = false
 
 	setTimeout(()=>mostrarLateral=true,600)
+
+	onMount(async () => {
+			proyectosModule = await import('../datos/proyectos.json')
+			console.log(proyectosModule)
+	})
 
 </script>
 
@@ -151,11 +159,9 @@
 
 		<section class="Lista">
 			<ul>
-				<ProyectoVistaPrevia/>			
-				<ProyectoVistaPrevia/>
-				<ProyectoVistaPrevia/>
-				<ProyectoVistaPrevia/>
-				<ProyectoVistaPrevia/>				
+				{#each proyectos as p}
+					<ProyectoVistaPrevia proyecto={p}/>				
+				{/each}
 			</ul>
 		</section>
 

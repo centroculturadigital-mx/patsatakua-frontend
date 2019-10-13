@@ -1,9 +1,29 @@
+
+<script context="module">
+	export async function preload(page, session) {
+        const { id } = page.params
+        console.log('id', id)
+        return { id }
+	}
+</script>
 <script>
+
+    import { onMount } from 'svelte'
+
 	import Pie from "../../componentes/Pie.svelte";
 	import Boton from "../../componentes/elementos/Boton.svelte";
     import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
     //import Fa from "../../../../patsatakua-frontend/node_modules/svelte-fa/dist/svelte-fa.mjs"
+    export let id
 
+	let proyectosModule
+    $: proyecto = proyectosModule && proyectosModule.default ?
+        proyectosModule.default.find(p => p.id === id) : {} 
+
+	onMount(async () => {
+			proyectosModule = await import('../../datos/proyectos.json')
+			console.log(proyectosModule, id)
+	})
 </script>
 
 <style>
@@ -138,13 +158,12 @@
                 </Boton>
             </a>
             <h1 class="Titulo">
-                Proyecto
+                {proyecto.titulo}
             </h1>
         </header>
 
         <section class="Contenido">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque velit architecto ab illum dignissimos earum, quos eaque asperiores tempore consequuntur? Quia voluptatem exercitationem quos, corrupti nihil modi optio amet.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque velit architecto ab illum dignissimos earum, quos eaque asperiores tempore consequuntur? Quia voluptatem exercitationem quos, corrupti nihil modi optio amet.</p>
+            {proyecto.contenido}
         </section>
     </div>
 
@@ -162,7 +181,7 @@
 
 </article>
 
-<section class="SubProyectos">
+<!-- <section class="SubProyectos">
     
     <h3 class="Subtitulo">Otros proyectos del proyecto</h3>
     <ul>
@@ -179,6 +198,6 @@
         <ProyectoVistaPrevia/>			
         <ProyectoVistaPrevia/>			
     </ul>
-</section>
+</section> -->
 
 <Pie/>

@@ -1,4 +1,5 @@
 <script>
+	export let proyecto
 	import { fade } from 'svelte/transition';
 
 </script>
@@ -49,32 +50,18 @@
 </style>
 
 <article class="Tarjeta" transition:fade>
-	<a href="/proyectos/666">
+	<a href={`/proyectos/${proyecto.id}`}>
 		
 		<img class="Imagen" src={`http://unsplash.it/300/${100+Math.floor(Math.random()*500)}`} alt="img"/>
 		
 		<div class="Texto">
 
 			<h2 class="Titulo">
-				Veniam elit cupidatat est irure Lorem elit. 
+				{proyecto.titulo}
 			</h2>
 
 			<div class="Extracto">
-				<p>
-					Eiusmod elit ut elit aute elit.
-				</p>
-				<p>
-					Lorem aliqua minim nostrud nisi consequat dolore magna.
-				</p>
-				<p>
-					Voluptate irure consectetur ullamco velit consectetur occaecat esse irure eu laborum sint.
-				</p>
-				<p>
-					Commodo nisi velit exercitation ad.
-				</p>
-				<p>
-					Lorem culpa do laborum et.
-				</p>			
+				{proyecto.contenido}		
 			</div>
 		</div>
 	</a>
