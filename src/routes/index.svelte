@@ -1,6 +1,11 @@
 <script>
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
+  import Carousel from "@centroculturadigital-mx/svelte-carousel";
+  import {
+    ChevronLeftIcon,
+    ChevronRightIcon
+  } from "../../node_modules/svelte-feather-icons/src/index.js";
 
   import ProyectoVistaPrevia from "../componentes/ProyectoVistaPrevia.svelte";
   import Pie from "../componentes/Pie.svelte";
@@ -14,11 +19,12 @@
 
   const LogoCultura = "logo.cultura.png";
   const LogoCCD = "logo.ccd.png";
-
+	let LogosProyectos = [LogoCCD,LogoCCD,LogoCCD,LogoCCD,LogoCCD,LogoCCD,LogoCCD];
   onMount(async () => {
     proyectosModule = await import("../datos/proyectos.json");
     console.log(proyectosModule);
   });
+    console.log(LogosProyectos);
 </script>
 
 <style>
@@ -95,12 +101,15 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+  .LogosProyectos {
+	  margin-bottom: 4rem;
+  }
   .LogosCreditos {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 4rem;
   }
-  .Logo {
+  .LogoInstitucional {
     display: flex;
     align-items: center;
   }
@@ -157,22 +166,53 @@
             como un territorio multilingüe.
           </p>
 
+          <!-- disclaimer -->
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
+            aperiam, odit quia deleniti iusto libero non vitae facere esse
+            voluptates ut animi fugiat et minus reprehenderit cupiditate totam
+            tenetur labore.
+          </p>
         </section>
 
         <section>
           <h4 class="Creditos">Créditos proyectos</h4>
 
+          <div class="LogosProyectos">
+
+            <Carousel perPage={{ 800: 1 }} loop>
+
+              <span class="Control" slot="left-control">
+                <ChevronLeftIcon />
+              </span>
+
+              {#each LogosProyectos as logo}
+                <div class="LogoProyecto">
+                  <img
+                    src={logo}
+                    alt="Proyecto parte de Patzatakua" />
+                </div>
+              {/each}
+              <span class="Control" slot="right-control">
+                <ChevronRightIcon />
+              </span>
+
+            </Carousel>
+
+            <!--  -->
+          </div>
           <div class="LogosCreditos">
 
-            <div class="Logo">
+            <div class="LogoInstitucional">
               <img
                 src={LogoCultura}
                 alt="Logotipo Secretaría de cultura México" />
             </div>
-            <div class="Logo">
+            <div class="LogoInstitucional">
               <img src={LogoCCD} alt="Logotipo Centro cultura digital México" />
             </div>
 
+            <!--  -->
           </div>
 
         </section>
