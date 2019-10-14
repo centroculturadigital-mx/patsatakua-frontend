@@ -3,66 +3,110 @@
   "url": "http://ajuukjaaky...",
   "titulo": "Ajuukjaaky",
   "etiquetas": ["herramienta de aprendizaje", "activismo"],
-  "contenido": "Ayuujkjaaky\n\nSi internet es el texto que escribimos colectivamente, este proyecto está dedicado enteramente a un microcosmos conformado por etiquetas en lengua ayüüjk. El sitio, pensado en su totalidad para usuarios que hablan y escriben esta lengua permite a partir de ciertos guiños de carácter lúdico, que un usuario no hablante se acerque a algunas palabras y su significado. Es un proyecto ideado por Luis Balbuena.\n\nHerramienta de aprendizaje, activismo \n\nhttp://ayuujkjaaky.tlahuitoltepec.com/\n\n\n\n"
+  "contenido": "Ayuujkjaaky\n\nSi internet es el texto que escribimos colectivamente, este proyecto está dedicado enteramente a un microcosmos conformado por etiquetas en lengua ayüüjk. El sitio, pensado en su totalidad para usuarios que hablan y escriben esta lengua permite a partir de ciertos guiños de carácter lúdico, que un usuario no hablante se acerque a algunas palabras y su significado. Es un proyecto ideado por Luis Balbuena.\n\nHerramienta de aprendizaje, activismo \n\nhttp://ayuujkjaaky.tlahuitoltepec.com/\n\n\n\n",
+  "image": {
+    "id": "patsatakua/ajuukjaaky_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/ajuukjaaky_imagen.png"
+  }
 }, {
   "id": "biblioteca_de_investigacion_juan_de_cordoba",
   "url": "http://bibliotecajuandecordova.mx/publicaciones-fahho/",
   "titulo": "Biblioteca de Investigación Juan de Córdoba",
   "etiquetas": ["comunidad", "herramienta de aprendizaje"],
-  "contenido": "Biblioteca de Investigación Juan de Córdoba\n \n \nAdemás de promover y resguardar la cultura oaxaqueña en acervos históricos, la Biblioteca promueve la edición de novelas gráficas basadas en relatos contemporáneos traducidos a varias lenguas, cuya temática refleja problemáticas actuales. Impresos en papel e ilustrados por artistas jóvenes, los cómics son accesible digitalmente a través de esta plataforma a maestros y lectores hablantes de las lenguas a las que fueron traducidos. \n\nComunidad, Herramienta de aprendizaje, \n \n \nhttp://bibliotecajuandecordova.mx/publicaciones-fahho/\n\n\n"
+  "contenido": "Biblioteca de Investigación Juan de Córdoba\n \n \nAdemás de promover y resguardar la cultura oaxaqueña en acervos históricos, la Biblioteca promueve la edición de novelas gráficas basadas en relatos contemporáneos traducidos a varias lenguas, cuya temática refleja problemáticas actuales. Impresos en papel e ilustrados por artistas jóvenes, los cómics son accesible digitalmente a través de esta plataforma a maestros y lectores hablantes de las lenguas a las que fueron traducidos. \n\nComunidad, Herramienta de aprendizaje, \n \n \nhttp://bibliotecajuandecordova.mx/publicaciones-fahho/\n\n\n",
+  "image": {
+    "id": "patsatakua/biblioteca_de_investigacion_juan_de_cordoba_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034695/patsatakua/biblioteca_de_investigacion_juan_de_cordoba_imagen.png"
+  }
 }, {
   "id": "colmix",
   "url": "https://colmix.org/",
   "titulo": "COLMIX",
   "etiquetas": ["documentación", "vida cotidiana", "activismo"],
-  "contenido": "COLMIX\n\nLa página da cuenta de una gran labor a cargo de varios de jóvenes hablantes y activistas de la lengua mixe alto del centro (ayüüjk ) quienes comprometidos con su cultura y sus comunidades, ofrecen diversos materiales críticos que dan cuenta de su cosmovisión y luchas por la defensa del territorio y la lengua.\n \nDocumentación, vida cotidiana, activismo\n\ncolmix.org\n\n\n"
+  "contenido": "COLMIX\n\nLa página da cuenta de una gran labor a cargo de varios de jóvenes hablantes y activistas de la lengua mixe alto del centro (ayüüjk ) quienes comprometidos con su cultura y sus comunidades, ofrecen diversos materiales críticos que dan cuenta de su cosmovisión y luchas por la defensa del territorio y la lengua.\n \nDocumentación, vida cotidiana, activismo\n\ncolmix.org\n\n\n",
+  "image": {
+    "id": "patsatakua/colmix_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/colmix_imagen.jpg"
+  }
 }, {
   "id": "ju_je_uantani",
   "url": "http://www.lanmo.unam.mx/jujeuantani/",
   "titulo": "Ju je uantani",
   "etiquetas": ["herramienta de aprendizaje", "activismo"],
-  "contenido": "Ju je uantani\nManual diseñado para la enseñanza y aprendizaje de la lengua purépecha (P'urhépecha) en el aula. Elaborado para estudiantes universitarios que quieren acercarse a este idioma bajo un enfoque comunicativo intercultural. Este material didáctico contribuye a la profesionalización de la enseñanza y al proceso de revitalización de las lenguas frente a su acelerado desplazamiento.\n\nHerramienta de aprendizaje, Activismo\n\nhttp://www.lanmo.unam.mx/jujeuantani/\n\n\n"
+  "contenido": "Ju je uantani\nManual diseñado para la enseñanza y aprendizaje de la lengua purépecha (P'urhépecha) en el aula. Elaborado para estudiantes universitarios que quieren acercarse a este idioma bajo un enfoque comunicativo intercultural. Este material didáctico contribuye a la profesionalización de la enseñanza y al proceso de revitalización de las lenguas frente a su acelerado desplazamiento.\n\nHerramienta de aprendizaje, Activismo\n\nhttp://www.lanmo.unam.mx/jujeuantani/\n\n\n",
+  "image": {
+    "id": "patsatakua/ju_je_uantani_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034697/patsatakua/ju_je_uantani_imagen.jpg"
+  }
 }, {
   "id": "koomuntoon",
   "url": "https://play.google.com/store/apps/details?id=com.seit.felix.kumoontun",
   "titulo": "Koomuntoon",
   "etiquetas": ["activismo", "comunidad", "herramienta de aprendizaje"],
-  "contenido": "Kumoontun \nKumoontun es una organización originaria de la comunidad de Santa María Ocotepec, Mixe. Al identificar propuestas que contrarrestaran la falta de interés, la poca o nula enseñanza del Ayöök en el ámbito escolar y la pérdida de historias de los pueblos, se lanza Kumoontun App, una aplicación para la enseñanza oral del mixe alto del Norte (Ayöök ) a partir de categorías semánticas. \nActivismo, Comunidad, Herramienta de aprendizaje\nhttps://bit.ly/2JxN02P\n\n"
+  "contenido": "Kumoontun \nKumoontun es una organización originaria de la comunidad de Santa María Ocotepec, Mixe. Al identificar propuestas que contrarrestaran la falta de interés, la poca o nula enseñanza del Ayöök en el ámbito escolar y la pérdida de historias de los pueblos, se lanza Kumoontun App, una aplicación para la enseñanza oral del mixe alto del Norte (Ayöök ) a partir de categorías semánticas. \nActivismo, Comunidad, Herramienta de aprendizaje\nhttps://bit.ly/2JxN02P\n\n",
+  "image": {
+    "id": "patsatakua/koomuntoon_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/koomuntoon_imagen.jpg"
+  }
 }, {
   "id": "lengua_y_cultura_triqui",
   "url": "https://twitter.com/LyC_Triqui",
   "titulo": "Lengua y cultura triqui",
   "etiquetas": ["comunidad", "documentación", "vida cotidiana"],
-  "contenido": "Lengua y cultura triqui\n\nOfrece artículos accesibles que ahondan en la escritura de la lengua Triqui de Copala (xnánj nùn' a) con el fin de preservar y divulgar su cultura. Sin perder de vista la naturaleza de la la plataforma digital, proponen juegos como un glosario de animales y emojis, simbología eficaz para introducir al usuario a una lengua. Tiene una salida extensiva en la cuenta de Twitter @LyC_Triqui. \n\nComunidad, Documentación, vida cotidiana\n\n\n\n"
+  "contenido": "Lengua y cultura triqui\n\nOfrece artículos accesibles que ahondan en la escritura de la lengua Triqui de Copala (xnánj nùn' a) con el fin de preservar y divulgar su cultura. Sin perder de vista la naturaleza de la la plataforma digital, proponen juegos como un glosario de animales y emojis, simbología eficaz para introducir al usuario a una lengua. Tiene una salida extensiva en la cuenta de Twitter @LyC_Triqui. \n\nComunidad, Documentación, vida cotidiana\n\n\n\n",
+  "image": {
+    "id": "patsatakua/lengua_y_cultura_triqui_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/lengua_y_cultura_triqui_imagen.jpg"
+  }
 }, {
   "id": "ma_tiksalokan_nawatl",
   "url": "https://drive.google.com/file/d/1rxf0LeG5w9I38BNPbVpmlehbCCD7IEDp/view",
   "titulo": "Ma tiksalokan nawatl",
   "etiquetas": ["vida cotidiana", "herramienta de aprendizaje"],
-  "contenido": "Ma tiksalokan nawatl\nMa tiksalokan nawatl (Vamos a aprender náhuatl) es una aplicación disponible en sistemas iOS y Android. Las palabras y expresiones que la alimentan provienen del náhuatl de Acatlán, Guerrero (nawatl), no obstante puede ser funcional para otras variantes nahuas.\nEs la tercera edición de una serie que inició con Vamos a aprender mixteco y que siguió con Vamos a aprender purépecha.\nVida cotidiana, Herramienta de aprendizaje\n\n\nhttps://play.google.com/store/apps/details?id=com.manuvo.nahuatl&hl=es_MX\n\n\n"
+  "contenido": "Ma tiksalokan nawatl\nMa tiksalokan nawatl (Vamos a aprender náhuatl) es una aplicación disponible en sistemas iOS y Android. Las palabras y expresiones que la alimentan provienen del náhuatl de Acatlán, Guerrero (nawatl), no obstante puede ser funcional para otras variantes nahuas.\nEs la tercera edición de una serie que inició con Vamos a aprender mixteco y que siguió con Vamos a aprender purépecha.\nVida cotidiana, Herramienta de aprendizaje\n\n\nhttps://play.google.com/store/apps/details?id=com.manuvo.nahuatl&hl=es_MX\n\n\n",
+  "image": {
+    "id": "patsatakua/ma_tiksalokan_nawatl_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034695/patsatakua/ma_tiksalokan_nawatl_imagen.jpg"
+  }
 }, {
   "id": "museo_virtual_del_zapoteco",
   "url": "http://museo-zapoteco.orgfree.com/veresp.html",
   "url2": "http://museo-zapoteco.orgfree.com/veresp.html",
   "titulo": "Museo Virtual del Zapoteco",
   "etiquetas": ["activismo", "vida cotidiana", "comunidad"],
-  "contenido": "Museo Virtual del Zapoteco\n\nEl Museo Virtual del Zapoteco es una plataforma creada para promover y difundir las lenguas originarias de México pensadas como bienes culturales inmateriales. El Museo dedica salas a muestras en otras lenguas y alberga proyectos como Indígenas sin fronteras: desarrollo de sistemas operativos para celulares en zapoteco, es un proyecto que desarrolla Rodrigo Pérez conocido como Zapoteco 3.0. \n\nActivismo, vida cotidiana, comunidad\n\nhttp://museo-zapoteco.orgfree.com/veresp.html\nhttp://museo-zapoteco.orgfree.com\n\n\n"
+  "contenido": "Museo Virtual del Zapoteco\n\nEl Museo Virtual del Zapoteco es una plataforma creada para promover y difundir las lenguas originarias de México pensadas como bienes culturales inmateriales. El Museo dedica salas a muestras en otras lenguas y alberga proyectos como Indígenas sin fronteras: desarrollo de sistemas operativos para celulares en zapoteco, es un proyecto que desarrolla Rodrigo Pérez conocido como Zapoteco 3.0. \n\nActivismo, vida cotidiana, comunidad\n\nhttp://museo-zapoteco.orgfree.com/veresp.html\nhttp://museo-zapoteco.orgfree.com\n\n\n",
+  "image": {
+    "id": "patsatakua/museo_virtual_del_zapoteco_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/museo_virtual_del_zapoteco_imagen.jpg"
+  }
 }, {
   "id": "red_de_activismo_digital_de_lenguas_indigenas",
   "url": "https://rising.globalvoices.org/lenguas/",
   "titulo": "Red de activismo digital de lenguas indígenas",
   "etiquetas": ["activismo", "documentación", "comunidad"],
-  "contenido": "Red de activismo digital de lenguas indígenas \n\nDocumenta los encuentros de activistas digitales hablantes de diversas lenguas del continente. Comparte la intención de hacer de internet un espacio más plural al subrayar el carácter multilingüe y resaltando la idea de red como un espacio comunitario en el que se dan lugar los intercambios de saberes y alrededor de las lenguas, tanto en línea como sin mediación de las tecnologías.\n\nActivismo, documentación, comunidad \n\nhttps://rising.globalvoices.org/lenguas/\n\n\n"
+  "contenido": "Red de activismo digital de lenguas indígenas \n\nDocumenta los encuentros de activistas digitales hablantes de diversas lenguas del continente. Comparte la intención de hacer de internet un espacio más plural al subrayar el carácter multilingüe y resaltando la idea de red como un espacio comunitario en el que se dan lugar los intercambios de saberes y alrededor de las lenguas, tanto en línea como sin mediación de las tecnologías.\n\nActivismo, documentación, comunidad \n\nhttps://rising.globalvoices.org/lenguas/\n\n\n",
+  "image": {
+    "id": "patsatakua/red_de_activismo_digital_de_lenguas_indigenas_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/red_de_activismo_digital_de_lenguas_indigenas_imagen.png"
+  }
 }, {
   "id": "ticha",
   "url": "https://ticha.haverford.edu/es/",
   "titulo": "Ticha",
   "etiquetas": ["herramienta de aprendizaje", "comunidad"],
-  "contenido": "Ticha\n\n\nTicha significa palabra o lenguaje es en su versión digital un explorador basado en un software de análisis lexical y gramatical que permite el acceso a textos en zapoteco colonial del valle(ticha za niaxeteni peni lachi). Estos documentos son el primer registro de escritura alfabética de una lengua indígena, luego de la conquista, y contienen extensa e importante información lingüística, histórica, antropológica y gramatical. \n\nHerramienta de aprendizaje, Comunidad \n\n\nhttps://ticha.haverford.edu/es/\n\n"
+  "contenido": "Ticha\n\n\nTicha significa palabra o lenguaje es en su versión digital un explorador basado en un software de análisis lexical y gramatical que permite el acceso a textos en zapoteco colonial del valle(ticha za niaxeteni peni lachi). Estos documentos son el primer registro de escritura alfabética de una lengua indígena, luego de la conquista, y contienen extensa e importante información lingüística, histórica, antropológica y gramatical. \n\nHerramienta de aprendizaje, Comunidad \n\n\nhttps://ticha.haverford.edu/es/\n\n",
+  "image": {
+    "id": "patsatakua/ticha_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/ticha_imagen.png"
+  }
 }, {
   "id": "turix",
   "url": "https://turix.yoochel.org/",
   "titulo": "Turix",
   "etiquetas": ["comunidad", "vida cotidiana"],
-  "contenido": "Turix\n\nTurix significa libélula en lengua maya yucateca (Maayat'aan). Este colectivo llamado como el sitio trabaja en un archivo que reúe video, fotografía digital, música electro-acústica, software libre, internet y radio a través de talleres, proyecciones itinerantes, auto-publicación y otras prácticas que manifiestan una plataforma que se basa en crear conexiones y relaciones entre diversas personas, temas, y geografías marcadas por la lengua. \n\nComunidad, vida cotidiana\n\nhttps://turix.yoochel.org/\n\n\n"
+  "contenido": "Turix\n\nTurix significa libélula en lengua maya yucateca (Maayat'aan). Este colectivo llamado como el sitio trabaja en un archivo que reúe video, fotografía digital, música electro-acústica, software libre, internet y radio a través de talleres, proyecciones itinerantes, auto-publicación y otras prácticas que manifiestan una plataforma que se basa en crear conexiones y relaciones entre diversas personas, temas, y geografías marcadas por la lengua. \n\nComunidad, vida cotidiana\n\nhttps://turix.yoochel.org/\n\n\n",
+  "image": {
+    "id": "patsatakua/turix_imagen",
+    "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/turix_imagen.png"
+  }
 }]

@@ -52,7 +52,7 @@
 <article class="Tarjeta" transition:fade>
 	<a href={`/proyectos/${proyecto.id}`}>
 		
-		<img class="Imagen" src={`http://unsplash.it/300/${100+Math.floor(Math.random()*500)}`} alt="img"/>
+		<img class="Imagen" src={`${proyecto.image.url}`} alt="img"/>
 		
 		<div class="Texto">
 
