@@ -12,6 +12,9 @@
 
   setTimeout(() => (mostrarLateral = true), 600);
 
+  const LogoCultura = "logo.cultura.png";
+  const LogoCCD = "logo.ccd.png";
+
   onMount(async () => {
     proyectosModule = await import("../datos/proyectos.json");
     console.log(proyectosModule);
@@ -27,23 +30,29 @@
     }
   }
 
-  .Logotipo {
-    padding: 0;
-    width: 12rem;
-    height: 100%;
-    object-fit: contain;
-    object-position: 0 0;
-  }
-
   /* .contenedor-principal {
 	} */
   .Titulo {
     color: #72a6aa;
     font-weight: 500;
-    font-size: 28px;
-    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+    font-size: 2.75rem;
+    text-align: center;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    letter-spacing: 0.125rem; /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
   }
-
+  .TituloFonetico {
+    color: #000;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .SubtituloSignificado {
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-bottom: 2rem;
+  }
   .Lateral {
     color: #000;
     height: 100vh;
@@ -51,6 +60,7 @@
     padding-top: 2rem;
     display: flex;
     justify-content: center;
+    overflow-y: scroll;
   }
 
   .LateralContenido {
@@ -60,21 +70,7 @@
   .Introduccion {
     font-weight: 200;
     font-size: 14px;
-    line-height: 17px;
-  }
-
-  .Subtitulo {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-  }
-
-  .Creditos {
-    font-weight: 200;
-    font-size: 0.8rem;
-    line-height: 14px;
-    color: #454344;
-    text-align: center;
+    line-height: 20px;
   }
 
   .contenedor-principal {
@@ -84,19 +80,36 @@
     padding: 0;
     padding-top: 2rem;
   }
+  .Lista ul {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
 
+  .Creditos {
+    font-weight: 200;
+    line-height: 14px;
+    color: #454344;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .LogosCreditos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+  }
+  .Logo {
+    display: flex;
+    align-items: center;
+  }
+  /* responsivos */
   @media screen and (min-width: 768px) {
     .Lista,
     .Lista ul {
       height: auto;
       padding-bottom: 5%;
-    }
-
-    .Lista ul {
-      padding: 0 1rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 2rem;
     }
   }
 
@@ -119,35 +132,49 @@
       {#if mostrarLateral}
         <header>
           <h1 class="Titulo" transition:fade>Patsatakua</h1>
+          <h5 class="TituloFonetico" transition:fade>/pa.tsá.ta.kwa/</h5>
 
-          <h4 class="Subtitulo" transition:fade>
-            Purépecha (P’urhépecha) que quiere decir, “en lo que se guarda”
+          <h4 class="SubtituloSignificado" transition:fade>
+            Patratakua en purépecha (P’urhépecha) quiere decir, “en lo que se
+            guarda”
           </h4>
-          <p class="Subtitulo" transition:fade>
-            Cómo se pronuncia ‘patsatakua’:/pa.tsá.ta.kwa/
-          </p>
         </header>
 
         <section class="Introduccion" transition:fade>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            labore molestias dicta ex veritatis accusantium ullam impedit
-            praesentium, nulla, nesciunt vero esse quo. Dolores fugiat,
-            distinctio expedita iste debitis excepturi.
+            Bajo esta palabra-repositorio se reúnen once proyectos de hablantes
+            de lenguas indígenas de diversas zonas del país que abordan de forma
+            particular el uso de las herramientas tecnológicas. Estos proyectos
+            representan la diversidad lingüística cultural y ofrecen un nuevo
+            mapa de términos y etiquetas. Del uso de plataformas precreadas a la
+            programación desde cero; de prácticas experimentales de escritura a
+            aplicaciones para aprender una lengua, de espacios de memoria visual
+            y oral a la documentación de la evolución del registro gráfico, de
+            la preservación de la lengua y el deseo de mantenerla como bien
+            común ante situaciones migratorias de sus hablantes a la invitación
+            al encuentro con esos otros y otras que desean ampliar la idea
+            sostenida por diversos activistas de las lenguas: entender a nuestro
+            como un territorio multilingüe.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
-            nihil aut pariatur voluptatum maiores necessitatibus explicabo totam
-            vero ad sit ex, eligendi ipsum, dignissimos saepe consequatur error
-            officiis optio accusantium.
-          </p>
-
-          <!-- <img class="Logotipo" src="http://fakeimg.pl/244x80?text=logotipos" alt="img" /> -->
 
         </section>
 
         <section>
-          <h5 class="Creditos">Créditos proyectos</h5>
+          <h4 class="Creditos">Créditos proyectos</h4>
+
+          <div class="LogosCreditos">
+
+            <div class="Logo">
+              <img
+                src={LogoCultura}
+                alt="Logotipo Secretaría de cultura México" />
+            </div>
+            <div class="Logo">
+              <img src={LogoCCD} alt="Logotipo Centro cultura digital México" />
+            </div>
+
+          </div>
+
         </section>
       {/if}
 
