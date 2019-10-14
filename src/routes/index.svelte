@@ -19,7 +19,7 @@
 
   const LogoCultura = "logo.cultura.png";
   const LogoCCD = "logo.ccd.png";
-	let LogosProyectos = [LogoCCD,LogoCCD,LogoCCD,LogoCCD,LogoCCD,LogoCCD,LogoCCD];
+	let LogosProyectos = ['https://fakeimg.pl/250x100/?text=Bienvenido','https://fakeimg.pl/250x100/?text=Al','https://fakeimg.pl/250x100/?text=Sitio','https://fakeimg.pl/250x100/?text=De','https://fakeimg.pl/250x100/?text=Patzatakua','https://fakeimg.pl/250x100/?text=Dev'];
   onMount(async () => {
     proyectosModule = await import("../datos/proyectos.json");
     console.log(proyectosModule);
@@ -113,6 +113,7 @@
     display: flex;
     align-items: center;
   }
+
   /* responsivos */
   @media screen and (min-width: 768px) {
     .Lista,
@@ -180,7 +181,7 @@
 
           <div class="LogosProyectos">
 
-            <Carousel perPage={{ 800: 1 }} loop>
+            <Carousel perPage={{ 800:1 }} autoplay='2500' loop>
 
               <span class="Control" slot="left-control">
                 <ChevronLeftIcon />
