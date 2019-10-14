@@ -9,6 +9,7 @@
 <script>
 
     import { onMount } from 'svelte'
+	import { fade } from 'svelte/transition';
 
 	import Pie from "../../componentes/Pie.svelte";
 	import Boton from "../../componentes/elementos/Boton.svelte";
@@ -18,12 +19,18 @@
 
 	let proyectosModule
     $: proyecto = proyectosModule && proyectosModule.default ?
-        proyectosModule.default.find(p => p.id === id) : {} 
+        proyectosModule.default.find(p => {
+            proyectosModule.default
+            return p.id === id
+        }) : {} 
 
 	onMount(async () => {
 			proyectosModule = await import('../../datos/proyectos.json')
-			console.log(proyectosModule, id)
+			console.log('aa', proyectosModule.default, id)
 	})
+
+    $: console.log('proyecto', proyecto)
+    $: console.log('id', id)
 </script>
 
 <style>
@@ -169,8 +176,11 @@
 
     <div class="contenedor-2">
     
-    	<img class="Imagen" src={`http://unsplash.it/300/${100+Math.floor(Math.random()*500)}`} alt="img"/>
-        
+        <div>
+            {#if !!proyecto && !!proyecto.image}
+                <img class="Imagen" src={`${proyecto.image.url}`} alt="img" transition:fade/>
+            {/if}
+        </div>
         <footer>            
             <Boton redondo>
                 Conocer Proyecto
