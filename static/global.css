@@ -67,8 +67,6 @@ code {
 	margin: 0 auto;
 
 }
-
-
 .Boton {
 	background-color: #72A6AA;
 	padding-left: 3rem;
@@ -77,7 +75,7 @@ code {
 }
 
 .Boton.Redondo {
-	border-radius: 2rem;
+	border-radius: 0.75rem;
 }
 
 .Boton.Regresar {
@@ -95,9 +93,9 @@ Tipografías
 /* Texto Chico */
 :root {
 
-	--TextoChico--font-size: 12px;
-	--TextoChico--line-height: 1.25;
-	--TextoMediano--font-size: 16px;
-	--TextoMediano--line-height: 1.25;
+	--TextoChico--font-size: 0.75rem;
+	--TextoChico--line-height: 1.25px;
+	--TextoMediano--font-size: 1rem;
+	--TextoMediano--line-height: 1.25px;
 	
 }
