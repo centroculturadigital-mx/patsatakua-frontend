@@ -94,8 +94,8 @@ Tipografías
 :root {
 
 	--TextoChico--font-size: 0.75rem;
-	--TextoChico--line-height: 1.25px;
+	--TextoChico--line-height: 1.5;
 	--TextoMediano--font-size: 1rem;
-	--TextoMediano--line-height: 1.25px;
+	--TextoMediano--line-height: 1.5;
 	
 }

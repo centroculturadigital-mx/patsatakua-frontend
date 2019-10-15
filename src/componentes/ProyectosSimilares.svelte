@@ -1,26 +1,50 @@
-<script></script>
+<script>
+  import ProyectoVistaPrevia from "./ProyectoVistaPrevia.svelte";
+  import Carousel from "@centroculturadigital-mx/svelte-carousel";
+  import {
+    ChevronLeftIcon,
+    ChevronRightIcon
+  } from "../../node_modules/svelte-feather-icons/src/index.js";
+
+  export let id;
+  export let proyecto;
+</script>
+
 <style>
-section {
-    background-color: transparent; 
-}
-
-#ProyectosSimilares {
-
-}
-
+  section {
+    background-color: transparent;
+  }
+  section h2 {
+    text-align: center;
+  }
+  #ProyectosSimilares {
+  }
 </style>
+
 <!--  -->
 
-<section>
+<!-- <section>
 
-<h2>ProyectosSimilares</h2>
+  <h2>ProyectosSimilares</h2>
 
-<div id="ProyectosSimilares">
+  <div id="ProyectosSimilares">
 
-{#each Array(4) as _}
-    {console.log("4 Veces")}
-{/each}
+    <Carousel perPage={{ 800: 1 }} autoplay="2500" loop>
 
-</div>
+      <span class="Control" slot="left-control">
+        <ChevronLeftIcon />
+      </span>
 
-</section>
+      {#each proyecto as p}
+        <ProyectoVistaPrevia />
+      {/each}
+
+      <span class="Control" slot="right-control">
+        <ChevronRightIcon />
+      </span>
+
+    </Carousel>
+
+  </div>
+
+</section> -->

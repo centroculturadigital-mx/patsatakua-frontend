@@ -12,8 +12,14 @@
 
   import Pie from "../../componentes/Pie.svelte";
   import Boton from "../../componentes/elementos/Boton.svelte";
-  //   import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
+  import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
   import ProyectosSimilares from "../../componentes/ProyectosSimilares.svelte";
+
+  import Carousel from "@centroculturadigital-mx/svelte-carousel";
+  import {
+    ChevronLeftIcon,
+    ChevronRightIcon
+  } from "../../../node_modules/svelte-feather-icons/src/index.js";
 
   export let id;
 
@@ -41,10 +47,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       background: #ffffff;
-      border: 0.5px solid #72a6aa;
+      border: 1px solid #72a6aa;
       box-sizing: border-box;
-      max-width: 800px;
-      padding: 3%;
+      max-width: 860px;
+      padding: 2.5rem;
+      margin-top: 2.25rem;
     }
     .Imagen {
       width: 100%;
@@ -60,15 +67,52 @@
       height: auto;
     }
   }
+  /*  */
   .contenedor-1 {
-    padding: 0;
+    padding: 0rem 0rem 0 1rem;
   }
   .contenedor-1 header {
     position: relative;
   }
   .contenedor-1 .Regresar {
-    /*margin-left: -4rem;*/
     font-weight: 100;
+    position: absolute;
+    top: 0.25rem;
+    left: -7.5rem;
+    cursor: pointer;
+  }
+  .contenedor-1 .Regresar button {
+    background-color: #72a6aa;
+    border: none;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: lighter;
+  }
+  .contenedor-1 .Regresar:hover {
+    background-color: #72a6aa;
+    opacity: 0.9;
+    border-radius: 5px;
+  }
+  .BotonConocerProyecto {
+    background-color: #72a6aa;
+    border: none;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    cursor: pointer;
+  }
+  .BotonConocerProyecto i {
+    padding-left: 1rem;
+  }
+  .BotonConocerProyecto:hover {
+    background-color: #72a6aa;
+    opacity: 0.9;
+    border-radius: 5px;
   }
   .contenedor-2 footer {
     margin-top: 1rem;
@@ -89,12 +133,13 @@
     font-weight: bold;
     font-size: 40px;
     line-height: 48px;
+    margin-bottom: 0.5rem;
   }
   .Contenido {
     width: 80%;
     font-weight: 200;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: var(--TextoMediano--line-height);
     left: 15px;
     /* margin: 25px;*/
   }
@@ -131,23 +176,32 @@
     left: 1.5rem;
     top: 1.5rem;
     border: 1px solid #72a6aa;
-    padding: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem;
   }
-
+  .RegresaInicio:hover {
+    background-color: rgba(114, 166, 170, 0.1);
+  }
+  #HeaderProyecto {
+    height: 2.5rem;
+  }
   /*  */
 </style>
 
-<a class="RegresaInicio" href="/">
-  <i class="fa fa-home" />
-</a>
+<header id="HeaderProyecto">
+  <a class="RegresaInicio" href="/">
+    <i class="fa fa-home" />
+  </a>
+</header>
 <article class="ProyectoDetalle ancho_maximo">
+
   <div class="contenedor-1">
     <header class="Proyecto">
       <a class="Regresar" href="/">
-        <Boton>
+        <button>
           <i class="fa fa-arrow-left" />
           <span>Volver</span>
-        </Boton>
+        </button>
       </a>
       <h1 class="Titulo">{proyecto.titulo}</h1>
     </header>
@@ -166,32 +220,49 @@
           transition:fade />
       {/if}
     </div>
-    <footer>
-      <Boton redondo>Conocer Proyecto</Boton>
-    </footer>
+    <div>
+      <button
+        class="BotonConocerProyecto"
+        on:click={console.log('Link a proyecto')}>
+        <span>Conocer Proyecto</span>
+        <i class="fa fa-arrow-right" />
+      </button>
+      <!-- <Boton>Conocer Proyecto</Boton> -->
+    </div>
   </div>
 
 </article>
 
-<ProyectosSimilares />
-
+<ProyectosSimilares proyecto={id}/>
 <!-- <section class="SubProyectos">
-    
-    <h3 class="Subtitulo">Otros proyectos del proyecto</h3>
-    <ul>
-        <ProyectoVistaPrevia/>			
-        <ProyectoVistaPrevia/>			
-        <ProyectoVistaPrevia/>			
-    </ul>
-</section>
 
-<section class="Similares">
-    <h3 class="Subtitulo">Proyectos similares</h3>
-    <ul>
-        <ProyectoVistaPrevia/>			
-        <ProyectoVistaPrevia/>			
-        <ProyectoVistaPrevia/>			
-    </ul>
+  <h3 class="Subtitulo">Proyectos Similares</h3>
+  <ul>
+    <ProyectoVistaPrevia />
+    <ProyectoVistaPrevia />
+    <ProyectoVistaPrevia />
+  </ul>
+</section> -->
+
+<!-- <section class="Similares">
+  <h3 class="Subtitulo">Proyectos similares</h3>
+
+  <Carousel perPage={{ 800: 1 }} autoplay="2500" loop>
+ 
+    <span class="Control" slot="left-control">
+      <ChevronLeftIcon />
+    </span>
+
+    {#each proyecto as item}
+      <ProyectoVistaPrevia />
+    {/each}
+
+    <span class="Control" slot="right-control">
+      <ChevronRightIcon />
+    </span> 
+
+  </Carousel>
+
 </section> -->
 
 <Pie />

@@ -36,7 +36,7 @@
 
 	.Texto .Titulo {
 		font-weight: 500;
-		font-size: var(--TextoMediano--font-size);
+		/* font-size: var(--TextoMediano--font-size); */
 		line-height: var(--TextoMediano--line-height);
 	}
 
@@ -56,9 +56,9 @@
 		
 		<div class="Texto">
 
-			<h2 class="Titulo">
+			<h3 class="Titulo">
 				{proyecto.titulo}
-			</h2>
+			</h3>
 
 			<div class="Extracto">
 				{proyecto.contenido}		

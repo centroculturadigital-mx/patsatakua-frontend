@@ -19,12 +19,11 @@
 
   const LogoCultura = "logo.cultura.png";
   const LogoCCD = "logo.ccd.png";
-	let LogosProyectos = ['https://fakeimg.pl/250x100/?text=Bienvenido','https://fakeimg.pl/250x100/?text=Al','https://fakeimg.pl/250x100/?text=Sitio','https://fakeimg.pl/250x100/?text=De','https://fakeimg.pl/250x100/?text=Patzatakua','https://fakeimg.pl/250x100/?text=Dev'];
+	let LogosProyectos = ['https://fakeimg.pl/250x100/?text=Bienvenido','https://fakeimg.pl/250x100/?text=Al','https://fakeimg.pl/250x100/?text=Sitio','https://fakeimg.pl/250x100/?text=De','https://fakeimg.pl/250x100/?text=Patzatakua','https://fakeimg.pl/250x100/?text=Devmd'];
   onMount(async () => {
     proyectosModule = await import("../datos/proyectos.json");
     console.log(proyectosModule);
   });
-    console.log(LogosProyectos);
 </script>
 
 <style>
@@ -35,7 +34,6 @@
       grid-template-columns: 1fr 2fr;
     }
   }
-
   /* .contenedor-principal {
 	} */
   .Titulo {
@@ -176,7 +174,7 @@
           </p>
         </section>
 
-        <section>
+        <section transition:fade>
           <h4 class="Creditos">Créditos proyectos</h4>
 
           <div class="LogosProyectos">

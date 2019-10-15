@@ -1,4 +1,5 @@
 <script>
+import { fade } from "svelte/transition"
     let logocultura = 'cultura.svg';
     let logoccd = 'ccd.svg';
     let logoinali = 'inali.png';
@@ -38,7 +39,7 @@
 
 </style>
 
-<footer class="Pie">
+<footer class="Pie" transition:fade>
     <section class="Texto">
         <p>
             Encontramos que esta palabra nos acerca a la idea principal de este conjunto de proyectos e iniciativas que,
