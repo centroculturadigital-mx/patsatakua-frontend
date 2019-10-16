@@ -198,7 +198,7 @@
         </section>
 
         <section transition:fade>
-          <h4 class="Creditos">Créditos proyectos</h4>
+          <h4 class="Creditos">Proyectos participantes</h4>
 
           <div class="LogosProyectos">
 
