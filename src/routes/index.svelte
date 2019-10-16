@@ -9,6 +9,31 @@
 
   import ProyectoVistaPrevia from "../componentes/ProyectoVistaPrevia.svelte";
   import Pie from "../componentes/Pie.svelte";
+  //const datos =  "../../datos/datosLateralFalso.js";
+
+
+  const datos =  {
+    titulo: "Patsatakua",
+    tituloFonetico: "/pa.tsá.ta.kwa/",
+    significado: "Patratakua en purépecha (P’urhépecha) quiere decir, /en lo que seguarda/" ,
+    introduccion: "Bajo esta palabra-repositorio se reúnen once proyectos de hablantes de lenguas indígenas de diversas zonas del país que abordan de forma particular el uso de las herramientas tecnológicas. Estos proyectos representan la diversidad lingüística cultural y ofrecen un nuevo mapa de términos y etiquetas. Del uso de plataformas precreadas a la programación desde cero; de prácticas experimentales de escritura a aplicaciones para aprender una lengua, de espacios de memoria visual y oral a la documentación de la evolución del registro gráfico, de la preservación de la lengua y el deseo de mantenerla como bien común ante situaciones migratorias de sus hablantes a la invitación al encuentro con esos otros y otras que desean ampliar la idea sostenida por diversos activistas de las lenguas: entender a nuestro como un territorio multilingüe." ,
+    declaracion: "Los lenguajes de la tecnología suelen estar homogeneizados y marcados por las agendas del norte global y del mercado. Estos proyectos descentralizan el uso de las herramientas tecnológicas desde sus concepciones propias, representan la diversidad lingüística cultural y crean un nuevo mapa de términos, vocablos, etiquetas, categorías y reescrituras desde alternativas y apropiaciones.",
+    sliderProyectos: [
+        "Ajuujkjaaky",
+        "Biblioteca de Investigacion Juan de Cordoba",
+        "Colmix",
+        "Kumoontun",
+        "Lengua y Cultura Triqui",
+        "Ma Tiksalokan Nawatl",
+        "Museo Virtual del Zapoteco",
+        "Red de Activismo Digital de Lenguas Indigenas",
+        "Ticha",
+        "Turix",
+    ]
+ }
+
+    let logocultura = 'cultura.svg';
+    let logoccd = 'ccd.svg';
 
   let proyectosModule;
   $: proyectos =
@@ -47,8 +72,6 @@
     margin-top: 4px;
     color: #72a6aa;
     text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 0px 3px #72a6aa;
-
-
   }
 
   .TituloFonetico {
@@ -79,7 +102,7 @@
 
   .Introduccion {
     font-weight: 200;
-    font-size: 14px;
+    font-size: 0.9rem;
     line-height: 20px;
   }
 
@@ -109,14 +132,21 @@
 	  margin-bottom: 4rem;
   }
   .LogosCreditos {
-    display: flex;
-    justify-content: space-evenly;
+    /*display: flex;
+    justify-content: space-evenly;*/
     margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    max-width: 18rem;
   }
   .LogoInstitucional {
     display: flex;
     align-items: center;
   }
+   .LogoInstitucional img{
+    max-width: 8rem;
+  }
+
 
   /* responsivos */
   @media screen and (min-width: 768px) {
@@ -148,38 +178,16 @@
                
           <h1 class="Titulo" transition:fade>Patsatakua  </h1>
           
-          <h5 class="TituloFonetico" transition:fade>/pa.tsá.ta.kwa/</h5>
+          <h5 class="TituloFonetico" transition:fade>{datos.tituloFonetico}</h5>
 
-          <h4 class="SubtituloSignificado" transition:fade>
-            Patratakua en purépecha (P’urhépecha) quiere decir, “en lo que se
-            guarda”
-          </h4>
+          <h4 class="SubtituloSignificado" transition:fade>{datos.significado}</h4>
         </header>
 
         <section class="Introduccion" transition:fade>
-          <p>
-            Bajo esta palabra-repositorio se reúnen once proyectos de hablantes
-            de lenguas indígenas de diversas zonas del país que abordan de forma
-            particular el uso de las herramientas tecnológicas. Estos proyectos
-            representan la diversidad lingüística cultural y ofrecen un nuevo
-            mapa de términos y etiquetas. Del uso de plataformas precreadas a la
-            programación desde cero; de prácticas experimentales de escritura a
-            aplicaciones para aprender una lengua, de espacios de memoria visual
-            y oral a la documentación de la evolución del registro gráfico, de
-            la preservación de la lengua y el deseo de mantenerla como bien
-            común ante situaciones migratorias de sus hablantes a la invitación
-            al encuentro con esos otros y otras que desean ampliar la idea
-            sostenida por diversos activistas de las lenguas: entender a nuestro
-            como un territorio multilingüe.
-          </p>
+          <p>{datos.introduccion} </p>
 
           <!-- disclaimer -->
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
-            aperiam, odit quia deleniti iusto libero non vitae facere esse
-            voluptates ut animi fugiat et minus reprehenderit cupiditate totam
-            tenetur labore.
-          </p>
+          <p>{datos.declaracion}</p>
         </section>
 
         <section transition:fade>
@@ -193,11 +201,9 @@
                 <ChevronLeftIcon />
               </span>
 
-              {#each LogosProyectos as logo}
+              {#each datos.sliderProyectos as proyecto}
                 <div class="LogoProyecto">
-                  <img
-                    src={logo}
-                    alt="Proyecto parte de Patzatakua" />
+                  <h3>{proyecto}</h3>
                 </div>
               {/each}
               <span class="Control" slot="right-control">
@@ -209,16 +215,12 @@
             <!--  -->
           </div>
           <div class="LogosCreditos">
-
             <div class="LogoInstitucional">
-              <img
-                src={LogoCultura}
-                alt="Logotipo Secretaría de cultura México" />
+                <img src="{logocultura}"  alt="Logotipo Secretaría de cultura México">
             </div>
             <div class="LogoInstitucional">
-              <img src={LogoCCD} alt="Logotipo Centro cultura digital México" />
+              <img src="{logoccd}"  alt="Logotipo Centro cultura digital México">
             </div>
-
             <!--  -->
           </div>
 

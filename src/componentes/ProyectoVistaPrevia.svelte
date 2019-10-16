@@ -44,6 +44,7 @@
 		font-weight: 300;
 		font-size: var(--TextoChico--font-size);
 		line-height: var(--TextoChico--line-height);
+		font-size: 0.9rem;
 		
 	}
 
