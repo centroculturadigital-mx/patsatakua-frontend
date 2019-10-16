@@ -35,20 +35,19 @@
     }
   }
   /*  */
-  .contenedor-1 {
-    padding: 0rem 0rem 0 1rem;
-  }
-  .contenedor-1 header {
+
+  header {
     position: relative;
   }
-  .contenedor-1 .Regresar {
+  .Regresar {
     font-weight: 100;
-    position: absolute;
     top: 0.25rem;
-    left: -7.5rem;
     cursor: pointer;
+    position: absolute;
+    left:1.5rem;
+    top: 2rem;
   }
-  .contenedor-1 .Regresar button {
+ .Regresar button {
     background-color: #72a6aa;
     border: none;
     color: #fff;
@@ -58,74 +57,21 @@
     cursor: pointer;
     font-weight: lighter;
   }
-  .contenedor-1 .Regresar:hover {
+ .Regresar:hover {
     background-color: #72a6aa;
     opacity: 0.9;
     border-radius: 5px;
   }
-  .BotonConocerProyecto {
-    background-color: #72a6aa;
-    border: none;
-    color: #fff;
-    padding: 0.75rem 1rem;
-    border-radius: 5px;
-    letter-spacing: 2px;
-    font-weight: lighter;
-    cursor: pointer;
-  }
-  .BotonConocerProyecto i {
-    padding-left: 1rem;
-  }
-  .BotonConocerProyecto:hover {
-    background-color: #72a6aa;
-    opacity: 0.9;
-    border-radius: 5px;
-  }
-  .contenedor-2 footer {
-    margin-top: 1rem;
-  }
-  footer div {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-  }
-  footer article {
-    width: auto;
-    padding: 3rem;
-  }
-  .Subtitulo {
-    text-align: center;
-  }
-  .Titulo {
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 0.5rem;
-  }
-  .Contenido {
-    width: 80%;
-    font-weight: 200;
-    font-size: 1rem;
-    line-height: var(--TextoMediano--line-height);
-    left: 15px;
-    /* margin: 25px;*/
-  }
-  .Proyecto {
-    /* left: 23px;*/
-  }
-  ul {
-    margin-bottom: 30px;
-    margin-top: 25px;
-  }
-  section {
+
+ iframe {
     margin: 0;
+    width: 100%;
+    height: 95vh;
+   display:block;
+   border-style: none;
+     
   }
-  .SubProyectos {
-    margin-top: 3em;
-  }
-  .Similares {
-    margin-top: 3em;
-  }
+
   .fa {
     font-family: "Font Awesome 5 Free";
     font-weight: 200;
@@ -140,7 +86,7 @@
   /*  */
   .RegresaInicio {
     position: absolute;
-    left: 1.5rem;
+    left: 9rem;
     top: 1.5rem;
     border: 1px solid #72a6aa;
     border-radius: 5px;
@@ -149,56 +95,25 @@
   .RegresaInicio:hover {
     background-color: rgba(114, 166, 170, 0.1);
   }
-  #HeaderProyecto {
-    height: 2.5rem;
+  .HeaderIframe {
+    height: 6rem;
+    background-color: rgb(255, 255, 255);
   }
   /*  */
 </style>
 
-<header id="HeaderProyecto">
-  <a class="RegresaInicio" href="/">
-    <i class="fa fa-home" />
-  </a>
-</header>
-<!-- <article class="ProyectoDetalle ancho_maximo"> -->
-
-  <!-- <div class="contenedor-1">
-    <header class="Proyecto">
-      <a class="Regresar" href="/">
+<header class="HeaderIframe">
+  <a class="Regresar" href="/">
         <button>
           <i class="fa fa-arrow-left" />
           <span>Volver</span>
         </button>
-      </a>
-      <h1 class="Titulo">{proyecto.titulo}</h1>
-    </header>
+  </a>
+  <a class="RegresaInicio" href="/">
+    <i class="fa fa-home" />
+  </a>
+</header>
+<main>
+<iframe title="sitios" src="http://museo-zapoteco.orgfree.com/"></iframe>
+</main>
 
-    <section class="Contenido">{proyecto.contenido}</section>
-  </div>
-
-  <div class="contenedor-2">
-
-    <div>
-      {#if !!proyecto && !!proyecto.image}
-        <img
-          class="Imagen"
-          src={`${proyecto.image.url}`}
-          alt="img"
-          transition:fade />
-      {/if}
-    </div>
-    <div>
-      <button
-        class="BotonConocerProyecto"
-        on:click={console.log('Link a proyecto')}>
-        <span>Conocer Proyecto</span>
-        <i class="fa fa-arrow-right" />
-      </button> -->
-      <!-- <Boton>Conocer Proyecto</Boton> -->
-    <!-- </div>
-  </div>
-
-</article> -->
-
-
-<Pie />
