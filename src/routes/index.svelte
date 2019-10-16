@@ -129,13 +129,14 @@
     margin-bottom: 2rem;
   }
   .LogosProyectos {
-	  margin-bottom: 4rem;
+    margin-bottom: 4rem;
   }
 
   .LogoProyecto{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     text-align: center;
     color: rgba(135, 116, 119, 1);
+   
   }
   .LogosCreditos {
     /*display: flex;
