@@ -1,44 +1,11 @@
-<script context="module">
-  export async function preload(page, session) {
-    const { id } = page.params;
-    console.log("id", id);
-    return { id };
-  }
-</script>
 
 <script>
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
 
-  import Pie from "../../componentes/Pie.svelte";
-  import Boton from "../../componentes/elementos/Boton.svelte";
-  import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
-  import ProyectosSimilares from "../../componentes/ProyectosSimilares.svelte";
-
-  import Carousel from "@centroculturadigital-mx/svelte-carousel";
-  import {
-    ChevronLeftIcon,
-    ChevronRightIcon
-  } from "../../../node_modules/svelte-feather-icons/src/index.js";
-
-  export let id;
-
-  let proyectosModule;
-  $: proyecto =
-    proyectosModule && proyectosModule.default
-      ? proyectosModule.default.find(p => {
-          proyectosModule.default;
-          return p.id === id;
-        })
-      : {};
-
-  onMount(async () => {
-    proyectosModule = await import("../../datos/proyectos.json");
-    console.log("aa", proyectosModule.default, id);
-  });
-
-  $: console.log("proyecto", proyecto);
-  $: console.log("id", id);
+  import Pie from "../componentes/Pie.svelte";
+  import Boton from "../componentes/elementos/Boton.svelte";
+  
 </script>
 
 <style>
@@ -233,36 +200,5 @@
 
 </article>
 
-<ProyectosSimilares proyecto={id}/>
-<!-- <section class="SubProyectos">
-
-  <h3 class="Subtitulo">Proyectos Similares</h3>
-  <ul>
-    <ProyectoVistaPrevia />
-    <ProyectoVistaPrevia />
-    <ProyectoVistaPrevia />
-  </ul>
-</section> -->
-
-<!-- <section class="Similares">
-  <h3 class="Subtitulo">Proyectos similares</h3>
-
-  <Carousel perPage={{ 800: 1 }} autoplay="2500" loop>
- 
-    <span class="Control" slot="left-control">
-      <ChevronLeftIcon />
-    </span>
-
-    {#each proyecto as item}
-      <ProyectoVistaPrevia />
-    {/each}
-
-    <span class="Control" slot="right-control">
-      <ChevronRightIcon />
-    </span> 
-
-  </Carousel>
-
-</section> -->
 
 <Pie />

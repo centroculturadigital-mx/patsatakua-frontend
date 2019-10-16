@@ -9,6 +9,7 @@
 
   import ProyectoVistaPrevia from "../componentes/ProyectoVistaPrevia.svelte";
   import Pie from "../componentes/Pie.svelte";
+  import iframe from "../componentes/iframe.svelte";
 
   let proyectosModule;
   $: proyectos =
@@ -44,6 +45,18 @@
     margin-bottom: 0.25rem;
     font-weight: bold;
     letter-spacing: 0.125rem; /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+    position: absolute;
+    margin-top: 4px;
+  }
+  .TituloStroke {
+    -webkit-text-stroke: 1px #72a6aa;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2.75rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.125rem; /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  
   }
   .TituloFonetico {
     color: #000;
@@ -139,7 +152,9 @@
 
       {#if mostrarLateral}
         <header>
-          <h1 class="Titulo" transition:fade>Patsatakua</h1>
+               
+          <h1 class="Titulo" transition:fade>Patsatakua  </h1>
+          <span class="TituloStroke">Patsatakua</span> 
           <h5 class="TituloFonetico" transition:fade>/pa.tsá.ta.kwa/</h5>
 
           <h4 class="SubtituloSignificado" transition:fade>
