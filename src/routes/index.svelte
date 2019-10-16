@@ -38,26 +38,20 @@
   /* .contenedor-principal {
 	} */
   .Titulo {
-    color: #72a6aa;
+    
     font-weight: 500;
     font-size: 2.75rem;
     text-align: center;
     margin-bottom: 0.25rem;
     font-weight: bold;
     letter-spacing: 0.125rem; /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
-    position: absolute;
     margin-top: 4px;
+    color: #72a6aa;
+    text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 0px 3px #72a6aa;
+
+
   }
-  .TituloStroke {
-    -webkit-text-stroke: 1px #72a6aa;
-    color: #fff;
-    font-weight: 500;
-    font-size: 2.75rem;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 0.125rem; /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
-  
-  }
+
   .TituloFonetico {
     color: #000;
     font-weight: lighter;
@@ -154,7 +148,7 @@
         <header>
                
           <h1 class="Titulo" transition:fade>Patsatakua  </h1>
-          <span class="TituloStroke">Patsatakua</span> 
+          
           <h5 class="TituloFonetico" transition:fade>/pa.tsá.ta.kwa/</h5>
 
           <h4 class="SubtituloSignificado" transition:fade>
