@@ -3,8 +3,8 @@
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
 
-  import Pie from "../componentes/Pie.svelte";
-  import Boton from "../componentes/elementos/Boton.svelte";
+  import Pie from "../../componentes/Pie.svelte";
+  import Boton from "../../componentes/elementos/Boton.svelte";
   
 </script>
 
@@ -160,9 +160,9 @@
     <i class="fa fa-home" />
   </a>
 </header>
-<article class="ProyectoDetalle ancho_maximo">
+<!-- <article class="ProyectoDetalle ancho_maximo"> -->
 
-  <div class="contenedor-1">
+  <!-- <div class="contenedor-1">
     <header class="Proyecto">
       <a class="Regresar" href="/">
         <button>
@@ -193,12 +193,12 @@
         on:click={console.log('Link a proyecto')}>
         <span>Conocer Proyecto</span>
         <i class="fa fa-arrow-right" />
-      </button>
+      </button> -->
       <!-- <Boton>Conocer Proyecto</Boton> -->
-    </div>
+    <!-- </div>
   </div>
 
-</article>
+</article> -->
 
 
 <Pie />

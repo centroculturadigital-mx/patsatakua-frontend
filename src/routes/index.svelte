@@ -9,7 +9,6 @@
 
   import ProyectoVistaPrevia from "../componentes/ProyectoVistaPrevia.svelte";
   import Pie from "../componentes/Pie.svelte";
-  import iframe from "../componentes/iframe.svelte";
 
   let proyectosModule;
   $: proyectos =
