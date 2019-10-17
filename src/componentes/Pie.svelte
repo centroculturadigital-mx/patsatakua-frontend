@@ -42,16 +42,9 @@ import { fade } from "svelte/transition"
 <footer class="Pie" transition:fade>
     <section class="Texto">
         <p>
-            Encontramos que esta palabra nos acerca a la idea principal de este conjunto de proyectos e iniciativas que,
-            desde las comunidades de hablantes, entretejen lengua y tecnología. Esta idea de ser un
-            espacio en el que se guarda se aproxima a la idea de un repositorio en esta materialidad
-            llamada internet.
+           Los lenguajes de la tecnología suelen estar homogeneizados y marcados por las agendas del norte global y del mercado. Estos proyectos descentralizan el uso de las herramientas tecnológicas desde sus concepciones propias, representan la diversidad lingüística cultural y crean un nuevo mapa de términos, vocablos, etiquetas, categorías y reescrituras desde alternativas y apropiaciones.
         </p>
-        <p>
-            Lo que aquí presentamos es un conjunto de iniciativas que desde la fuerza de diversas
-            comunidades de hablantes de lenguas indígenas, ubicados en diversos puntos del país, buscan
-            reescribir las tecnologías. 
-        </p>
+    
     </section>
 
     <section class="Logos">
