@@ -121,12 +121,11 @@
   }
 
   .Creditos {
-    font-weight: 200;
     line-height: 14px;
     color: #454344;
     text-align: center;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    font-weight: 400;
   }
 
   .ProyectosParticipantes {
@@ -135,8 +134,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
   }
 
   .LogosProyectos {
@@ -168,7 +165,8 @@
   .LogoProyecto{
     font-size: 0.9rem;
     text-align: center;
-    color: rgba(135, 116, 119, 1);
+    color: rgb(121, 121, 121);
+    font-weight: 400;
    
   }
   .LogoProyecto > .Titulo {
