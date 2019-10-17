@@ -60,7 +60,8 @@
   }
   /* .contenedor-principal {
 	} */
-  .Titulo {
+ 
+  .LateralContenido > header > .Titulo {
     
     font-weight: 500;
     font-size: 2.75rem;
@@ -127,8 +128,41 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
+  .ProyectosParticipantes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
   .LogosProyectos {
+    height: 5rem;
+    width: 14rem;
     margin-bottom: 2rem;
+  }
+  .LogosProyectos :global( .carousel ),
+  .LogosProyectos :global( .slides )
+  {
+    height: 5rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+  }
+  .LogosProyectos :global( .slides > * > * )
+  {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .LogosProyectos :global( .slides > * > * > * )
+  {
+    box-sizing: border-box;
+    padding: 0 3rem; 
   }
 
   .LogoProyecto{
@@ -137,7 +171,19 @@
     color: rgba(135, 116, 119, 1);
    
   }
+  .LogoProyecto > .Titulo {
+    margin: 0;
+  }
+  .LogoProyecto :global(.slides) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+  }
+
   .LogosCreditos {
+    width: 100%;
     /*display: flex;
     justify-content: space-evenly;*/
     margin-bottom: 4rem;
@@ -148,9 +194,10 @@
   .LogoInstitucional {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
    .LogoInstitucional img{
-    max-width: 8rem;
+    max-width: 5rem;
   }
 
 
@@ -200,7 +247,7 @@
        
         </section>
 
-        <section transition:fade>
+        <section class="ProyectosParticipantes" transition:fade>
           <h4 class="Creditos">
             Proyectos participantes
           </h4>
@@ -215,7 +262,9 @@
 
               {#each datos.sliderProyectos as proyecto}
                 <div class="LogoProyecto">
-                  <h3>{proyecto}</h3>
+                  <h4 class="Titulo">
+                    {proyecto}
+                  </h4>
                 </div>
               {/each}
               <span class="Control" slot="right-control">

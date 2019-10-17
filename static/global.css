@@ -119,6 +119,11 @@ Tipografías
 	color: aqua;
 }
 
-.carousel button {
-	color: red;
-} 
+
+.carousel button.left {
+	left: 0;
+}
+
+.carousel button.right {
+	right: 0;
+}
