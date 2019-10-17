@@ -1,4 +1,5 @@
 <script context="module">
+
   export async function preload(page, session) {
     const { id } = page.params;
     console.log("id", id);

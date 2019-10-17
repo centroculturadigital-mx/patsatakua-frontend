@@ -51,7 +51,6 @@ import { fade } from "svelte/transition"
         <ul>
             <img src="{logocultura}"  alt=" cultura">
             <img src="{logoccd}"  alt="ccd">  
-            <img src="{logoinali}"  alt="ccd">  
         </ul>
     </section>
 </footer>
