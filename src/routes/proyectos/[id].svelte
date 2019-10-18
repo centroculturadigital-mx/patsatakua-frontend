@@ -15,6 +15,7 @@
   import Boton from "../../componentes/elementos/Boton.svelte";
   import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
   import ProyectosSimilares from "../../componentes/ProyectosSimilares.svelte";
+  import IframeContenedor from "./IframeContenedor.svelte";
 
   import Carousel from "@centroculturadigital-mx/svelte-carousel";
   import {
@@ -39,8 +40,15 @@
     proyectosModule = await import("../../datos/proyectos.json");
   });
 
-  // $: console.log("proyecto", proyecto);
+  $: console.log("proyecto", proyecto);
   // $: console.log("id", id);
+
+  let mostrarDetalle = false;
+
+  const abrirProyecto = () => {
+    mostrarDetalle = true;
+  }
+
 </script>
 
 <style>
@@ -58,7 +66,7 @@
     .Imagen {
       width: 100%;
       height: 20rem;
-      object-fit: cover;
+      object-fit: contain;
     }
     .ProyectoDetalle + section ul,
     .ProyectoDetalle + section + section ul {
@@ -190,6 +198,15 @@
   /*  */
 </style>
 
+
+
+{#if mostrarDetalle}
+
+  <IframeContenedor url={proyecto.url}/>
+
+{:else}
+
+
 <header id="HeaderProyecto">
   <a class="RegresaInicio" href="/">
     <i class="fa fa-home" />
@@ -223,12 +240,23 @@
       {/if}
     </div>
     <div>
+      {#if ! proyecto.url_externo  }
       <button
         class="BotonConocerProyecto"
-        on:click={console.log('Link a proyecto')}>
+        on:click={abrirProyecto}>
         <span>Conocer Proyecto</span>
         <i class="fa fa-arrow-right" />
       </button>
+      {:else}
+        <a href={proyecto.url} target="_blank">
+          <button class="BotonConocerProyecto">
+            <span>
+              Conocer Proyecto
+              <i class="fa fa-arrow-right" />
+            </span>
+          </button>
+        </a>
+      {/if}
       <!-- <Boton>Conocer Proyecto</Boton> -->
     </div>
   </div>
@@ -246,13 +274,17 @@
   </ul>
 </section> -->
 
-<section class="Similares">
+<!-- <section class="Similares">
   <h3 class="Subtitulo">Proyectos similares</h3>
 
     {#each proyectosSimilares as proyectoSimilar }
       <ProyectoVistaPrevia {proyectoSimilar}/>
     {/each}
 
-</section>
+</section> -->
+
+
+
+{/if}
 
 

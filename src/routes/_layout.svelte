@@ -1,6 +1,9 @@
 <script>
 import { onMount } from 'svelte' 
 
+
+import PieMovil from '../componentes/PieMovil.svelte';
+
 onMount(async () => {
 
 	// const { default: Particles } = await import(`../../node_modules/particlesjs/src/particles.js`);	
@@ -47,3 +50,5 @@ onMount(async () => {
 </main>
 
 
+
+<PieMovil/>

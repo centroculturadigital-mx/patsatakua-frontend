@@ -48,6 +48,18 @@
     proyectosModule = await import("../datos/proyectos.json");
     console.log(proyectosModule);
   });
+
+  let introCompleto = false;
+
+  const introColapsar = () => {
+    console.log("introColapsar");
+    
+    introCompleto = !introCompleto
+
+  }
+
+  $: introClases = "Introduccion" + (introCompleto ? " Completo" : "")
+
 </script>
 
 <style>
@@ -88,7 +100,6 @@
   }
   .Lateral {
     color: #000;
-    height: 100vh;
     background-color: rgb(255, 255, 255);
     padding-top: 2rem;
     display: flex;
@@ -200,12 +211,44 @@
 
 
   /* responsivos */
+  @media screen and (max-width: 767px) {
+
+    .Lateral {
+      height: auto;
+      transition: height 2s ease-out;
+    }
+
+    .ProyectosParticipantes {
+      display: none;
+    }
+
+    .Introduccion {
+      height: 8rem;
+      transition: height 2s ease-out;
+      overflow-y: hidden;
+    }
+    .Introduccion.Completo {
+      height: auto;
+    }
+  }
+
   @media screen and (min-width: 768px) {
+    
+    .Lateral {
+      color: #000;
+      height: 100vh;
+    }
+
+    .Introduccion + .Mas {
+      display: none;
+    }
     .Lista,
     .Lista ul {
       height: auto;
       padding-bottom: 5%;
     }
+
+
   }
 
   @media screen and (min-width: 1200px) {
@@ -239,11 +282,14 @@
           <h4 class="SubtituloSignificado" transition:fade>{datos.significado}</h4>
         </header>
 
-        <section class="Introduccion" transition:fade>
+        <section class={introClases} transition:fade>
           <p>{datos.curatorial} </p>
-
-       
         </section>
+          <div class="Mas">
+            <button on:click={introColapsar}>
+              { introCompleto ? "Cerrar" : "Leer más"}
+            </button>
+          </div>
 
         <section class="ProyectosParticipantes" transition:fade>
           <h4 class="Creditos">

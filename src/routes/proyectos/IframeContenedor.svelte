@@ -1,10 +1,11 @@
-
 <script>
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
 
   import Pie from "../../componentes/Pie.svelte";
   import Boton from "../../componentes/elementos/Boton.svelte";
+
+  export let url;
   
 </script>
 
@@ -60,16 +61,18 @@
  .Regresar:hover {
     background-color: #72a6aa;
     opacity: 0.9;
+
     border-radius: 5px;
   }
 
  iframe {
-    margin: 0;
-    width: 100%;
-    height: 95vh;
+    margin: 0rem 10vw;
+    width: 80vw;
+        
+    height: 80vh;
    display:block;
    border-style: none;
-     
+    border: 1px solid #72a6aa;
   }
 
   .fa {
@@ -113,9 +116,8 @@
     <i class="fa fa-home" />
   </a>
 </header>
-<main>
-
-<iframe title="sitios" src="http://museo-zapoteco.orgfree.com/"></iframe>
-
-</main>
-
+{#if !! url }
+  <div class="Contenedor">
+    <iframe title="sitios" src={url}></iframe>
+  </div>
+{/if}

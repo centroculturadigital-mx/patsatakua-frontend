@@ -1,8 +1,20 @@
 <script>
-import { fade } from "svelte/transition"
-    let logocultura = 'cultura.svg';
-    let logoccd = 'ccd.svg';
-import Carousel from "@centroculturadigital-mx/svelte-carousel";    
+
+
+  import { fade } from "svelte/transition"
+  
+  let logocultura = 'cultura.svg';
+  let logoccd = 'ccd.svg';
+
+  import { onMount } from "svelte";
+
+  let Carousel;
+
+  onMount(async ()=>{
+    Carousel = await import("@centroculturadigital-mx/svelte-carousel");
+    Carousel = Carousel.default
+  })
+
   const datos =  {
     titulo: "Patsatakua",
     tituloFonetico: "/pa.tsá.ta.kwa/",
@@ -26,12 +38,18 @@ import Carousel from "@centroculturadigital-mx/svelte-carousel";
 
 <style>
 
-.Pie {
+.PieMovil {
     width: 100%;
     /*padding: 2rem;*/
     background-color: #F0F0F0;
     display: grid;
     grid-template-columns: 70% 30%;    
+}
+
+@media screen and (min-width: 768px) {
+  .PieMovil {
+    display: none;
+  }
 }
 
 .Texto  {
@@ -97,7 +115,7 @@ import Carousel from "@centroculturadigital-mx/svelte-carousel";
 
 </style>
 
-<footer class="Pie" transition:fade>
+<footer class="Pie PieMovil" transition:fade>
     
         <section class="ProyectosParticipantes" transition:fade>
           <h4 class="Creditos">
@@ -105,12 +123,12 @@ import Carousel from "@centroculturadigital-mx/svelte-carousel";
           </h4>
 
           <div class="LogosProyectos">
-
+            {#if !! Carousel }
             <Carousel perPage={{ 800:1 }} autoplay='2500' loop>
 
-              <span class="Control" slot="left-control">
+              <!-- <span class="Control" slot="left-control">
                 <ChevronLeftIcon />
-              </span>
+              </span> -->
 
               {#each datos.sliderProyectos as proyecto}
                 <div class="LogoProyecto">
@@ -119,13 +137,13 @@ import Carousel from "@centroculturadigital-mx/svelte-carousel";
                   </h4>
                 </div>
               {/each}
-              <span class="Control" slot="right-control">
+              <!-- <span class="Control" slot="right-control">
                 <ChevronRightIcon />
-              </span>
+              </span> -->
 
             </Carousel>
 
-            <!--  -->
+            {/if}
           </div>
 
     <section class="Texto">
