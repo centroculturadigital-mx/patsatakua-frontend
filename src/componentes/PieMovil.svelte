@@ -119,9 +119,9 @@
 <footer class="Pie PieMovil" transition:fade>
     
         <section class="ProyectosParticipantes" transition:fade>
-          <h4 class="Creditos">
+          <h3 class="Creditos">
             Proyectos participantes
-          </h4>
+          </h3>
 
           <div class="LogosProyectos">
             {#if !! Carousel }

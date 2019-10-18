@@ -183,8 +183,11 @@
       text-align: center;
     }
 
+    .Enlace .Texto {
+      font-size: 0.75rem;
+    }
+
     .Contenido {
-      
       margin: 1rem 0 2rem 0;
     }
 
@@ -297,7 +300,7 @@
         <h5>
           Enlace:
         </h5>
-        <strong>
+        <strong class="Texto">
           {!!proyecto.url?proyecto.url:""}
         </strong>
       </div>
