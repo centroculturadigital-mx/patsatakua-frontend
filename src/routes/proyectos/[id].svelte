@@ -33,13 +33,14 @@
         })
       : {};
 
+  $: proyectosSimilares = []
+
   onMount(async () => {
     proyectosModule = await import("../../datos/proyectos.json");
-    console.log("aa", proyectosModule.default, id);
   });
 
-  $: console.log("proyecto", proyecto);
-  $: console.log("id", id);
+  // $: console.log("proyecto", proyecto);
+  // $: console.log("id", id);
 </script>
 
 <style>
@@ -234,7 +235,7 @@
 
 </article>
 
-<ProyectosSimilares proyecto={id}/>
+<!-- <ProyectosSimilares proyecto={id}/> -->
 <!-- <section class="SubProyectos">
 
   <h3 class="Subtitulo">Proyectos Similares</h3>
@@ -245,25 +246,13 @@
   </ul>
 </section> -->
 
-<!-- <section class="Similares">
+<section class="Similares">
   <h3 class="Subtitulo">Proyectos similares</h3>
 
-  <Carousel perPage={{ 800: 1 }} autoplay="2500" loop>
- 
-    <span class="Control" slot="left-control">
-      <ChevronLeftIcon />
-    </span>
-
-    {#each proyecto as item}
-      <ProyectoVistaPrevia />
+    {#each proyectosSimilares as proyectoSimilar }
+      <ProyectoVistaPrevia {proyectoSimilar}/>
     {/each}
 
-    <span class="Control" slot="right-control">
-      <ChevronRightIcon />
-    </span> 
-
-  </Carousel>
-
-</section> -->
+</section>
 
 
