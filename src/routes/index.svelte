@@ -117,18 +117,26 @@
     line-height: 20px;
   }
 
+
+  .Introduccion + .Mas {
+    padding: 1rem;
+    text-align:center;
+    width:100%;
+  }
+
+  .Introduccion + .Mas button {
+    color:#72A6AA;
+    background: none;
+    border: none;
+  }
+
   .contenedor-principal {
-    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 0;
     padding-top: 2rem;
   }
   .Lista ul {
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    padding: 1rem;
   }
 
   .Creditos {
@@ -230,10 +238,22 @@
     .Introduccion.Completo {
       height: auto;
     }
+
+    .Lista ul :global(.Tarjeta) {
+      margin-bottom: 2rem;
+    }
   }
 
   @media screen and (min-width: 768px) {
     
+    .contenedor-principal {
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 0;
+      padding-top: 2rem;
+    }
+
     .Lateral {
       color: #000;
       height: 100vh;
@@ -242,11 +262,15 @@
     .Introduccion + .Mas {
       display: none;
     }
-    .Lista,
+
+
     .Lista ul {
-      height: auto;
-      padding-bottom: 5%;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
     }
+
 
 
   }
@@ -285,11 +309,11 @@
         <section class={introClases} transition:fade>
           <p>{datos.curatorial} </p>
         </section>
-          <div class="Mas">
+          <footer class="Mas">
             <button on:click={introColapsar}>
               { introCompleto ? "Cerrar" : "Leer más"}
             </button>
-          </div>
+          </footer>
 
         <section class="ProyectosParticipantes" transition:fade>
           <h4 class="Creditos">

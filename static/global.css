@@ -64,6 +64,15 @@ code {
 	margin: 0 auto;
 
 }
+
+
+button,
+button:focus,
+button:active {
+	outline: none !important;
+	border: none !important;
+}
+
 .Boton {
 	background-color: #72A6AA;
 	padding-left: 3rem;
