@@ -12,7 +12,32 @@
 	<link rel='stylesheet' href='tipografia.css'>
 	<link rel='manifest' href='manifest.json'>
 	<link rel='icon' type='image/png' href='favicon.png'>
+<style>
 
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+canvas {
+	z-index: -1;
+	position: absolute;
+}
+#particles-js {
+  position: fixed;
+  z-index: 0;
+  top: -30vw;
+  left: -30vw;
+  width: 160vw;
+  height: 160vh;
+  /* background-color: #fff; */
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+</style>
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
 	     lazily loaded when it precaches secondary pages -->
@@ -31,5 +56,12 @@
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
 	%sapper.scripts%
+	<div id="particles-js"></div>
+	<script src="js/particles.js"></script>
+	<script>
+		particlesJS.load('particles-js', 'js/particles.json', function() {
+		console.log('callback - particles-js config loaded');
+		});
+	</script>
 </body>
 </html>

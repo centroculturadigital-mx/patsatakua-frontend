@@ -100,11 +100,12 @@
   }
   .Lateral {
     color: #000;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.6);
     padding-top: 2rem;
     display: flex;
     justify-content: center;
     overflow-y: scroll;
+    z-index: 11;
   }
 
   .LateralContenido {

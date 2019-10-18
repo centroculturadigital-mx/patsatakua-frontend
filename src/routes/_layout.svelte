@@ -4,17 +4,24 @@ import { onMount } from 'svelte'
 
 import PieMovil from '../componentes/PieMovil.svelte';
 
-onMount(async () => {
+// // import particlesData from "../datos/particles";
 
-	// const { default: Particles } = await import(`../../node_modules/particlesjs/src/particles.js`);	
-	const { default: Particles } = await import(`../../node_modules/particlesjs/dist/particles.js`);	
-	// console.log(Particles)
+// // let Particles;
+// onMount(async () => {
+// 	if( typeof window != "undefined") {
 
-	// Particles.init({
-	// 	selector: '#FondoParticulas',
-	// })
+// 		// const { default: Particles } = await import(`../../node_modules/particlesjs/src/particles.js`);	
+// 		// Particles = await import("../../node_modules/particles.js/particles.js");	
+// 		// Particles = Particles;
 
-})
+// 		// console.log(Particles)
+
+// 	}
+// 	// Particles.init({
+// 	// 	selector: '#FondoParticulas',
+// 	// })
+
+// })
 
 
 </script>

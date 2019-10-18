@@ -7,6 +7,7 @@
 <style>
 	article {
 		max-width: 320px;
+		z-index: 11;
 	}
 
 	.Imagen {
@@ -23,6 +24,7 @@
 	}
 
 	a {
+		/* position: absolute; */
 		text-decoration: none;
 		color: #000;
 	}

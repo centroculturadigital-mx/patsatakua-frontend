@@ -217,9 +217,18 @@
   }
 
 
+    :global(#particles-js) {
+      z-index: -1;
+    }
   @media screen and (min-width: 768px) {
 
-    
+    :global(#particles-js) {
+      z-index: 0;
+    }
+    article {
+      position: absolute;
+      z-index: 11;
+    }
 
     .Imagen--movil {
       display: none;
@@ -230,12 +239,14 @@
     }
     
     .ProyectoDetalle {
+      left: calc( ( 100vw - 54rem ) / 2 );
+      right: calc( ( 100vw - 54rem ) / 2 );
       display: grid;
       grid-template-columns: 1fr 1fr;
-      background: #ffffff;
+      background: rgba(255,255,255,0.8);
       border: 1px solid #72a6aa;
       box-sizing: border-box;
-      max-width: 860px;
+      max-width: 54rem;
       padding: 2.5rem;
       margin-top: 2.25rem;
     }
