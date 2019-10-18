@@ -12,6 +12,7 @@
   import { fade } from "svelte/transition";
 
   import Pie from "../../componentes/Pie.svelte";
+  import PieMovil from "../../componentes/PieMovil.svelte";
   import Boton from "../../componentes/elementos/Boton.svelte";
   import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
   import ProyectosSimilares from "../../componentes/ProyectosSimilares.svelte";
@@ -263,7 +264,7 @@
     </span> 
 
   </Carousel>
-
 </section> -->
+<PieMovil />
 
 

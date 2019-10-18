@@ -2,7 +2,14 @@
 import { fade } from "svelte/transition"
     let logocultura = 'cultura.svg';
     let logoccd = 'ccd.svg';
-import Carousel from "@centroculturadigital-mx/svelte-carousel";    
+
+import Carousel from "@centroculturadigital-mx/svelte-carousel";
+  import {
+    ChevronLeftIcon,
+    ChevronRightIcon
+  } from "../../node_modules/svelte-feather-icons/src/index.js";
+
+
   const datos =  {
     titulo: "Patsatakua",
     tituloFonetico: "/pa.tsá.ta.kwa/",
@@ -29,18 +36,13 @@ import Carousel from "@centroculturadigital-mx/svelte-carousel";
 .Pie {
     width: 100%;
     /*padding: 2rem;*/
-    background-color: #F0F0F0;
-    display: grid;
-    grid-template-columns: 70% 30%;    
+    background-color: #F0F0F0; 
+    padding: 1rem;    
 }
 
 .Texto  {
-    
     font-size: 0.8rem;
     padding: 2rem;
-    border-right-style: solid;
-    border-right-color: #c4c4c4;
-    border-right-width: 1px;
 }
 
 .Logos {
@@ -93,7 +95,13 @@ import Carousel from "@centroculturadigital-mx/svelte-carousel";
     justify-content: center;
     padding: 0 1.5rem;
   }
-
+ .Creditos {
+    line-height: 14px;
+    color: #454344;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 400;
+  }
 
 </style>
 
