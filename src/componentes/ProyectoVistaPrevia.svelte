@@ -13,7 +13,7 @@
 	.Imagen {
 		width: 100%;
 		height: 12rem;
-		object-fit: cover;
+		object-fit: contain;
 	}
 
 	.Texto {
