@@ -127,7 +127,7 @@
         "id": "patsatakua/ticha_imagen",
         "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/ticha_imagen.png"
     },
-    "url_externo": false,
+    "url_externo": true,
     "url2_externo": false,
     "extracto": "Ticha significa palabra o lenguaje. Es en su versión digital, un explorador basado en un software de análisis lexical y gramatical que permite el acceso a textos en zapoteco colonial del valle (ticha za niaxeteni peni lachi). Estos documentos ..."
 }, {
