@@ -9,8 +9,8 @@
 
   import ProyectoVistaPrevia from "../componentes/ProyectoVistaPrevia.svelte";
   import Pie from "../componentes/Pie.svelte";
+  import PieMovil from "../componentes/PieMovil.svelte";
   //const datos =  "../../datos/datosLateralFalso.js";
-
 
   const datos =  {
     titulo: "Patsatakua",
@@ -345,7 +345,8 @@
       </ul>
     </section>
 
-    <Pie />
+   <!-- <Pie />
+    <!-- <PieMovil />-->
 
   </div>
 
