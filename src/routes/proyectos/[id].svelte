@@ -57,12 +57,18 @@
     height: 5rem;
     padding: 1.5rem;
     top: 1.5rem;
-  }
 
+    position: relative;
+  }
+  
   #HeaderProyecto > a {
     border: 1px solid #72a6aa;
     border-radius: 5px;
     padding: .5rem;
+    position:absolute;
+    top:1rem;
+    left:1rem;
+    z-index: 11;
     display: block;
     width: 3rem;
   }
@@ -275,6 +281,13 @@
 
 
 
+<header id="HeaderProyecto">
+  <a class="RegresaInicio" href="/">
+    <i class="fa fa-home" />
+  </a>
+</header>
+
+
 {#if mostrarDetalle}
 
   <IframeContenedor url={proyecto.url}/>
@@ -282,11 +295,6 @@
 {:else}
 
 
-<header id="HeaderProyecto">
-  <a class="RegresaInicio" href="/">
-    <i class="fa fa-home" />
-  </a>
-</header>
 
 <article class="ProyectoDetalle ancho_maximo">
   {#if !! proyecto && !! proyecto.image }

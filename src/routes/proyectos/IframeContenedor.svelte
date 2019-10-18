@@ -13,20 +13,9 @@
 
   .Contenedor {
     padding: 1rem;
-    position: relative; 
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
   }
 
   iframe {
-    position: absolute;
-    z-index: 111;
     width: 100%;
     height: 80vh;
     margin: 0;
@@ -39,7 +28,7 @@
   @media screen and (min-width: 768px) {
 
   iframe {
-    margin: 0rem;
+    margin: 0rem 10vw;
     width: 80vw;      
   }
 
@@ -129,7 +118,7 @@
   /*  */
 </style>
 
-<header class="HeaderIframe">
+<!-- <header class="HeaderIframe">
   <a class="Regresar" href="/">
         <button>
           <i class="fa fa-arrow-left" />
@@ -139,7 +128,7 @@
   <a class="RegresaInicio" href="/">
     <i class="fa fa-home" />
   </a>
-</header>
+</header> -->
 {#if !! url }
   <div class="Contenedor">
     <iframe title="sitios" src={url}></iframe>
