@@ -136,6 +136,10 @@
     overflow-x: hidden;
     padding-top: 2rem;
   }
+  .Lista {
+    margin-bottom: 3rem; 
+  }
+  
   .Lista ul {
     padding: 1rem;
   }
@@ -370,9 +374,11 @@
       </ul>
     </section>
 
-   <!-- <Pie />
+    <Pie /> 
+   <!-- 
     <!-- <PieMovil />-->
 
   </div>
 
 </section>
+
