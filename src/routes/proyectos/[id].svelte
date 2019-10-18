@@ -52,35 +52,39 @@
 </script>
 
 <style>
-  @media screen and (min-width: 768px) {
-    .ProyectoDetalle {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      background: #ffffff;
-      border: 1px solid #72a6aa;
-      box-sizing: border-box;
-      max-width: 860px;
-      padding: 2.5rem;
-      margin-top: 2.25rem;
-    }
-    .Imagen {
-      width: 100%;
-      height: 20rem;
-      object-fit: contain;
-    }
-    .ProyectoDetalle + section ul,
-    .ProyectoDetalle + section + section ul {
-      display: flex;
-      flex-direction: row !important;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      height: auto;
-    }
+  
+  #HeaderProyecto {
+    height: 5rem;
+    padding: 1.5rem;
+    top: 1.5rem;
   }
+
+  #HeaderProyecto > a {
+    border: 1px solid #72a6aa;
+    border-radius: 5px;
+    padding: .5rem;
+    display: block;
+    width: 3rem;
+  }
+  #HeaderProyecto > a:hover {
+    background-color: rgba(114, 166, 170, 0.1);
+  }
+
+  .fa {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 200;
+    font-style: normal;
+  }
+  .fa-home {
+    font-family: "Font Awesome 5 Free";
+    font-size: 2rem;
+    font-style: normal;
+    color: #72a6aa;
+  }
+
+
   /*  */
-  .contenedor-1 {
-    padding: 0rem 0rem 0 1rem;
-  }
+  
   .contenedor-1 header {
     position: relative;
   }
@@ -146,13 +150,11 @@
     margin-bottom: 0.5rem;
   }
   .Contenido {
-    width: 80%;
     font-weight: 200;
     font-size: 1rem;
     line-height: var(--TextoMediano--line-height);
-    left: 15px;
-    /* margin: 25px;*/
   }
+
   .Proyecto {
     /* left: 23px;*/
   }
@@ -166,36 +168,95 @@
   .SubProyectos {
     margin-top: 3em;
   }
-  .Similares {
+  /* .Similares {
     margin-top: 3em;
   }
-  .fa {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 200;
-    font-style: normal;
+   */
+
+
+
+  @media screen and (max-width: 767px) {
+
+    .Titulo {
+      margin: 2rem 0;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .Contenido {
+      
+      margin: 1rem 0 2rem 0;
+    }
+
+
+
+    .Imagen--movil {
+      display: block;
+      width: 100%;
+      height: 10rem;
+      object-fit: contain;
+      margin-bottom: 2rem;
+    }
+
+    .Imagen {
+      display: none;
+    }
+
+    #HeaderProyecto,
+    article {
+      padding: 1rem;
+    }
+
+    .EnlaceContenedor {
+      text-align: center;
+      margin: 3rem 0;
+    }
   }
-  .fa-home {
-    font-family: "Font Awesome 5 Free";
-    font-size: 2rem;
-    font-style: normal;
-    color: #72a6aa;
+
+
+  @media screen and (min-width: 768px) {
+
+    
+
+    .Imagen--movil {
+      display: none;
+    }
+
+    .contenedor-1 {
+      padding: 0rem 0rem 0 1rem;
+    }
+    
+    .ProyectoDetalle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #ffffff;
+      border: 1px solid #72a6aa;
+      box-sizing: border-box;
+      max-width: 860px;
+      padding: 2.5rem;
+      margin-top: 2.25rem;
+    }
+    .Imagen {
+      width: 100%;
+      height: 20rem;
+      object-fit: contain;
+    }
+    .ProyectoDetalle + section ul,
+    .ProyectoDetalle + section + section ul {
+      display: flex;
+      flex-direction: row !important;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      height: auto;
+    }
+
+    .Contenido {
+      width: 80%;
+    }
+
   }
-  /*  */
-  .RegresaInicio {
-    position: absolute;
-    left: 1.5rem;
-    top: 1.5rem;
-    border: 1px solid #72a6aa;
-    border-radius: 5px;
-    padding: 0.5rem;
-  }
-  .RegresaInicio:hover {
-    background-color: rgba(114, 166, 170, 0.1);
-  }
-  #HeaderProyecto {
-    height: 2.5rem;
-  }
-  /*  */
+
+
 </style>
 
 
@@ -212,7 +273,15 @@
     <i class="fa fa-home" />
   </a>
 </header>
+
 <article class="ProyectoDetalle ancho_maximo">
+  {#if !! proyecto && !! proyecto.image }
+    <img
+    class="Imagen--movil"
+    src={`${proyecto.image.url}`}
+    alt="img"
+    transition:fade />
+  {/if}
 
   <div class="contenedor-1">
     <header class="Proyecto">
@@ -223,6 +292,15 @@
         </button>
       </a>
       <h1 class="Titulo">{proyecto.titulo}</h1>
+      
+      <div class="Enlace">
+        <h5>
+          Enlace:
+        </h5>
+        <strong>
+          {!!proyecto.url?proyecto.url:""}
+        </strong>
+      </div>
     </header>
 
     <section class="Contenido">{proyecto.contenido}</section>
@@ -230,7 +308,7 @@
 
   <div class="contenedor-2">
 
-    <div>
+    <div class="ImagenContenedor">
       {#if !!proyecto && !!proyecto.image}
         <img
           class="Imagen"
@@ -239,7 +317,7 @@
           transition:fade />
       {/if}
     </div>
-    <div>
+    <div class="EnlaceContenedor">
       {#if ! proyecto.url_externo  }
       <button
         class="BotonConocerProyecto"

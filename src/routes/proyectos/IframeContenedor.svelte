@@ -10,7 +10,29 @@
 </script>
 
 <style>
+
+  .Contenedor {
+    padding: 1rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+    display:block;
+    border-style: none;
+    border: 1px solid #72a6aa;
+  }
+
+  
   @media screen and (min-width: 768px) {
+
+  iframe {
+    margin: 0rem 10vw;
+    width: 80vw;      
+  }
+
+
     .ProyectoDetalle {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -65,15 +87,6 @@
     border-radius: 5px;
   }
 
- iframe {
-    margin: 0rem 10vw;
-    width: 80vw;
-        
-    height: 80vh;
-   display:block;
-   border-style: none;
-    border: 1px solid #72a6aa;
-  }
 
   .fa {
     font-family: "Font Awesome 5 Free";

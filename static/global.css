@@ -18,6 +18,10 @@ body > div {
 }
 
 
+img {
+	max-width: 100%;
+}
+
 ul {
 	padding: 0;
 	margin: 0;
@@ -149,3 +153,6 @@ Tipografías
 .carousel button.right {
 	right: 0;
 }
+
+
+
