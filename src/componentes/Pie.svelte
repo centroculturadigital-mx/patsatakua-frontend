@@ -26,15 +26,15 @@ import { fade } from "svelte/transition"
 }
 
 .Logos {
-    padding: 1rem;
     text-align: center;	
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+   
 }
 
 .Logos img {
-    max-width: 140px;
-   
+    max-width: 140px;   
 }
 
 </style>
