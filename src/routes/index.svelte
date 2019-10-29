@@ -19,20 +19,20 @@
     curatorial: "Bajo esta palabra-repositorio se reúnen once proyectos de hablantes de lenguas indígenas de diversas zonas del país que abordan de forma particular el uso de las herramientas tecnológicas. Estos proyectos representan la diversidad lingüística cultural y ofrecen un nuevo mapa de términos y etiquetas. Del uso de plataformas precreadas a la programación desde cero; de prácticas experimentales de escritura a aplicaciones para aprender una lengua, de espacios de memoria visual y oral a la documentación de la evolución del registro gráfico, de la preservación de la lengua y el deseo de mantenerla como bien común ante situaciones migratorias de sus hablantes a la invitación al encuentro con esos otros y otras que desean ampliar la idea sostenida por diversos activistas de las lenguas: entender a nuestro como un territorio multilingüe." ,
     sliderProyectos: [
         "Ayuujkjaaky",
-        "Biblioteca de Investigacion Juan de Cordova",
+        "Biblioteca de Investigación Juan de Córdova",
         "COLMIX",
         "Kumoontun",
         "Lengua y Cultura Triqui",
         "Ma Tiksalokan Nawatl",
         "Museo Virtual del Zapoteco",
-        "Red de Activismo Digital de Lenguas Indigenas",
+        "Red de Activismo Digital de Lenguas Indígenas",
         "Ticha",
         "Turix",
     ]
- }
+  }
 
-    let logocultura = 'cultura.svg';
-    let logoccd = 'ccd.svg';
+  let logocultura = 'cultura.svg';
+  let logoccd = 'ccd.svg';
 
   let proyectosModule;
   $: proyectos =
@@ -43,7 +43,6 @@
 
   const LogoCultura = "logo.cultura.png";
   const LogoCCD = "logo.ccd.png";
-	let LogosProyectos = ['https://fakeimg.pl/250x100/?text=Bienvenido','https://fakeimg.pl/250x100/?text=Al','https://fakeimg.pl/250x100/?text=Sitio','https://fakeimg.pl/250x100/?text=De','https://fakeimg.pl/250x100/?text=Patzatakua','https://fakeimg.pl/250x100/?text=Devmd'];
   onMount(async () => {
     proyectosModule = await import("../datos/proyectos.json");
     console.log(proyectosModule);
@@ -56,6 +55,27 @@
     
     introCompleto = !introCompleto
 
+  }
+
+  const randomizar = (array) => { 
+    let indice = array.length
+    let temporal
+    let indiceAleatorio
+
+    // While there remain elements to shuffle...
+    while (0 !== indice) {
+
+      // Pick a remaining element...
+      indiceAleatorio = Math.floor(Math.random() * indice);
+      indice -= 1;
+
+      // And swap it with the current element.
+      temporal = array[indice];
+      array[indice] = array[indiceAleatorio];
+      array[indiceAleatorio] = temporal;
+    }
+
+    return array;
   }
 
   $: introClases = "Introduccion" + (introCompleto ? " Completo" : "")
@@ -333,7 +353,7 @@
                 <ChevronLeftIcon />
               </span>
 
-              {#each datos.sliderProyectos as proyecto}
+              {#each randomizar(datos.sliderProyectos) as proyecto}
                 <div class="LogoProyecto">
                   <h4 class="Titulo">
                     {proyecto}
@@ -368,7 +388,7 @@
 
     <section class="Lista">
       <ul>
-        {#each proyectos as p}
+        {#each randomizar(proyectos) as p}
           <ProyectoVistaPrevia proyecto={p} />
         {/each}
       </ul>

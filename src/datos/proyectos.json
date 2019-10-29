@@ -3,14 +3,14 @@
     "url": "http://ayuujkjaaky.tlahuitoltepec.com/",
     "titulo": "Ayuujkjaaky",
     "etiquetas": ["herramienta de aprendizaje", "activismo"],
-    "contenido": "Si internet es el texto que escribimos colectivamente, este proyecto está dedicado enteramente a un microcosmos conformado por etiquetas en lengua ayüüjk. El sitio, pensado en su totalidad para usuarios que hablan y escriben esta lengua permite a partir de ciertos guiños de carácter lúdico, que un usuario no hablante se acerque a algunas palabras y su significado. Es un proyecto ideado por Luis Balbuena.\n",
+    "contenido": "Si internet es el texto que escribimos colectivamente, este proyecto está dedicado enteramente a un microcosmos conformado por etiquetas en lengua ayuujk. El sitio, pensado en su totalidad para usuarios que hablan y escriben esta lengua permite a partir de ciertos guiños de carácter lúdico, que un usuario no hablante se acerque a algunas palabras y su significado. Es un proyecto ideado por Luis Balbuena.\n",
     "image": {
         "id": "patsatakua/ajuujkjaaky_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/ajuukjaaky_imagen.png"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/ajuukjaaky_imagen.png"
     },
     "url_externo": false,
     "url2_externo": false,
-    "extracto": "Si internet es el texto que escribimos colectivamente, este proyecto está dedicado enteramente a un microcosmos conformado por etiquetas en lengua ayüüjk. El sitio, pensado en su totalidad para usuarios que hablan y escriben esta lengua permite ..."
+    "extracto": "Si internet es el texto que escribimos colectivamente, este proyecto está dedicado enteramente a un microcosmos conformado por etiquetas en lengua ayuujk. El sitio, pensado en su totalidad para usuarios que hablan y escriben esta lengua permite ..."
 }, {
     "id": "biblioteca_de_investigacion_juan_de_cordoba",
     "url": "http://bibliotecajuandecordova.mx/publicaciones-fahho/",
@@ -19,7 +19,7 @@
     "contenido": "Además de promover y resguardar la cultura oaxaqueña en acervos históricos, la Biblioteca promueve la edición de novelas gráficas basadas en relatos contemporáneos traducidos a varias lenguas, cuya temática refleja problemáticas actuales. Impresos en papel e ilustrados por artistas jóvenes, los cómics son accesibles digitalmente a través de esta plataforma a maestros y lectores hablantes de las lenguas a las que fueron traducidos. \n",
     "image": {
         "id": "patsatakua/biblioteca_de_investigacion_juan_de_cordoba_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034695/patsatakua/biblioteca_de_investigacion_juan_de_cordoba_imagen.png"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034695/patsatakua/biblioteca_de_investigacion_juan_de_cordoba_imagen.png"
     },
     "url_externo": false,
     "url2_externo": false,
@@ -32,7 +32,7 @@
     "contenido": "La página da cuenta de una gran labor a cargo de varios de jóvenes hablantes y activistas de la lengua mixe alto del centro (ayuujk ) quienes comprometidos con su cultura y sus comunidades, ofrecen diversos materiales críticos que dan cuenta de su cosmovisión y luchas por la defensa del territorio y la lengua.\n",
     "image": {
         "id": "patsatakua/colmix_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/colmix_imagen.jpg"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/colmix_imagen.jpg"
     },
     "url_externo": false,
     "url2_externo": false,
@@ -45,7 +45,7 @@
     "contenido": "Manual diseñado para la enseñanza y aprendizaje de la lengua purépecha (P'urhépecha) en el aula. Elaborado para estudiantes universitarios que quieren acercarse a este idioma bajo un enfoque comunicativo intercultural. Este material didáctico contribuye a la profesionalización de la enseñanza y al proceso de revitalización de las lenguas frente a su acelerado desplazamiento.\n",
     "image": {
         "id": "patsatakua/ju_je_uantani_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034697/patsatakua/ju_je_uantani_imagen.jpg"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034697/patsatakua/ju_je_uantani_imagen.jpg"
     },
     "url_externo": false,
     "url2_externo": false,
@@ -58,7 +58,7 @@
     "contenido": "Kumoontun es una organización originaria de la comunidad de Santa María Ocotepec, Mixe. Al identificar propuestas que contrarrestaran la falta de interés, la poca o nula enseñanza del Ayöök en el ámbito escolar y la pérdida de historias de los pueblos, se lanza Kumoontun App, una aplicación para la enseñanza oral del mixe alto del Norte (Ayöök ) a partir de categorías semánticas.\n",
     "image": {
         "id": "patsatakua/kumoontun_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343631/patsatakua/kumoontun_imagen.jpg"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343631/patsatakua/kumoontun_imagen.jpg"
     },
     "url_externo": true,
     "url2_externo": true,
@@ -72,7 +72,7 @@
     "contenido": "Ofrece artículos accesibles que ahondan en la escritura de la lengua Triqui de Copala (xnánj nùn' a) con el fin de preservar y divulgar su cultura. Sin perder de vista la naturaleza de la plataforma digital, proponen juegos como un glosario de animales y emojis, simbología eficaz para introducir al usuario a una lengua. Tiene una salida extensiva en la cuenta de Twitter @LyC_Triqui. \n",
     "image": {
         "id": "patsatakua/lengua_y_cultura_triqui_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/lengua_y_cultura_triqui_imagen.jpg"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/lengua_y_cultura_triqui_imagen.jpg"
     },
     "url_externo": false,
     "url2_externo": true,
@@ -85,7 +85,7 @@
     "contenido": "Ma tiksalokan nawatl (Vamos a aprender náhuatl) es una aplicación disponible en sistemas iOS y Android. Las palabras y expresiones que la alimentan provienen del náhuatl de Acatlán, Guerrero (nawatl), no obstante puede ser funcional para otras variantes nahuas.\nEs la tercera edición de una serie que inició con Vamos a aprender mixteco y que siguió con Vamos a aprender purépecha.\n",
     "image": {
         "id": "patsatakua/ma_tiksalokan_nawatl_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343633/patsatakua/ma_tiksalokan_nawatl_imagen.jpg"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343633/patsatakua/ma_tiksalokan_nawatl_imagen.jpg"
     },
     "url_externo": true,
     "url2_externo": true,
@@ -99,7 +99,7 @@
     "contenido": "El Museo Virtual del Zapoteco es una plataforma creada para promover y difundir las lenguas originarias de México pensadas como bienes culturales inmateriales. El Museo dedica salas a muestras en otras lenguas y alberga proyectos como Indígenas sin fronteras: desarrollo de sistemas operativos para celulares en zapoteco, es un proyecto que desarrolla Rodrigo Pérez conocido como Zapoteco 3.0. \n",
     "image": {
         "id": "patsatakua/museo_virtual_del_zapoteco_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343632/patsatakua/museo_virtual_del_zapoteco_imagen.png"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343632/patsatakua/museo_virtual_del_zapoteco_imagen.png"
     },
     "url_externo": false,
     "url2_externo": false,
@@ -112,7 +112,7 @@
     "contenido": "Documenta los encuentros de activistas digitales hablantes de diversas lenguas del continente. Comparte la intención de hacer de internet un espacio más plural al subrayar el carácter multilingüe y resaltando la idea de red como un espacio comunitario en el que se dan lugar los intercambios de saberes y alrededor de las lenguas, tanto en línea como sin mediación de las tecnologías.\n",
     "image": {
         "id": "patsatakua/red_de_activismo_digital_de_lenguas_indigenas_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343632/patsatakua/red_de_activismo_digital_de_lenguas_indigenas_imagen.png"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343632/patsatakua/red_de_activismo_digital_de_lenguas_indigenas_imagen.png"
     },
     "url_externo": false,
     "url2_externo": false,
@@ -125,7 +125,7 @@
     "contenido": "Ticha significa palabra o lenguaje. Es en su versión digital, un explorador basado en un software de análisis lexical y gramatical que permite el acceso a textos en zapoteco colonial del valle (ticha za niaxeteni peni lachi). Estos documentos son el primer registro de escritura alfabética de una lengua indígena, luego de la conquista, y contienen extensa e importante información lingüística, histórica, antropológica y gramatical. \n",
     "image": {
         "id": "patsatakua/ticha_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/ticha_imagen.png"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571034694/patsatakua/ticha_imagen.png"
     },
     "url_externo": true,
     "url2_externo": false,
@@ -138,7 +138,7 @@
     "contenido": "Turix significa libélula en lengua maya yucateca (Maayat'aan). Este colectivo llamado como el sitio, trabaja en un archivo que reúne video, fotografía digital, música electro-acústica, software libre, internet y radio a través de talleres, proyecciones itinerantes, auto-publicación y otras prácticas que manifiestan una plataforma basada en crear conexiones y relaciones entre diversas personas, temas, y geografías marcadas por la lengua. \n",
     "image": {
         "id": "patsatakua/turix_imagen",
-        "url": "http://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343632/patsatakua/turix_imagen.png"
+        "url": "https://res.cloudinary.com/centro-cultura-digital/image/upload/v1571343632/patsatakua/turix_imagen.png"
     },
     "url_externo": false,
     "url2_externo": false,
