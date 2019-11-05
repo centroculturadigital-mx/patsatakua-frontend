@@ -161,6 +161,10 @@
     line-height: var(--TextoMediano--line-height);
   }
 
+  .Enlace {
+    padding-top: .5rem;
+  }
+
   .Proyecto {
     /* left: 23px;*/
   }
@@ -188,7 +192,9 @@
       margin-top: 3rem;
       text-align: center;
     }
-
+    .Enlace {
+      padding-top: .5rem;
+    }
     .Enlace .Texto {
       font-size: 0.75rem;
     }
@@ -313,19 +319,26 @@
           <span>Volver</span>
         </button>
       </a>
-      <h1 class="Titulo">{proyecto.titulo}</h1>
+      <h1 class="Titulo">
+        {proyecto.titulo}
+      </h1>
       
-      <div class="Enlace">
+    </header>
+
+    <section class="Contenido">
+      {proyecto.contenido}
+    </section>
+    
+    <div class="Enlace">
         <h5>
           Enlace:
         </h5>
         <strong class="Texto">
-          {!!proyecto.url?proyecto.url:""}
+          <a href={!!proyecto.url?proyecto.url:""} target="_blank">
+            {!!proyecto.url?proyecto.url:""}
+          </a>   
         </strong>
       </div>
-    </header>
-
-    <section class="Contenido">{proyecto.contenido}</section>
   </div>
 
   <div class="contenedor-2">
