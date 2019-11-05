@@ -162,7 +162,11 @@
   }
 
   .Enlace {
-    padding-top: .5rem;
+    padding-top: 1rem;
+  }
+  
+  .Texto a:hover {
+    color: #72a6aa;
   }
 
   .Proyecto {
@@ -193,10 +197,13 @@
       text-align: center;
     }
     .Enlace {
-      padding-top: .5rem;
+      padding-top: 1rem;
     }
     .Enlace .Texto {
       font-size: 0.75rem;
+    }
+    .Texto a:hover {
+      color: #72a6aa;
     }
 
     .Contenido {
