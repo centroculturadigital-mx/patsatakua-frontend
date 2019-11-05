@@ -49,6 +49,8 @@
     mostrarDetalle = true;
   }
 
+  let tituloHeader = "Patzatakua";
+
 </script>
 
 <style>
@@ -57,12 +59,11 @@
     height: 5rem;
     padding: 1.5rem;
     top: 1.5rem;
-
     position: relative;
   }
   
   #HeaderProyecto > a {
-    border: 1px solid #72a6aa;
+    /* border: 1px solid #72a6aa; */
     border-radius: 5px;
     padding: .5rem;
     position:absolute;
@@ -70,7 +71,7 @@
     left:1rem;
     z-index: 11;
     display: block;
-    width: 3rem;
+    width: auto;
   }
   #HeaderProyecto > a:hover {
     background-color: rgba(114, 166, 170, 0.1);
@@ -155,6 +156,19 @@
     line-height: 48px;
     margin-bottom: 0.5rem;
   }
+
+.TituloHead {
+    font-weight: 500;
+    font-size: 2.75rem;
+    text-align: center;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    letter-spacing: 0.125rem; /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+    margin-top: 4px;
+    color: #72a6aa;
+    text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 0px 3px #72a6aa;
+  }
+
   .Contenido {
     font-weight: 200;
     font-size: 1rem;
@@ -346,7 +360,10 @@
 
 <header id="HeaderProyecto">
   <a class="RegresaInicio" href="/">
-    <i class="fa fa-home" />
+    <!-- <i class="fa fa-home" />
+     -->
+     <!-- <h1 class="TituloHead">{proyecto.titulo}</h1> -->
+     <h1 class="TituloHead">{tituloHeader}</h1>
   </a>
 </header>
 

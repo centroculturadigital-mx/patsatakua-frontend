@@ -9,7 +9,7 @@
 		max-width: 320px;
 		z-index: 11;
 	}
-
+	
 	.Imagen {
 		width: 100%;
 		height: 12rem;
