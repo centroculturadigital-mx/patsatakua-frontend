@@ -30,10 +30,14 @@
 	}
 
 	.Tarjeta {
+		transition: 0.35s;
 		background: #FFFFFF;
 		mix-blend-mode: normal;
 		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 		border-radius: 3px;
+	}
+	.Tarjeta:hover {
+		box-shadow: 1px 5px 17px rgba(0, 0, 0, 0.4);
 	}
 
 	.Texto .Titulo {
