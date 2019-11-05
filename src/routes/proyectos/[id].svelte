@@ -56,9 +56,8 @@
 <style>
   
   #HeaderProyecto {
-    height: 5rem;
+    height: auto;
     padding: 1.5rem;
-    top: 1.5rem;
     position: relative;
   }
   
@@ -66,15 +65,15 @@
     /* border: 1px solid #72a6aa; */
     border-radius: 5px;
     padding: .5rem;
-    position:absolute;
+    /* position:absolute;
     top:1rem;
     left:1rem;
-    z-index: 11;
+    z-index: 11; */
     display: block;
     width: auto;
   }
   #HeaderProyecto > a:hover {
-    background-color: rgba(114, 166, 170, 0.1);
+    /* background-color: rgba(114, 166, 170, 0.1); */
   }
 
   .fa {
@@ -159,11 +158,12 @@
 
 .TituloHead {
     font-weight: 500;
+    text-align: left;
     font-size: 2.75rem;
-    text-align: center;
+    text-align: left;
     margin-bottom: 0.25rem;
     font-weight: bold;
-    letter-spacing: 0.125rem; /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+    letter-spacing: 0.125rem;
     margin-top: 4px;
     color: #72a6aa;
     text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 0px 3px #72a6aa;
@@ -268,7 +268,6 @@
       box-sizing: border-box;
       max-width: 54rem;
       padding: 2.5rem;
-      margin-top: 2.25rem;
     }
     .Imagen {
       width: 100%;
