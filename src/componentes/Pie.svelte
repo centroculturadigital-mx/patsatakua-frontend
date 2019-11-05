@@ -12,8 +12,14 @@ import { fade } from "svelte/transition"
     width: 100%;
     /*padding: 2rem;*/
     background-color: #F0F0F0;
-    display: grid;
+    display: none;
     grid-template-columns: 70% 30%;    
+}
+
+@media screen and (min-width: 768px) {
+  .Pie {
+    display: grid;
+  }
 }
 
 .Texto  {
@@ -36,6 +42,7 @@ import { fade } from "svelte/transition"
 .Logos img {
     max-width: 140px;   
 }
+
 
 </style>
 

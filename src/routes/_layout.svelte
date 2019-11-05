@@ -56,6 +56,4 @@ import PieMovil from '../componentes/PieMovil.svelte';
 
 </main>
 
-
-
 <PieMovil/>
