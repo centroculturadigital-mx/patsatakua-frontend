@@ -249,10 +249,11 @@
 
     .Lista ul :global(.Tarjeta) {
       margin-bottom: 2rem;
+      margin: 0 auto 2rem;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     
     .contenedor-principal {
       height: 100vh;
