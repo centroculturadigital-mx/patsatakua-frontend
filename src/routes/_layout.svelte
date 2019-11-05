@@ -58,6 +58,4 @@ fondoParticulas.style.zIndex = -1;
 
 </main>
 
-
-
 <PieMovil/>

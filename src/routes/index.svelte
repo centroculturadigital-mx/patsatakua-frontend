@@ -70,6 +70,8 @@
       grid-template-columns: 1fr 2fr;
     }
   }
+
+  
   /* .contenedor-principal {
 	} */
  
@@ -279,8 +281,6 @@
       grid-gap: 2rem;
     }
 
-
-
   }
 
   @media screen and (min-width: 1200px) {
@@ -378,8 +378,8 @@
     </section>
 
     <Pie /> 
-   <!-- 
-    <!-- <PieMovil />-->
+   
+    <!--<PieMovil /> -->
 
   </div>
 
