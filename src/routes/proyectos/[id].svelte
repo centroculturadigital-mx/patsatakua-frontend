@@ -164,9 +164,12 @@
   .Enlace {
     padding-top: 1rem;
   }
-  
+  .Texto a {
+    text-decoration: none;
+  }
   .Texto a:hover {
     color: #72a6aa;
+    text-decoration: underline;
   }
 
   .Proyecto {
@@ -202,8 +205,12 @@
     .Enlace .Texto {
       font-size: 0.75rem;
     }
+    .Texto a {
+      text-decoration: none;
+    }
     .Texto a:hover {
       color: #72a6aa;
+      text-decoration: underline;
     }
 
     .Contenido {
@@ -338,7 +345,7 @@
     
     <div class="Enlace">
         <h5>
-          Enlace:
+          Enlace de proyecto:
         </h5>
         <strong class="Texto">
           <a href={!!proyecto.url?proyecto.url:""} target="_blank">
