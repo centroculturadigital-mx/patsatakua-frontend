@@ -66,7 +66,7 @@
     border-radius: 5px;
     padding: .5rem;
     position:absolute;
-    top:1rem;
+    top: 0;
     left:1rem;
     z-index: 11;
     display: block;
@@ -240,12 +240,22 @@
       text-align: center;
       margin: 3rem 0;
     }
+    .ProyectoDetalle{
+      background: rgba(255,255,255,0.6);
+      padding: 1rem;
+      margin: .5rem;
+    }
+
+
   }
 
 
     :global(#particles-js) {
       z-index: -1;
     }
+
+    
+
   @media screen and (min-width: 768px) {
 
     :global(#particles-js) {
