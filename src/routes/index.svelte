@@ -226,12 +226,13 @@
 
 
   /* responsivos */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
 
     .Lateral {
       height: auto;
       transition: height 2s ease-out;
-    }
+      overflow-y: hidden;
+  }
 
     .ProyectosParticipantes {
       display: none;
