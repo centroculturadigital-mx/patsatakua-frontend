@@ -101,7 +101,7 @@
   .Lateral {
     color: #000;
     background-color: rgb(255, 255, 255, 0.6);
-    padding-top: 2rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     overflow-y: scroll;
@@ -262,6 +262,7 @@
     .Lateral {
       color: #000;
       height: 100vh;
+
     }
 
     .Introduccion + .Mas {
