@@ -62,11 +62,6 @@
     /* border: 1px solid #72a6aa; */
     border-radius: 5px;
     padding: 0.5rem;
-
-    /* position:absolute;
-    top:1rem;
-    left:1rem;
-    z-index: 11; */
     display: block;
     width: auto;
   }
