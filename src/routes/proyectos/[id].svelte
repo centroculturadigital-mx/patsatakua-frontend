@@ -73,6 +73,7 @@
     padding: 0.5rem;
     display: flex;
     width: auto;
+    text-decoration:none;
   }
   .HeaderLinks {
     display: flex;
