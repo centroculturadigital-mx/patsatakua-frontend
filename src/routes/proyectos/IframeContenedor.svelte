@@ -48,6 +48,7 @@
       padding: 2.5rem;
       margin-top: 2.25rem;
     }
+    
     .Imagen {
       width: 100%;
       height: 20rem;
