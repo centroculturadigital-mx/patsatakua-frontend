@@ -17,7 +17,7 @@
   }
 
   iframe {
-    position: absolute;
+   /* position: absolute;*/
     top: 0;
     left: 0;
     z-index: 11;
@@ -33,8 +33,8 @@
   @media screen and (min-width: 768px) {
 
   iframe {
-    margin: 0rem 10vw;
-    width: 80vw;      
+    margin: 0rem auto;
+    width: 90vw;      
   }
 
 
