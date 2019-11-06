@@ -1,5 +1,4 @@
 <script context="module">
-
   export async function preload(page, session) {
     const { id } = page.params;
     console.log("id", id);
@@ -34,7 +33,7 @@
         })
       : {};
 
-  $: proyectosSimilares = []
+  $: proyectosSimilares = [];
 
   onMount(async () => {
     proyectosModule = await import("../../datos/proyectos.json");
@@ -47,24 +46,22 @@
 
   const abrirProyecto = () => {
     mostrarDetalle = true;
-  }
+  };
 
   let tituloHeader = "Patzatakua";
-
 </script>
 
 <style>
-  
   #HeaderProyecto {
     height: auto;
     padding: 1.5rem;
     position: relative;
   }
-  
+
   #HeaderProyecto > a {
     /* border: 1px solid #72a6aa; */
     border-radius: 5px;
-    padding: .5rem;
+    padding: 0.5rem;
 
     /* position:absolute;
     top:1rem;
@@ -89,17 +86,16 @@
     color: #72a6aa;
   }
 
-
   /*  */
-  
+
   .contenedor-1 header {
     position: relative;
   }
   .contenedor-1 .Regresar {
     font-weight: 100;
-    position: absolute;
+    position: relative;
     top: 0.25rem;
-    left: -7.5rem;
+    left: 2.5rem;
     cursor: pointer;
   }
   .contenedor-1 .Regresar button {
@@ -157,7 +153,7 @@
     margin-bottom: 0.5rem;
   }
 
-.TituloHead {
+  .TituloHead {
     font-weight: 500;
     text-align: left;
     font-size: 2.75rem;
@@ -167,7 +163,8 @@
     letter-spacing: 0.125rem;
     margin-top: 4px;
     color: #72a6aa;
-    text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 0px 3px #72a6aa;
+    text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff,
+      1px 1px #f3f3f2, 0px 3px #72a6aa;
   }
 
   .Contenido {
@@ -205,10 +202,12 @@
   }
    */
 
-
-
   @media screen and (max-width: 767px) {
-
+    /* .contenedor-1 .Regresar {
+      position: absolute;
+      top: 0.25rem;
+      left: -7.5rem;
+    } */
     .Titulo {
       margin: 2rem 0;
       margin-top: 3rem;
@@ -232,8 +231,6 @@
       margin: 1rem 0 2rem 0;
     }
 
-
-
     .Imagen--movil {
       display: block;
       width: 100%;
@@ -255,25 +252,20 @@
       text-align: center;
       margin: 3rem 0;
     }
-    .ProyectoDetalle{
-      background: rgba(255,255,255,0.6);
+    .ProyectoDetalle {
+      background: rgba(255, 255, 255, 0.6);
       padding: 1rem;
-      margin: .5rem;
+      margin: 0.5rem;
     }
-
   }
 
-
-    :global(#particles-js) {
-      z-index: -1;
-    }
-
-    
+  :global(#particles-js) {
+    z-index: -1;
+  }
 
   @media screen and (min-width: 768px) {
-
     :global(#particles-js) {
-      z-index: 0;
+      z-index: -1;
     }
     article {
       position: absolute;
@@ -287,13 +279,13 @@
     .contenedor-1 {
       padding: 0rem 0rem 0 1rem;
     }
-    
+
     .ProyectoDetalle {
-      left: calc( ( 100vw - 54rem ) / 2 );
-      right: calc( ( 100vw - 54rem ) / 2 );
+      left: calc((100vw - 54rem) / 2);
+      right: calc((100vw - 54rem) / 2);
       display: grid;
       grid-template-columns: 1fr 1fr;
-      background: rgba(255,255,255,0.8);
+      background: rgba(255, 255, 255, 0.8);
       border: 1px solid #72a6aa;
       box-sizing: border-box;
       max-width: 54rem;
@@ -316,15 +308,19 @@
     .Contenido {
       width: 80%;
     }
-
   }
-  @media (min-width: 576px) and (max-width: 768px) {
+  @media (min-width: 768px) {
+       .contenedor-1 .Regresar {
+      position: absolute;
+      top: 0.25rem;
+      left: -7.5rem;
+    }
     .ProyectoDetalle {
-      left: calc( ( 100vw - 54rem ) / 2 );
-      right: calc( ( 100vw - 54rem ) / 2 );
+      left: calc((100vw - 54rem) / 2);
+      right: calc((100vw - 54rem) / 2);
       display: grid;
       grid-template-columns: 1fr 1fr;
-      background: rgba(255,255,255,0.8);
+      background: rgba(255, 255, 255, 0.8);
       border: 1px solid #72a6aa;
       box-sizing: border-box;
       max-width: 38rem;
@@ -335,10 +331,10 @@
     }
     .Contenido {
       width: 90%;
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
     .Texto {
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
     .contenedor-2 {
       padding-left: 2rem;
@@ -349,108 +345,91 @@
       object-fit: contain;
     }
     .Enlace h5 {
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
-}
-
+  }
 </style>
-
-
 
 <header id="HeaderProyecto">
   <a class="RegresaInicio" href="/">
     <!-- <i class="fa fa-home" />
      -->
-     <!-- <h1 class="TituloHead">{proyecto.titulo}</h1> -->
-     <h1 class="TituloHead">{tituloHeader}</h1>
+    <!-- <h1 class="TituloHead">{proyecto.titulo}</h1> -->
+    <h1 class="TituloHead">{tituloHeader}</h1>
   </a>
 </header>
 
-
 {#if mostrarDetalle}
-
-  <IframeContenedor url={proyecto.url}/>
-
+  <IframeContenedor url={proyecto.url} />
 {:else}
+  <article class="ProyectoDetalle ancho_maximo">
+    {#if !!proyecto && !!proyecto.image}
+      <img
+        class="Imagen--movil"
+        src={`${proyecto.image.url}`}
+        alt="img"
+        transition:fade />
+    {/if}
 
-
-
-<article class="ProyectoDetalle ancho_maximo">
-  {#if !! proyecto && !! proyecto.image }
-    <img
-    class="Imagen--movil"
-    src={`${proyecto.image.url}`}
-    alt="img"
-    transition:fade />
-  {/if}
-
-  <div class="contenedor-1">
-    <header class="Proyecto">
-      <a class="Regresar" href="/">
-        <button>
-          <i class="fa fa-arrow-left" />
-          <span>Volver</span>
-        </button>
-      </a>
-      <h1 class="Titulo">
-        {proyecto.titulo}
-      </h1>
-      
-    </header>
-
-    <section class="Contenido">
-      {proyecto.contenido}
-    </section>
-    
-    <div class="Enlace">
-        <h5>
-          Enlace de proyecto:
-        </h5>
-        <strong class="Texto">
-          <a href={!!proyecto.url?proyecto.url:""} target="_blank">
-            {!!proyecto.url?proyecto.url:""}
-          </a>   
-        </strong>
-      </div>
-  </div>
-
-  <div class="contenedor-2">
-
-    <div class="ImagenContenedor">
-      {#if !!proyecto && !!proyecto.image}
-        <img
-          class="Imagen"
-          src={`${proyecto.image.url}`}
-          alt="img"
-          transition:fade />
-      {/if}
-    </div>
-    <div class="EnlaceContenedor">
-      {#if ! proyecto.url_externo  }
-      <button
-        class="BotonConocerProyecto"
-        on:click={abrirProyecto}>
-        <span>Conocer Proyecto</span>
-        <i class="fa fa-arrow-right" />
-      </button>
-      {:else}
-        <a href={proyecto.url} target="_blank">
-          <button class="BotonConocerProyecto">
-            <span>
-              Conocer Proyecto
-              <i class="fa fa-arrow-right" />
-            </span>
+    <div class="contenedor-1">
+      <header class="Proyecto">
+        <a class="Regresar" href="/">
+          <button>
+            <i class="fa fa-arrow-left" />
+            <span>Volver</span>
           </button>
         </a>
-      {/if}
-      <!-- <Boton>Conocer Proyecto</Boton> -->
+        <h1 class="Titulo">{proyecto.titulo}</h1>
+
+      </header>
+
+      <section class="Contenido">{proyecto.contenido}</section>
+
+      <div class="Enlace">
+        <h5>Enlace de proyecto:</h5>
+        <strong class="Texto">
+          <a href={!!proyecto.url ? proyecto.url : ''} target="_blank">
+            {!!proyecto.url ? proyecto.url : ''}
+          </a>
+        </strong>
+      </div>
     </div>
-  </div>
 
-</article>
+    <div class="contenedor-2">
 
-<!-- <ProyectosSimilares proyecto={id}/> -->
-<!-- <section class="SubProyectos">
+      <div class="ImagenContenedor">
+        {#if !!proyecto && !!proyecto.image}
+          <img
+            class="Imagen"
+            src={`${proyecto.image.url}`}
+            alt="img"
+            transition:fade />
+        {/if}
+      </div>
+      <div class="EnlaceContenedor">
+        {#if !proyecto.url_externo}
+          <button class="BotonConocerProyecto" on:click={abrirProyecto}>
+            <span>Conocer Proyecto</span>
+            <i class="fa fa-arrow-right" />
+          </button>
+        {:else}
+          <a href={proyecto.url} target="_blank">
+            <button class="BotonConocerProyecto">
+              <span>
+                Conocer Proyecto
+                <i class="fa fa-arrow-right" />
+              </span>
+            </button>
+          </a>
+        {/if}
+        <!-- <Boton>Conocer Proyecto</Boton> -->
+      </div>
+    </div>
+
+  </article>
+
+  <!-- <ProyectosSimilares proyecto={id}/> -->
+  <!-- <section class="SubProyectos">
 
   <h3 class="Subtitulo">Proyectos Similares</h3>
   <ul>
@@ -460,7 +439,7 @@
   </ul>
 </section> -->
 
-<!-- <section class="Similares">
+  <!-- <section class="Similares">
   <h3 class="Subtitulo">Proyectos similares</h3>
 
     {#each proyectosSimilares as proyectoSimilar }
@@ -468,9 +447,4 @@
     {/each}
 
 </section> -->
-
-
-
 {/if}
-
-
