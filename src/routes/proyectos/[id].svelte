@@ -350,7 +350,7 @@
       max-width: 38rem;
       padding: 2.5rem;
       margin-top: 2.25rem;
-      height: 25rem;
+      height: auto;
       margin-bottom: 2.25rem;
     }
     .Contenido {
@@ -364,7 +364,7 @@
       padding-left: 2rem;
     }
     .Imagen {
-      width: 80%;
+      width: 100%;
       height: 15rem;
       object-fit: contain;
     }
@@ -372,6 +372,45 @@
       font-size: 0.75rem;
     }
   }
+@media (min-width: 1024px) {
+    .ProyectoDetalle {
+      left: calc((100vw - 54rem) / 2);
+      right: calc((100vw - 54rem) / 2);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid #72a6aa;
+      box-sizing: border-box;
+      max-width: 54rem;
+      padding: 2.5rem;
+      margin-top: 2.25rem;
+      height: auto;
+      
+    }
+    .Contenido {
+      width: 80%;
+      font-size: 1rem;
+
+    }
+    .Texto {
+      font-size: 1rem;
+    }
+    .Imagen {
+      width: 100%;
+      height: 20rem;
+      object-fit: contain;
+    }
+    /* 
+    .contenedor-2 {
+      padding-left: 2rem;
+    }
+    
+    .Enlace h5 {
+      font-size: 0.75rem;
+    } */
+}
+  
+
 </style>
 
 <header id="HeaderProyecto">
