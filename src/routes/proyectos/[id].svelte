@@ -65,13 +65,9 @@
     /* border: 1px solid #72a6aa; */
     border-radius: 5px;
     padding: .5rem;
-<<<<<<< HEAD
-    position:absolute;
-    top: 0;
-=======
+
     /* position:absolute;
     top:1rem;
->>>>>>> Header de regreso
     left:1rem;
     z-index: 11; */
     display: block;
@@ -264,7 +260,6 @@
       padding: 1rem;
       margin: .5rem;
     }
-
 
   }
 
