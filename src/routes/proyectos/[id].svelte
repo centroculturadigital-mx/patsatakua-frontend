@@ -335,6 +335,9 @@
       height: 15rem;
       object-fit: contain;
     }
+    .Enlace h5 {
+      font-size: .75rem;
+    }
 }
 
 </style>
