@@ -48,7 +48,7 @@
     mostrarDetalle = true;
   };
 
-  let tituloHeader = "Patzatakua";
+  let tituloHeader = "Patsatakua";
 </script>
 
 <style>
@@ -69,6 +69,7 @@
     z-index: 11; */
     display: block;
     width: auto;
+    text-decoration:none;
   }
   #HeaderProyecto > a:hover {
     /* background-color: rgba(114, 166, 170, 0.1); */
