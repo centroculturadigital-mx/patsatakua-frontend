@@ -186,7 +186,6 @@
     margin-top: 4px;
     color: #72a6aa;
     text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff,
-      1px 1px #f3f3f2, 0px 3px #72a6aa;
   }
   .TituloHead:hover {
     color: #73b7bb;
