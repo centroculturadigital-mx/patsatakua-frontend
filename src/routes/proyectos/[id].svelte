@@ -35,8 +35,15 @@
 
   $: proyectosSimilares = [];
 
+  let regresa
+
   onMount(async () => {
     proyectosModule = await import("../../datos/proyectos.json");
+    regresa = () => {
+      if (!! window ) {
+        window.location.reload()
+      }
+    }
   });
 
   $: console.log("proyecto", proyecto);
@@ -48,7 +55,7 @@
     mostrarDetalle = true;
   };
 
-  let tituloHeader = "Patzatakua";
+  let tituloHeader = "Patsatakua";
 </script>
 
 <style>
@@ -56,19 +63,39 @@
     height: auto;
     padding: 1.5rem;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-width: 50%;
   }
 
   #HeaderProyecto > a {
-    /* border: 1px solid #72a6aa; */
     border-radius: 5px;
     padding: 0.5rem;
-    display: block;
+    display: flex;
     width: auto;
   }
-  #HeaderProyecto > a:hover {
-    /* background-color: rgba(114, 166, 170, 0.1); */
+  .HeaderLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    min-width: 50%;
   }
-
+  .HeaderLinks a {
+    text-decoration: none;
+    color: #72a6aa;
+  }
+  .HeaderLinks a:hover {
+    text-decoration: none;
+    color: #73b7bb;
+  }
+  .RegresaProyecto {
+    color: #72a6aa;
+    cursor: pointer;
+  }
+  .RegresaProyecto:hover {
+    text-decoration: none;
+    color: #73b7bb;
+  }
   .fa {
     font-family: "Font Awesome 5 Free";
     font-weight: 200;
@@ -160,6 +187,9 @@
     color: #72a6aa;
     text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff,
       1px 1px #f3f3f2, 0px 3px #72a6aa;
+  }
+  .TituloHead:hover {
+    color: #73b7bb;
   }
 
   .Contenido {
@@ -305,7 +335,7 @@
     }
   }
   @media (min-width: 768px) {
-       .contenedor-1 .Regresar {
+    .contenedor-1 .Regresar {
       position: absolute;
       top: 0.25rem;
       left: -7.5rem;
@@ -347,11 +377,14 @@
 
 <header id="HeaderProyecto">
   <a class="RegresaInicio" href="/">
-    <!-- <i class="fa fa-home" />
-     -->
-    <!-- <h1 class="TituloHead">{proyecto.titulo}</h1> -->
     <h1 class="TituloHead">{tituloHeader}</h1>
   </a>
+  {#if mostrarDetalle}
+  <div class="HeaderLinks">
+    <p class="RegresaProyecto" on:click={regresa}>Regresa a proyecto</p>
+    <a class="LinkProyecto" href="{!!proyecto.url ? proyecto.url : ''}" target="_blank">Link a proyecto</a>
+  </div>
+  {/if}
 </header>
 
 {#if mostrarDetalle}
