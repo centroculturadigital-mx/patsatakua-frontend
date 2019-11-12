@@ -358,7 +358,7 @@
     .contenedor-1 .Regresar {
       position: absolute;
       top: 0.25rem;
-      left: -9.5rem;
+      left: -7.5rem;
     }
     .ProyectoDetalle {
       left: calc((100vw - 54rem) / 2);
