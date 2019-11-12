@@ -2,6 +2,16 @@
 	export let proyecto
 	import { fade } from 'svelte/transition';
 
+  let extractoTexto = (texto, limite, textoFinal) => {
+	if (!texto || !limite) return;
+	var content = texto;
+	content = content.trim();
+	content = content.split(' ').slice(0, limite);
+	content = content.join(' ') + (textoFinal ? textoFinal : '');
+	//
+  return content;
+
+};
 </script>
 
 <style>
@@ -34,7 +44,7 @@
 		background: #FFFFFF;
 		mix-blend-mode: normal;
 		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-		border-radius: 3px;
+		border-radius: 5px;
 	}
 	.Tarjeta:hover {
 		box-shadow: 1px 5px 17px rgba(0, 0, 0, 0.4);
@@ -68,7 +78,8 @@
 			</h3>
 
 			<div class="Extracto">
-				{proyecto.contenido}		
+				<!-- {proyecto.contenido} -->
+				{extractoTexto(proyecto.contenido, 18,'...')}		
 			</div>
 		</div>
 	</a>
