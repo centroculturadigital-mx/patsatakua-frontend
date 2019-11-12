@@ -204,13 +204,17 @@
     padding-top: 1rem;
   }
   .Texto a {
+    font-weight: 200;
+    color: #2094FF;
     text-decoration: none;
   }
   .Texto a:hover {
-    color: #72a6aa;
+    color: #000000;
     text-decoration: underline;
   }
-
+  .TituloEnlace {
+    font-weight: 600;
+  }
   .Proyecto {
     /* left: 23px;*/
   }
@@ -259,10 +263,12 @@
       font-size: 0.75rem;
     }
     .Texto a {
+      font-weight: 200;
+      color: #2094FF;
       text-decoration: none;
     }
     .Texto a:hover {
-      color: #72a6aa;
+      color: #000000;
       text-decoration: underline;
     }
 
@@ -470,7 +476,9 @@
       <section class="Contenido">{proyecto.contenido}</section>
 
       <div class="Enlace">
-        <h5>Enlace de proyecto:</h5>
+        <h5 class="TituloEnlace">
+          Enlace de proyecto:
+        </h5>
         <strong class="Texto">
           <a href={!!proyecto.url ? proyecto.url : ''} target="_blank">
             {!!proyecto.url ? proyecto.url : ''}
