@@ -10,8 +10,12 @@
 	content = content.join(' ') + (textoFinal ? textoFinal : '');
 	//
   return content;
-
 };
+
+let extracto = 24;
+// let extracto = [18,32,24,48];
+// extracto = extracto[Math.floor(Math.random()*extracto.length)];
+
 </script>
 
 <style>
@@ -79,7 +83,7 @@
 
 			<div class="Extracto">
 				<!-- {proyecto.contenido} -->
-				{extractoTexto(proyecto.contenido, 18,'...')}		
+				{extractoTexto(proyecto.contenido, extracto,'...')}		
 			</div>
 		</div>
 	</a>
