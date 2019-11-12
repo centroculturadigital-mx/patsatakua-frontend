@@ -28,7 +28,9 @@
         "Red de Activismo Digital de Lenguas Indigenas",
         "Ticha",
         "Turix",
-    ]
+    ],
+    contacto: "Para proponer un proyecto, escríbenos a:",
+    mail: "editorial.ccd@gmail.com"
  }
 
     let logocultura = 'cultura.svg';
@@ -224,6 +226,27 @@
     max-width: 8rem;
   }
 
+  .colaboraciones{
+    border-style: solid;
+    border-color: rgba(114, 166, 170, 1);
+    border-width:thin;
+    display: flex;
+    padding:0.5rem 1rem 0.5rem 1rem;
+   }
+    
+
+   .infoColabora{  
+    font-size: 0.9rem;
+    text-align: left;
+    color: #000;
+    } 
+
+    .mail {
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #000; 
+    }
 
   /* responsivos */
   @media screen and (max-width: 768px) {
@@ -322,7 +345,11 @@
               { introCompleto ? "Cerrar" : "Leer más"}
             </button>
           </footer>
-
+        <section class="colaboraciones">
+        <p class="infoColabora">{datos.contacto} <span class="mail">{datos.mail}</span>  </p>
+        
+        </section>
+        
         <section class="ProyectosParticipantes" transition:fade>
           <h4 class="Creditos">
             Proyectos participantes
