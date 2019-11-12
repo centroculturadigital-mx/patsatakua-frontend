@@ -70,7 +70,6 @@ code {
 }
 
 
-button,
 button:focus,
 button:active {
 	outline: none !important;

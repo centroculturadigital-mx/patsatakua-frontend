@@ -122,19 +122,19 @@
     cursor: pointer;
   }
   .contenedor-1 .Regresar button {
-    background-color: #72a6aa;
-    border: none;
-    color: #fff;
+    background-color: #FFF;
+    color: #72a6aa;
     padding: 0.75rem 1rem;
+    border: 1px solid #72a6aa !important;
     border-radius: 5px;
     letter-spacing: 2px;
     cursor: pointer;
     font-weight: lighter;
+    box-shadow: 3px 3px 1px #72a6aa;
+    transition: 0.25s;
   }
-  .contenedor-1 .Regresar:hover {
-    background-color: #72a6aa;
-    opacity: 0.9;
-    border-radius: 5px;
+  .contenedor-1 .Regresar button:hover {
+    box-shadow: 3px 3px 3px #72a6aa;
   }
   .BotonConocerProyecto {
     background-color: #72a6aa;
@@ -352,7 +352,7 @@
     .contenedor-1 .Regresar {
       position: absolute;
       top: 0.25rem;
-      left: -7.5rem;
+      left: -9.5rem;
     }
     .ProyectoDetalle {
       left: calc((100vw - 54rem) / 2);
@@ -364,7 +364,6 @@
       box-sizing: border-box;
       max-width: 38rem;
       padding: 2.5rem;
-      margin-top: 2.25rem;
       height: auto;
       margin-bottom: 2.25rem;
     }
@@ -398,7 +397,7 @@
       box-sizing: border-box;
       max-width: 54rem;
       padding: 2.5rem;
-      margin-top: 2.25rem;
+      margin-top: 0.25rem;
       height: auto;
     }
     .Contenido {
@@ -442,8 +441,11 @@
 </header>
 
 {#if mostrarDetalle}
+
   <IframeContenedor url={proyecto.url} />
+
 {:else}
+
   <article class="ProyectoDetalle ancho_maximo">
     {#if !!proyecto && !!proyecto.image}
       <img
