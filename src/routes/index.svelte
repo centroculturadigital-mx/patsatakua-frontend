@@ -226,7 +226,7 @@
     max-width: 8rem;
   }
 
-  .colaboraciones{
+  .Colaboraciones{
     border-style: solid;
     border-color: rgba(114, 166, 170, 1);
     border-width:thin;
@@ -235,13 +235,13 @@
    }
     
 
-   .infoColabora{  
+   .TextoColabora{  
     font-size: 0.9rem;
     text-align: left;
     color: #000;
     } 
 
-    .mail {
+    .Mail {
     font-weight: bold;
     font-size: 0.9rem;
     text-align: left;
@@ -345,11 +345,10 @@
               { introCompleto ? "Cerrar" : "Leer más"}
             </button>
           </footer>
-        <section class="colaboraciones">
-        <p class="infoColabora">{datos.contacto} <span class="mail">{datos.mail}</span>  </p>
-        
-        </section>
-        
+        <section class="Colaboraciones">
+        <p class="TextoColabora">{datos.contacto}
+        <a href="mailto:{datos.mail}" class="Mail">{datos.mail}</a></p>
+        </section>        
         <section class="ProyectosParticipantes" transition:fade>
           <h4 class="Creditos">
             Proyectos participantes
