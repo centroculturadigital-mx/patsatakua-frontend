@@ -4,6 +4,7 @@ import { fade } from "svelte/transition"
     let logoccd = 'ccd.svg';
     let logoinali = 'inali.png';
    	
+    const textoFooter = 'Los lenguajes de la tecnología suelen estar homogeneizados y marcados por las agendas del norte global y del mercado. Estos proyectos descentralizan el uso de las herramientas tecnológicas desde sus concepciones propias, representan la diversidad lingüística cultural y crean un nuevo mapa de términos, vocablos, etiquetas, categorías y reescrituras desde alternativas y apropiaciones.';
 </script>
 
 <style>
@@ -46,10 +47,10 @@ import { fade } from "svelte/transition"
 
 </style>
 
-<footer class="Pie" transition:fade>
+<footer class="Pie" transition:fade={{duration:1000}}>
     <section class="Texto">
         <p>
-           Los lenguajes de la tecnología suelen estar homogeneizados y marcados por las agendas del norte global y del mercado. Estos proyectos descentralizan el uso de las herramientas tecnológicas desde sus concepciones propias, representan la diversidad lingüística cultural y crean un nuevo mapa de términos, vocablos, etiquetas, categorías y reescrituras desde alternativas y apropiaciones.
+        {textoFooter}
         </p>
     
     </section>

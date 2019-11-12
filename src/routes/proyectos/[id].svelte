@@ -35,15 +35,15 @@
 
   $: proyectosSimilares = [];
 
-  let regresa
+  let regresa;
 
   onMount(async () => {
     proyectosModule = await import("../../datos/proyectos.json");
     regresa = () => {
-      if (!! window ) {
-        window.location.reload()
+      if (!!window) {
+        window.location.reload();
       }
-    }
+    };
   });
 
   $: console.log("proyecto", proyecto);
@@ -73,12 +73,12 @@
     padding: 0.5rem;
     display: flex;
     width: auto;
-    text-decoration:none;
+    text-decoration: none;
   }
   .HeaderLinks {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     min-width: 50%;
   }
   .HeaderLinks a {
@@ -187,7 +187,9 @@
     margin-top: 4px;
     color: #72a6aa;
     text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff,
+      1px 1px #f3f3f2, 0px 3px #72a6aa;
   }
+
   .TituloHead:hover {
     color: #73b7bb;
   }
@@ -227,6 +229,18 @@
   }
    */
 
+  @media screen and (max-width: 560px) {
+    #HeaderProyecto {
+      display: block;
+    }
+    .HeaderLinks {
+      min-width: 100%;
+    }
+    .RegresaProyecto {
+      margin: 0;
+      padding-left: 0.5rem;
+    }
+  }
   @media screen and (max-width: 767px) {
     /* .contenedor-1 .Regresar {
       position: absolute;
@@ -373,7 +387,7 @@
       font-size: 0.75rem;
     }
   }
-@media (min-width: 1024px) {
+  @media (min-width: 1024px) {
     .ProyectoDetalle {
       left: calc((100vw - 54rem) / 2);
       right: calc((100vw - 54rem) / 2);
@@ -386,12 +400,10 @@
       padding: 2.5rem;
       margin-top: 2.25rem;
       height: auto;
-      
     }
     .Contenido {
       width: 80%;
       font-size: 1rem;
-
     }
     .Texto {
       font-size: 1rem;
@@ -409,9 +421,7 @@
     .Enlace h5 {
       font-size: 0.75rem;
     } */
-}
-  
-
+  }
 </style>
 
 <header id="HeaderProyecto">
@@ -419,10 +429,15 @@
     <h1 class="TituloHead">{tituloHeader}</h1>
   </a>
   {#if mostrarDetalle}
-  <div class="HeaderLinks">
-    <p class="RegresaProyecto" on:click={regresa}>Regresa a proyecto</p>
-    <a class="LinkProyecto" href="{!!proyecto.url ? proyecto.url : ''}" target="_blank">Link a proyecto</a>
-  </div>
+    <div class="HeaderLinks">
+      <p class="RegresaProyecto" on:click={regresa}>Regresa a proyecto</p>
+      <a
+        class="LinkProyecto"
+        href={!!proyecto.url ? proyecto.url : ''}
+        target="_blank">
+        Link a proyecto
+      </a>
+    </div>
   {/if}
 </header>
 

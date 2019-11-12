@@ -153,3 +153,7 @@ Tipografías
 .carousel button.right {
 	right: 0;
 }
+
+.carousel ul {
+	display: none !important;
+}
