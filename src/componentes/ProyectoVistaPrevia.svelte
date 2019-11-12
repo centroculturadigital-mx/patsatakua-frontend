@@ -73,7 +73,7 @@
 <article class="Tarjeta" transition:fade>
 	<a href={`/proyectos/${proyecto.id}`}>
 		
-		<img class="Imagen" src={`${proyecto.image.url}`} alt="img"/>
+		<img class="Imagen" src={`${proyecto.image.url}`} alt="Proyecto: {proyecto.titulo}"/>
 		
 		<div class="Texto">
 
