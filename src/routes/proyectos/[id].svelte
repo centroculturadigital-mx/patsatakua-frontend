@@ -83,11 +83,11 @@
   }
   .HeaderLinks a {
     text-decoration: none;
-    color: #72a6aa;
+    /* color: #72a6aa; */
   }
   .HeaderLinks a:hover {
     text-decoration: none;
-    color: #73b7bb;
+    color: #ffffff;
   }
   .RegresaProyecto {
     color: #72a6aa;
@@ -123,6 +123,25 @@
   }
   .RegresaDetalle:hover {
     box-shadow: 3px 3px 3px #72a6aa;
+  }
+
+  .LinkExterno {
+    background-color: #72a6aa;
+    border: none;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    cursor: pointer;
+  }
+  .LinkExterno:hover {
+    background-color:#72a6aa;
+    opacity: 0.9;
+    border-radius: 5px;
+  }
+  .LinkProyecto {
+    color: #fff;
   }
 
   /*  */
@@ -451,11 +470,10 @@
   </a>
   {#if mostrarDetalle}
     <div class="HeaderLinks">
-        <button class="RegresaDetalle" on:click={regresa}>
-          <i class="fa fa-arrow-left" />
-          <span>Volver</span>
-        </button>
-      <!-- <p class="RegresaProyecto" on:click={regresa}>Regresa a proyecto</p> -->
+      <button class="RegresaDetalle" on:click={regresa}>
+        <i class="fa fa-arrow-left" />
+        <span>Volver</span>
+      </button>
       <button class="LinkExterno">
         <a
           class="LinkProyecto"
