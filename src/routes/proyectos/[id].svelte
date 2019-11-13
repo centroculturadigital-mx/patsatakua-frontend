@@ -79,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 50%;
+    min-width: 60%;
   }
   .HeaderLinks a {
     text-decoration: none;
@@ -112,7 +112,7 @@
   .RegresaDetalle {
     background-color: #FFF;
     color:#72a6aa;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     border: 1px solid#72a6aa !important;
     border-radius: 5px;
     letter-spacing: 2px;
@@ -129,7 +129,7 @@
     background-color: #72a6aa;
     border: none;
     color: #fff;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     letter-spacing: 2px;
     font-weight: lighter;
@@ -139,6 +139,9 @@
     background-color:#72a6aa;
     opacity: 0.9;
     border-radius: 5px;
+  }
+  .LinkExterno i {
+    padding-left: 0.75rem;
   }
   .LinkProyecto {
     color: #fff;
@@ -344,6 +347,12 @@
   }
 
   @media screen and (min-width: 768px) {
+    .HeaderLinks {
+      min-width: 74%;
+    }
+    .LinkExterno {
+      display: none;
+    }
     :global(#particles-js) {
       z-index: -1;
     }
@@ -390,6 +399,7 @@
     }
   }
   @media (min-width: 768px) {
+    
     .contenedor-1 .Regresar {
       position: absolute;
       top: 0.25rem;
@@ -428,6 +438,12 @@
     }
   }
   @media (min-width: 1024px) {
+     .HeaderLinks {
+      min-width: 75%;
+    }
+    .LinkExterno {
+      display: flex;
+    }
     .ProyectoDetalle {
       left: calc((100vw - 54rem) / 2);
       right: calc((100vw - 54rem) / 2);
