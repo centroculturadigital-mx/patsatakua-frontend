@@ -109,6 +109,22 @@
     color: #72a6aa;
   }
 
+  .RegresaDetalle {
+    background-color: #FFF;
+    color:#72a6aa;
+    padding: 0.75rem 1rem;
+    border: 1px solid#72a6aa !important;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: lighter;
+    box-shadow: 3px 3px 1px#72a6aa;
+    transition: 0.25s;
+  }
+  .RegresaDetalle:hover {
+    box-shadow: 3px 3px 3px #72a6aa;
+  }
+
   /*  */
 
   .contenedor-1 header {
@@ -435,13 +451,20 @@
   </a>
   {#if mostrarDetalle}
     <div class="HeaderLinks">
-      <p class="RegresaProyecto" on:click={regresa}>Regresa a proyecto</p>
-      <a
-        class="LinkProyecto"
-        href={!!proyecto.url ? proyecto.url : ''}
-        target="_blank">
-        Link a proyecto
-      </a>
+        <button class="RegresaDetalle" on:click={regresa}>
+          <i class="fa fa-arrow-left" />
+          <span>Volver</span>
+        </button>
+      <!-- <p class="RegresaProyecto" on:click={regresa}>Regresa a proyecto</p> -->
+      <button class="LinkExterno">
+        <a
+          class="LinkProyecto"
+          href={!!proyecto.url ? proyecto.url : ''}
+          target="_blank">
+          Ir al sitio oficial
+        </a>
+        <i class="fa fa-arrow-right" />
+      </button>
     </div>
   {/if}
 </header>
