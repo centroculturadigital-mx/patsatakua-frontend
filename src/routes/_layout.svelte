@@ -13,11 +13,12 @@
       });
     }
   }
- 
 
-// fondo particulas a quedarse atras
-let fondoParticulas = document.querySelector('#particles-js');
-fondoParticulas.style.zIndex = -1;
+  onMount(() => {
+    // fondo particulas a quedarse atras
+    let fondoParticulas = document.querySelector("#particles-js");
+    fondoParticulas.style.zIndex = -1;
+  });
 </script>
 
 <style>
@@ -48,5 +49,4 @@ fondoParticulas.style.zIndex = -1;
 
 </main>
 
-<PieMovil/>
-
+<PieMovil />
