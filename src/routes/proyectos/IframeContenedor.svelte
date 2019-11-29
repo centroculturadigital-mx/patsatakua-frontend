@@ -17,7 +17,7 @@
   }
 
   iframe {
-    position: absolute;
+   /* position: absolute;*/
     top: 0;
     left: 0;
     z-index: 11;
@@ -33,8 +33,8 @@
   @media screen and (min-width: 768px) {
 
   iframe {
-    margin: 0rem 10vw;
-    width: 80vw;      
+    margin: 0rem auto;
+    width: 90vw;      
   }
 
 
@@ -48,6 +48,7 @@
       padding: 2.5rem;
       margin-top: 2.25rem;
     }
+    
     .Imagen {
       width: 100%;
       height: 20rem;
@@ -134,6 +135,7 @@
     <i class="fa fa-home" />
   </a>
 </header> -->
+
 {#if !! url }
   <div class="Contenedor">
     <iframe title="sitios" src={url}></iframe>

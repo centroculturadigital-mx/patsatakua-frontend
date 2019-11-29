@@ -28,7 +28,9 @@
         "Red de Activismo Digital de Lenguas Indigenas",
         "Ticha",
         "Turix",
-    ]
+    ],
+    contacto: "Para proponer un proyecto, escríbenos a:",
+    mail: "editorial.ccd@gmail.com"
  }
 
     let logocultura = 'cultura.svg';
@@ -70,6 +72,8 @@
       grid-template-columns: 1fr 2fr;
     }
   }
+
+  
   /* .contenedor-principal {
 	} */
  
@@ -101,7 +105,7 @@
   .Lateral {
     color: #000;
     background-color: rgb(255, 255, 255, 0.6);
-    padding-top: 2rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
     overflow-y: scroll;
@@ -222,14 +226,36 @@
     max-width: 8rem;
   }
 
+  .Colaboraciones{
+    border-style: solid;
+    border-color: rgba(114, 166, 170, 1);
+    border-width:thin;
+    display: flex;
+    padding:0.5rem 1rem 0.5rem 1rem;
+   }
+    
+
+   .TextoColabora{  
+    font-size: 0.9rem;
+    text-align: left;
+    color: #000;
+    } 
+
+    .Mail {
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #000; 
+    }
 
   /* responsivos */
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
 
     .Lateral {
       height: auto;
       transition: height 2s ease-out;
-    }
+      overflow-y: hidden;
+  }
 
     .ProyectosParticipantes {
       display: none;
@@ -246,10 +272,11 @@
 
     .Lista ul :global(.Tarjeta) {
       margin-bottom: 2rem;
+      margin: 0 auto 2rem;
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     
     .contenedor-principal {
       height: 100vh;
@@ -262,6 +289,7 @@
     .Lateral {
       color: #000;
       height: 100vh;
+
     }
 
     .Introduccion + .Mas {
@@ -275,8 +303,6 @@
       grid-template-columns: 1fr 1fr;
       grid-gap: 2rem;
     }
-
-
 
   }
 
@@ -319,7 +345,10 @@
               { introCompleto ? "Cerrar" : "Leer más"}
             </button>
           </footer>
-
+        <section class="Colaboraciones">
+        <p class="TextoColabora">{datos.contacto}
+        <a href="mailto:{datos.mail}" class="Mail">{datos.mail}</a></p>
+        </section>        
         <section class="ProyectosParticipantes" transition:fade>
           <h4 class="Creditos">
             Proyectos participantes
@@ -375,8 +404,8 @@
     </section>
 
     <Pie /> 
-   <!-- 
-    <!-- <PieMovil />-->
+   
+    <!--<PieMovil /> -->
 
   </div>
 

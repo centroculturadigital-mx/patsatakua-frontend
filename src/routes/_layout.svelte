@@ -13,24 +13,11 @@
       });
     }
   }
-  // // import particlesData from "../datos/particles";
+ 
 
-  // // let Particles;
-  // onMount(async () => {
-  // 	if( typeof window != "undefined") {
-
-  // 		// const { default: Particles } = await import(`../../node_modules/particlesjs/src/particles.js`);
-  // 		// Particles = await import("../../node_modules/particles.js/particles.js");
-  // 		// Particles = Particles;
-
-  // 		// console.log(Particles)
-
-  // 	}
-  // 	// Particles.init({
-  // 	// 	selector: '#FondoParticulas',
-  // 	// })
-
-  // })
+// fondo particulas a quedarse atras
+let fondoParticulas = document.querySelector('#particles-js');
+fondoParticulas.style.zIndex = -1;
 </script>
 
 <style>
@@ -61,4 +48,5 @@
 
 </main>
 
-<PieMovil />
+<PieMovil/>
+

@@ -114,9 +114,10 @@
     font-weight: 400;
   }
 
+
 </style>
 
-<footer class="Pie PieMovil" transition:fade>
+<footer class="Pie PieMovil" transition:fade={{duration:1000}}>
     
         <section class="ProyectosParticipantes" transition:fade>
           <h3 class="Creditos">
