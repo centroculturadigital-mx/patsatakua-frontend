@@ -2,19 +2,19 @@
 	export let proyecto
 	import { fade } from 'svelte/transition';
 
-//   let extractoTexto = (texto, limite, textoFinal) => {
-// 	if (!texto || !limite) return;
-// 	var content = texto;
-// 	content = content.trim();
-// 	content = content.split(' ').slice(0, limite);
-// 	content = content.join(' ') + (textoFinal ? textoFinal : '');
-// 	//
-//   return content;
-// };
+  let extractoTexto = (texto, limite, textoFinal) => {
+	if (!texto || !limite) return;
+	var content = texto;
+	content = content.trim();
+	content = content.split(' ').slice(0, limite);
+	content = content.join(' ') + (textoFinal ? textoFinal : '');
+	//
+  return content;
+};
 
-// let extracto = 24;
 // let extracto = [18,32,24,48];
 // extracto = extracto[Math.floor(Math.random()*extracto.length)];
+let extracto = 16;
 
 </script>
 
@@ -82,8 +82,8 @@
 			</h3>
 
 			<div class="Extracto">
-				{proyecto.contenido}
-				<!-- {extractoTexto(proyecto.contenido, extracto,'...')}		 -->
+				<!-- {proyecto.contenido} -->
+				{extractoTexto(proyecto.contenido, extracto,'...')}		
 			</div>
 		</div>
 	</a>
