@@ -12,29 +12,31 @@
   import PieMovil from "../componentes/PieMovil.svelte";
   //const datos =  "../../datos/datosLateralFalso.js";
 
-  const datos =  {
+  const datos = {
     titulo: "Patsatakua",
     tituloFonetico: "/pa.tsá.ta.kwa/",
-    significado: 'Patsatakua en purépecha (P’urhépecha) quiere decir: "en lo que se guarda" ',
-    curatorial: "Bajo esta palabra-repositorio se reúnen once proyectos de hablantes de lenguas indígenas de diversas zonas del país que abordan de forma particular el uso de las herramientas tecnológicas. Estos proyectos representan la diversidad lingüística cultural y ofrecen un nuevo mapa de términos y etiquetas. Del uso de plataformas precreadas a la programación desde cero; de prácticas experimentales de escritura a aplicaciones para aprender una lengua, de espacios de memoria visual y oral a la documentación de la evolución del registro gráfico, de la preservación de la lengua y el deseo de mantenerla como bien común ante situaciones migratorias de sus hablantes a la invitación al encuentro con esos otros y otras que desean ampliar la idea sostenida por diversos activistas de las lenguas: entender a nuestro país como un territorio multilingüe." ,
+    significado:
+      'Patsatakua en purépecha (P’urhépecha) quiere decir: "en lo que se guarda" ',
+    curatorial:
+      "Bajo esta palabra-repositorio se reúnen once proyectos de hablantes de lenguas indígenas de diversas zonas del país que abordan de forma particular el uso de las herramientas tecnológicas. Estos proyectos representan la diversidad lingüística cultural y ofrecen un nuevo mapa de términos y etiquetas. Del uso de plataformas precreadas a la programación desde cero; de prácticas experimentales de escritura a aplicaciones para aprender una lengua, de espacios de memoria visual y oral a la documentación de la evolución del registro gráfico, de la preservación de la lengua y el deseo de mantenerla como bien común ante situaciones migratorias de sus hablantes a la invitación al encuentro con esos otros y otras que desean ampliar la idea sostenida por diversos activistas de las lenguas: entender a nuestro país como un territorio multilingüe.",
     sliderProyectos: [
-        "Ayuujkjaaky",
-        "Biblioteca de Investigación Juan de Cordova",
-        "COLMIX",
-        "Kumoontun",
-        "Lengua y Cultura Triqui",
-        "Ma tiksalokan nawatl",
-        "Museo Virtual del Zapoteco",
-        "Red de Activismo Digital de Lenguas Indigenas",
-        "Ticha",
-        "Turix",
+      "Ayuujkjaaky",
+      "Biblioteca de Investigación Juan de Cordova",
+      "COLMIX",
+      "Kumoontun",
+      "Lengua y Cultura Triqui",
+      "Ma tiksalokan nawatl",
+      "Museo Virtual del Zapoteco",
+      "Red de Activismo Digital de Lenguas Indigenas",
+      "Ticha",
+      "Turix"
     ],
     contacto: "Para proponer un proyecto, escríbenos a:",
     mail: "editorial.ccd@gmail.com"
- }
+  };
 
-    let logocultura = 'cultura.svg';
-    let logoccd = 'ccd.svg';
+  let logocultura = "cultura.svg";
+  let logoccd = "ccd.svg";
 
   let proyectosModule;
   $: proyectos =
@@ -45,23 +47,28 @@
 
   const LogoCultura = "logo.cultura.png";
   const LogoCCD = "logo.ccd.png";
-	let LogosProyectos = ['https://fakeimg.pl/250x100/?text=Bienvenido','https://fakeimg.pl/250x100/?text=Al','https://fakeimg.pl/250x100/?text=Sitio','https://fakeimg.pl/250x100/?text=De','https://fakeimg.pl/250x100/?text=Patzatakua','https://fakeimg.pl/250x100/?text=Devmd'];
+
   onMount(async () => {
     proyectosModule = await import("../datos/proyectos.json");
-    console.log(proyectosModule);
+    shuffle(proyectosModule.default);
   });
 
   let introCompleto = false;
 
   const introColapsar = () => {
-    console.log("introColapsar");
-    
-    introCompleto = !introCompleto
 
-  }
+    introCompleto = !introCompleto;
+  };
 
-  $: introClases = "Introduccion" + (introCompleto ? " Completo" : "")
+  $: introClases = "Introduccion" + (introCompleto ? " Completo" : "");
 
+  const shuffle = arr => {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  };
 </script>
 
 <style>
@@ -73,12 +80,10 @@
     }
   }
 
-  
   /* .contenedor-principal {
 	} */
- 
+
   .LateralContenido > header > .Titulo {
-    
     font-weight: 500;
     font-size: 2.75rem;
     text-align: center;
@@ -87,7 +92,8 @@
     letter-spacing: 0.125rem; /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
     margin-top: 4px;
     color: #72a6aa;
-    text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 0px 3px #72a6aa;
+    text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff,
+      1px 1px #f3f3f2, 0px 3px #72a6aa;
   }
 
   .TituloFonetico {
@@ -122,28 +128,30 @@
     line-height: 20px;
   }
 
-
   .Introduccion + .Mas {
     padding: 1rem;
-    text-align:center;
-    width:100%;
+    text-align: center;
+    width: 100%;
   }
 
   .Introduccion + .Mas button {
-    color:#72A6AA;
+    color: #72a6aa;
     background: none;
     border: none;
+    cursor: pointer;
   }
-
+  .Mas button:hover {
+    opacity: 0.75;
+  }
   .contenedor-principal {
     overflow-y: auto;
     overflow-x: hidden;
     padding-top: 2rem;
   }
   .Lista {
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
   }
-  
+
   .Lista ul {
     padding: 1rem;
   }
@@ -169,33 +177,29 @@
     width: 14rem;
     margin-bottom: 2rem;
   }
-  .LogosProyectos :global( .carousel ),
-  .LogosProyectos :global( .slides )
-  {
+  .LogosProyectos :global(.carousel),
+  .LogosProyectos :global(.slides) {
     height: 5rem;
     /* display: flex;
     align-items: center;
     justify-content: center; */
   }
-  .LogosProyectos :global( .slides > * > * )
-  {
+  .LogosProyectos :global(.slides > * > *) {
     height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .LogosProyectos :global( .slides > * > * > * )
-  {
+  .LogosProyectos :global(.slides > * > * > *) {
     box-sizing: border-box;
-    padding: 0 3rem; 
+    padding: 0 3rem;
   }
 
-  .LogoProyecto{
+  .LogoProyecto {
     font-size: 0.9rem;
     text-align: center;
     color: rgb(121, 121, 121);
     font-weight: 400;
-   
   }
   .LogoProyecto > .Titulo {
     margin: 0;
@@ -214,7 +218,7 @@
     justify-content: space-evenly;*/
     margin-bottom: 4rem;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     max-width: 18rem;
   }
   .LogoInstitucional {
@@ -222,40 +226,41 @@
     align-items: center;
     justify-content: center;
   }
-   .LogoInstitucional img{
+  .LogoInstitucional img {
     max-width: 8rem;
   }
 
-  .Colaboraciones{
+  .Colaboraciones {
     border-style: solid;
     border-color: rgba(114, 166, 170, 1);
-    border-width:thin;
+    border-width: thin;
     display: flex;
-    padding:0.5rem 1rem 0.5rem 1rem;
-   }
-    
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
 
-   .TextoColabora{  
+  .TextoColabora {
     font-size: 0.9rem;
     text-align: left;
     color: #000;
-    } 
+  }
 
-    .Mail {
+  .Mail {
     font-weight: bold;
     font-size: 0.9rem;
     text-align: left;
-    color: #000; 
-    }
+    color: #000;
+  }
+  .Mail:hover {
+    opacity: 0.75;
+  }
 
   /* responsivos */
   @media screen and (max-width: 768px) {
-
     .Lateral {
       height: auto;
       transition: height 2s ease-out;
       overflow-y: hidden;
-  }
+    }
 
     .ProyectosParticipantes {
       display: none;
@@ -277,7 +282,6 @@
   }
 
   @media screen and (min-width: 767px) {
-    
     .contenedor-principal {
       height: 100vh;
       overflow-y: auto;
@@ -289,13 +293,11 @@
     .Lateral {
       color: #000;
       height: 100vh;
-
     }
 
     .Introduccion + .Mas {
       display: none;
     }
-
 
     .Lista ul {
       padding: 0 1rem;
@@ -303,7 +305,6 @@
       grid-template-columns: 1fr 1fr;
       grid-gap: 2rem;
     }
-
   }
 
   @media screen and (min-width: 1200px) {
@@ -311,11 +312,10 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-/*.Control :global (.left) {
+  /*.Control :global (.left) {
    left: 2vw;
    color: bisque;}
 }*/
-
 </style>
 
 <svelte:head>
@@ -329,34 +329,36 @@
 
       {#if mostrarLateral}
         <header>
-               
-          <h1 class="Titulo" transition:fade>Patsatakua  </h1>
-          
+
+          <h1 class="Titulo" transition:fade>Patsatakua</h1>
+
           <h5 class="TituloFonetico" transition:fade>{datos.tituloFonetico}</h5>
 
-          <h4 class="SubtituloSignificado" transition:fade>{datos.significado}</h4>
+          <h4 class="SubtituloSignificado" transition:fade>
+            {datos.significado}
+          </h4>
         </header>
 
         <section class={introClases} transition:fade>
-          <p>{datos.curatorial} </p>
+          <p>{datos.curatorial}</p>
         </section>
-          <footer class="Mas">
-            <button on:click={introColapsar}>
-              { introCompleto ? "Cerrar" : "Leer más"}
-            </button>
-          </footer>
+        <footer class="Mas">
+          <button on:click={introColapsar}>
+            {introCompleto ? 'Cerrar' : 'Leer más'}
+          </button>
+        </footer>
         <section class="Colaboraciones">
-        <p class="TextoColabora">{datos.contacto}
-        <a href="mailto:{datos.mail}" class="Mail">{datos.mail}</a></p>
-        </section>        
+          <p class="TextoColabora">
+            {datos.contacto}
+            <a href="mailto:{datos.mail}" class="Mail">{datos.mail}</a>
+          </p>
+        </section>
         <section class="ProyectosParticipantes" transition:fade>
-          <h4 class="Creditos">
-            Proyectos participantes
-          </h4>
+          <h4 class="Creditos">Proyectos participantes</h4>
 
           <div class="LogosProyectos">
 
-            <Carousel perPage={{ 800:1 }} autoplay='2500' loop>
+            <Carousel perPage={{ 800: 1 }} autoplay="2500" loop>
 
               <span class="Control" slot="left-control">
                 <ChevronLeftIcon />
@@ -364,9 +366,7 @@
 
               {#each datos.sliderProyectos as proyecto}
                 <div class="LogoProyecto">
-                  <h4 class="Titulo">
-                    {proyecto}
-                  </h4>
+                  <h4 class="Titulo">{proyecto}</h4>
                 </div>
               {/each}
               <span class="Control" slot="right-control">
@@ -379,10 +379,12 @@
           </div>
           <div class="LogosCreditos">
             <div class="LogoInstitucional">
-                <img src="{logocultura}"  alt="Logotipo Secretaría de cultura México">
+              <img
+                src={logocultura}
+                alt="Logotipo Secretaría de cultura México" />
             </div>
             <div class="LogoInstitucional">
-              <img src="{logoccd}"  alt="Logotipo Centro cultura digital México">
+              <img src={logoccd} alt="Logotipo Centro cultura digital México" />
             </div>
             <!--  -->
           </div>
@@ -403,11 +405,10 @@
       </ul>
     </section>
 
-    <Pie /> 
-   
+    <Pie />
+
     <!--<PieMovil /> -->
 
   </div>
 
 </section>
-

@@ -1,7 +1,6 @@
 <script context="module">
   export async function preload(page, session) {
     const { id } = page.params;
-    console.log("id", id);
     return { id };
   }
 </script>
@@ -46,8 +45,7 @@
     };
   });
 
-  $: console.log("proyecto", proyecto);
-  // $: console.log("id", id);
+  // $: console.log("proyecto", proyecto);
 
   let mostrarDetalle = false;
 
@@ -78,7 +76,7 @@
   .HeaderLinks {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
     min-width: 60%;
   }
   .HeaderLinks a {
@@ -120,6 +118,7 @@
     font-weight: lighter;
     box-shadow: 3px 3px 1px#72a6aa;
     transition: 0.25s;
+    margin-right: 1rem;
   }
   .RegresaDetalle:hover {
     box-shadow: 3px 3px 3px #72a6aa;
@@ -134,6 +133,7 @@
     letter-spacing: 2px;
     font-weight: lighter;
     cursor: pointer;
+    box-shadow: 3px 3px 1px #72a6aa;
   }
   .LinkExterno:hover {
     background-color:#72a6aa;
@@ -348,10 +348,7 @@
 
   @media screen and (min-width: 768px) {
     .HeaderLinks {
-      min-width: 74%;
-    }
-    .LinkExterno {
-      display: none;
+      min-width: 63%;
     }
     :global(#particles-js) {
       z-index: -1;
