@@ -558,20 +558,19 @@
       <div class="EnlaceContenedor">
         {#if !proyecto.url_externo}
           <button class="BotonConocerProyecto" on:click={abrirProyecto}>
-            <span>Conocer Proyecto</span>
+            <span>Conocer proyecto</span>
             <i class="fa fa-arrow-right" />
           </button>
         {:else}
           <a href={proyecto.url} target="_blank">
             <button class="BotonConocerProyecto">
               <span>
-                Conocer Proyecto
+                Conocer proyecto
                 <i class="fa fa-arrow-right" />
               </span>
             </button>
           </a>
         {/if}
-        <!-- <Boton>Conocer Proyecto</Boton> -->
       </div>
     </div>
 
