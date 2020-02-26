@@ -77,7 +77,7 @@
     display: flex;
     align-items: center;
     justify-content: right;
-    min-width: 60%;
+    min-width: 50%;
   }
   .HeaderLinks a {
     text-decoration: none;
@@ -108,8 +108,8 @@
   }
 
   .RegresaDetalle {
-    background-color: #FFF;
-    color:#72a6aa;
+    background-color: #fff;
+    color: #72a6aa;
     padding: 0.5rem 1rem;
     border: 1px solid#72a6aa !important;
     border-radius: 5px;
@@ -125,6 +125,7 @@
   }
 
   .LinkExterno {
+    transition: 0.5s;
     background-color: #72a6aa;
     border: none;
     color: #fff;
@@ -133,12 +134,12 @@
     letter-spacing: 2px;
     font-weight: lighter;
     cursor: pointer;
-    box-shadow: 3px 3px 1px #72a6aa;
+    box-shadow: 2px 2px 1px #72a6aa;
   }
   .LinkExterno:hover {
-    background-color:#72a6aa;
-    opacity: 0.9;
+    background-color: #72a6aa;
     border-radius: 5px;
+    box-shadow: 2px 2px 3px #72a6aa;
   }
   .LinkExterno i {
     padding-left: 0.75rem;
@@ -160,7 +161,7 @@
     cursor: pointer;
   }
   .contenedor-1 .Regresar button {
-    background-color: #FFF;
+    background-color: #fff;
     color: #72a6aa;
     padding: 0.75rem 1rem;
     border: 1px solid #72a6aa !important;
@@ -175,6 +176,7 @@
     box-shadow: 3px 3px 3px #72a6aa;
   }
   .BotonConocerProyecto {
+    transition: 0.5s;
     background-color: #72a6aa;
     border: none;
     color: #fff;
@@ -183,14 +185,13 @@
     letter-spacing: 2px;
     font-weight: lighter;
     cursor: pointer;
-  }
-  .BotonConocerProyecto i {
     padding-left: 1rem;
+    box-shadow: 2px 2px 1px#72a6aa;
   }
   .BotonConocerProyecto:hover {
-    background-color: #72a6aa;
-    opacity: 0.9;
-    border-radius: 5px;
+    box-shadow: 2px 2px 3px#72a6aa;
+    /* border-bottom: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke; */
   }
   .contenedor-2 footer {
     margin-top: 1rem;
@@ -243,7 +244,7 @@
   }
   .Texto a {
     font-weight: 200;
-    color: #2094FF;
+    color: #2094ff;
     text-decoration: none;
   }
   .Texto a:hover {
@@ -277,6 +278,7 @@
     }
     .HeaderLinks {
       min-width: 100%;
+      justify-content: space-between;
     }
     .RegresaProyecto {
       margin: 0;
@@ -302,7 +304,7 @@
     }
     .Texto a {
       font-weight: 200;
-      color: #2094FF;
+      color: #2094ff;
       text-decoration: none;
     }
     .Texto a:hover {
@@ -396,7 +398,6 @@
     }
   }
   @media (min-width: 768px) {
-    
     .contenedor-1 .Regresar {
       position: absolute;
       top: 0.25rem;
@@ -435,7 +436,7 @@
     }
   }
   @media (min-width: 1024px) {
-     .HeaderLinks {
+    .HeaderLinks {
       min-width: 75%;
     }
     .LinkExterno {
@@ -501,11 +502,8 @@
 </header>
 
 {#if mostrarDetalle}
-
   <IframeContenedor url={proyecto.url} />
-
 {:else}
-
   <article class="ProyectoDetalle ancho_maximo">
     {#if !!proyecto && !!proyecto.image}
       <img
@@ -530,9 +528,7 @@
       <section class="Contenido">{proyecto.contenido}</section>
 
       <div class="Enlace">
-        <h5 class="TituloEnlace">
-          Enlace de proyecto:
-        </h5>
+        <h5 class="TituloEnlace">Enlace de proyecto:</h5>
         <strong class="Texto">
           <a href={!!proyecto.url ? proyecto.url : ''} target="_blank">
             {!!proyecto.url ? proyecto.url : ''}
