@@ -443,7 +443,7 @@
 {:else if mostrarDetalle}
   <IframeContenedor url={proyecto.url} />
 {:else}
-  <article class="ProyectoDetalle ancho_maximo">
+  <article class="ProyectoDetalle ancho_maximo" transition:fade>
     {#if !!proyecto && !!proyecto.image}
       <img
         class="Imagen--movil"
