@@ -12,8 +12,8 @@
   import Pie from "../../componentes/Pie.svelte";
   import Boton from "../../componentes/elementos/Boton.svelte";
   import ProyectoVistaPrevia from "../../componentes/ProyectoVistaPrevia.svelte";
-  import ProyectosSimilares from "../../componentes/ProyectosSimilares.svelte";
   import IframeContenedor from "./IframeContenedor.svelte";
+  import Carga from "../../componentes/Carga/Carga.svelte";
 
   import Carousel from "@centroculturadigital-mx/svelte-carousel";
   import {
@@ -35,17 +35,18 @@
   $: proyectosSimilares = [];
 
   let regresa;
+  let load;
 
   onMount(async () => {
     proyectosModule = await import("../../datos/proyectos.json");
+    load = await proyectosModule;
+
     regresa = () => {
       if (!!window) {
         window.location.reload();
       }
     };
   });
-
-  // $: console.log("proyecto", proyecto);
 
   let mostrarDetalle = false;
 
@@ -177,8 +178,6 @@
   }
   .BotonConocerProyecto:hover {
     box-shadow: 2px 2px 3px#72a6aa;
-    /* border-bottom: 1px solid whitesmoke;
-    border-right: 1px solid whitesmoke; */
   }
   .Titulo {
     font-weight: bold;
@@ -413,6 +412,7 @@
       object-fit: contain;
     }
   }
+
 </style>
 
 <header id="HeaderProyecto">
@@ -438,7 +438,9 @@
   {/if}
 </header>
 
-{#if mostrarDetalle}
+{#if !load}
+  <Carga />
+{:else if mostrarDetalle}
   <IframeContenedor url={proyecto.url} />
 {:else}
   <article class="ProyectoDetalle ancho_maximo">
@@ -505,24 +507,4 @@
     </div>
 
   </article>
-
-  <!-- <ProyectosSimilares proyecto={id}/> -->
-  <!-- <section class="SubProyectos">
-
-  <h3 class="Subtitulo">Proyectos Similares</h3>
-  <ul>
-    <ProyectoVistaPrevia />
-    <ProyectoVistaPrevia />
-    <ProyectoVistaPrevia />
-  </ul>
-</section> -->
-
-  <!-- <section class="Similares">
-  <h3 class="Subtitulo">Proyectos similares</h3>
-
-    {#each proyectosSimilares as proyectoSimilar }
-      <ProyectoVistaPrevia {proyectoSimilar}/>
-    {/each}
-
-</section> -->
 {/if}

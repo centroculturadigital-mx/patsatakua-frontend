@@ -10,6 +10,7 @@
   import ProyectoVistaPrevia from "../componentes/ProyectoVistaPrevia.svelte";
   import Pie from "../componentes/Pie.svelte";
   import PieMovil from "../componentes/PieMovil.svelte";
+  import Carga from "../componentes/Carga/Carga.svelte";
   //const datos =  "../../datos/datosLateralFalso.js";
 
   const datos = {
@@ -48,9 +49,12 @@
   const LogoCultura = "logo.cultura.png";
   const LogoCCD = "logo.ccd.png";
 
+  let load;
+
   onMount(async () => {
     proyectosModule = await import("../datos/proyectos.json");
     shuffle(proyectosModule.default);
+    load = await proyectosModule;
   });
 
   let introCompleto = false;
@@ -322,6 +326,9 @@
   <title>Patsatakua</title>
 </svelte:head>
 
+{#if !load}
+  <Carga />
+  {:else}
 <section class="Inicio">
   <div class="Lateral">
 
@@ -407,8 +414,7 @@
 
     <Pie />
 
-    <!--<PieMovil /> -->
-
   </div>
 
 </section>
+{/if}
