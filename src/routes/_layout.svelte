@@ -22,11 +22,6 @@
 </script>
 
 <style>
-  @import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700&display=swap");
-
-  body {
-    font-family: "Fira San", sans-serif;
-  }
   main {
     position: relative;
   }

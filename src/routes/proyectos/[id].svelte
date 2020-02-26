@@ -87,24 +87,11 @@
     text-decoration: none;
     color: #ffffff;
   }
-  .RegresaProyecto {
-    color: #72a6aa;
-    cursor: pointer;
-  }
-  .RegresaProyecto:hover {
-    text-decoration: none;
-    color: #73b7bb;
-  }
+
   .fa {
     font-family: "Font Awesome 5 Free";
     font-weight: 200;
     font-style: normal;
-  }
-  .fa-home {
-    font-family: "Font Awesome 5 Free";
-    font-size: 2rem;
-    font-style: normal;
-    color: #72a6aa;
   }
 
   .RegresaDetalle {
@@ -193,21 +180,6 @@
     /* border-bottom: 1px solid whitesmoke;
     border-right: 1px solid whitesmoke; */
   }
-  .contenedor-2 footer {
-    margin-top: 1rem;
-  }
-  footer div {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-  }
-  footer article {
-    width: auto;
-    padding: 3rem;
-  }
-  .Subtitulo {
-    text-align: center;
-  }
   .Titulo {
     font-weight: bold;
     font-size: 40px;
@@ -254,23 +226,9 @@
   .TituloEnlace {
     font-weight: 600;
   }
-  .Proyecto {
-    /* left: 23px;*/
-  }
-  ul {
-    margin-bottom: 30px;
-    margin-top: 25px;
-  }
   section {
     margin: 0;
   }
-  .SubProyectos {
-    margin-top: 3em;
-  }
-  /* .Similares {
-    margin-top: 3em;
-  }
-   */
 
   @media screen and (max-width: 560px) {
     #HeaderProyecto {
@@ -279,10 +237,6 @@
     .HeaderLinks {
       min-width: 100%;
       justify-content: space-between;
-    }
-    .RegresaProyecto {
-      margin: 0;
-      padding-left: 0.5rem;
     }
   }
   @media screen and (max-width: 767px) {
@@ -384,15 +338,6 @@
       height: 20rem;
       object-fit: contain;
     }
-    .ProyectoDetalle + section ul,
-    .ProyectoDetalle + section + section ul {
-      display: flex;
-      flex-direction: row !important;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      height: auto;
-    }
-
     .Contenido {
       width: 80%;
     }
@@ -467,14 +412,6 @@
       height: 20rem;
       object-fit: contain;
     }
-    /* 
-    .contenedor-2 {
-      padding-left: 2rem;
-    }
-    
-    .Enlace h5 {
-      font-size: 0.75rem;
-    } */
   }
 </style>
 
