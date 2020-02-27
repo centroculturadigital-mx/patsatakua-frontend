@@ -41,6 +41,8 @@ let extracto = 16;
 		/* position: absolute; */
 		text-decoration: none;
 		color: #000;
+		display: block;
+		height: 100%;
 	}
 
 	.Tarjeta {

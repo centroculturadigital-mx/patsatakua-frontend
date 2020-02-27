@@ -335,13 +335,13 @@
     <div class="LateralContenido">
 
       {#if mostrarLateral}
-        <header>
+        <header transition:fade>
 
-          <h1 class="Titulo" transition:fade>Patsatakua</h1>
+          <h1 class="Titulo">Patsatakua</h1>
 
-          <h5 class="TituloFonetico" transition:fade>{datos.tituloFonetico}</h5>
+          <h5 class="TituloFonetico" >{datos.tituloFonetico}</h5>
 
-          <h4 class="SubtituloSignificado" transition:fade>
+          <h4 class="SubtituloSignificado" >
             {datos.significado}
           </h4>
         </header>

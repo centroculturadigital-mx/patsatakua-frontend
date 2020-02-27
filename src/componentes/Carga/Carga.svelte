@@ -1,5 +1,5 @@
 <script>
-
+  import { fade } from "svelte/transition";
 </script>
 
 <style>
@@ -20,7 +20,7 @@
   }
 </style>
 
-<section class="loading">
+<section class="loading" transition:fade>
   <div>
     <img src="inali.png" alt="INALI" />
     <p>Cargando ...</p>
