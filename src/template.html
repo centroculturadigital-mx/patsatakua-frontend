@@ -1,67 +1,97 @@
 <!doctype html>
 <html>
+
 <head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
-	<meta name='theme-color' content='#333333'>
 
-	%sapper.base%
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153617044-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-	<link rel='stylesheet' href='global.css'>
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link rel='stylesheet' href='tipografia.css'>
-	<link rel='manifest' href='manifest.json'>
-	<link rel='icon' type='image/png' href='favicon.png'>
-<style>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
+        gtag('config', 'UA-153617044-1');
+    </script>
 
-/* ---- particles.js container ---- */
-canvas {
-	z-index: -1;
-	position: absolute;
-}
-#particles-js {
-  position: fixed;
-  z-index: 0;
-  top: -30vw;
-  left: -30vw;
-  width: 160vw;
-  height: 160vh;
-  /* background-color: #fff; */
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-</style>
-	<!-- Sapper generates a <style> tag containing critical CSS
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <meta name='theme-color' content='#333333'> %sapper.base%
+
+    <!-- social FB -->
+    <meta property="og:title" content="Patsatakua | Secretaría de Cultura">
+    <meta property="og:site_name" content="Patsatakua | Secretaría de Cultura">
+    <meta property="og:description" content="Repositorio de proyectos de hablantes de lenguas indígenas de diversas zonas de México.">
+    <meta property="og:image" content="social.jpg">
+    <meta property="og:url" content="http://patsatakua.centroculturadigital.mx">
+    <!-- social Tw -->
+    <meta name="twitter:title" content="Patsatakua | Secretaría de Cultura">
+    <meta name="twitter:description" content="Repositorio de proyectos de hablantes de lenguas indígenas de diversas zonas de México.">
+    <meta name="twitter:image" content="social.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="Patsatakua | Secretaría de Cultura">
+    <!--  -->
+
+    <link rel='stylesheet' href='global.css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel='stylesheet' href='tipografia.css'>
+    <link rel='manifest' href='manifest.json'>
+    <link rel='icon' type='image/png' href='favicon.png'>
+    <!-- <link rel='icon' type='image/x-icon' href='favicon.ico'> -->
+    <style>
+        canvas {
+            display: block;
+            vertical-align: bottom;
+        }
+        /* ---- particles.js container ---- */
+        
+        canvas {
+            z-index: -1;
+            position: absolute;
+        }
+        
+        #particles-js {
+            position: fixed;
+            z-index: 0;
+            top: -30vw;
+            left: -30vw;
+            width: 160vw;
+            height: 160vh;
+            /* background-color: #fff; */
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+    </style>
+    <!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is
 	     lazily loaded when it precaches secondary pages -->
-	%sapper.styles%
+    %sapper.styles%
 
-	<!-- This contains the contents of the <svelte:head> component, if
+    <!-- This contains the contents of the <svelte:head> component, if
 	     the current page has one -->
-	%sapper.head%
+    %sapper.head%
 </head>
-<body>
-	<!-- The application will be rendered inside this element,
-	     because `src/client.js` references it -->
-	<div id='sapper'>%sapper.html%</div>
 
-	<!-- Sapper creates a <script> tag containing `src/client.js`
+<body>
+    <!-- The application will be rendered inside this element,
+	     because `src/client.js` references it -->
+    <div id='sapper'>%sapper.html%</div>
+
+    <!-- Sapper creates a <script> tag containing `src/client.js`
 	     and anything else it needs to hydrate the app and
 	     initialise the router -->
-	%sapper.scripts%
-	<div id="particles-js"></div>
-	<script src="js/particles.js"></script>
-	<script>
-		particlesJS.load('particles-js', 'js/particles.json', function() {
-		console.log('callback - particles-js config loaded');
-		});
-	</script>
+    %sapper.scripts%
+    <div id="particles-js"></div>
+    <script src="js/particles.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'js/particles.json', function() {
+            console.log('Particles OK.');
+        });
+    </script>
 </body>
+
 </html>

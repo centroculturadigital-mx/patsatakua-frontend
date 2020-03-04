@@ -1,61 +1,47 @@
 <script>
-import { onMount } from 'svelte' 
+  import { stores } from "@sapper/app";
+  import { onMount } from "svelte";
 
+  import PieMovil from "../componentes/PieMovil.svelte";
 
-import PieMovil from '../componentes/PieMovil.svelte';
+  const { page } = stores();
 
-// // import particlesData from "../datos/particles";
+  $: {
+    if (typeof gtag !== "undefined") {
+      gtag("config", "UA-153617044-1", {
+        page_path: $page.path
+      });
+    }
+  }
 
-// // let Particles;
-// onMount(async () => {
-// 	if( typeof window != "undefined") {
-
-// 		// const { default: Particles } = await import(`../../node_modules/particlesjs/src/particles.js`);	
-// 		// Particles = await import("../../node_modules/particles.js/particles.js");	
-// 		// Particles = Particles;
-
-// 		// console.log(Particles)
-
-// 	}
-// 	// Particles.init({
-// 	// 	selector: '#FondoParticulas',
-// 	// })
-
-// })
-
-
+  onMount(() => {
+    // fondo particulas a quedarse atras
+    let fondoParticulas = document.querySelector("#particles-js");
+    fondoParticulas.style.zIndex = -1;
+  });
 </script>
 
 <style>
-
-	@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700&display=swap');
-	
-	body {
-		font-family: 'Fira San', sans-serif;
-	}
-	main {
-		position: relative;
-	}
-	#FondoParticulas {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100vh;
-		margin-top: 0;
-		width: 100vw;
-		z-index: -1;
-	}
-
+  main {
+    position: relative;
+  }
+  #FondoParticulas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    margin-top: 0;
+    width: 100vw;
+    z-index: -1;
+  }
 </style>
 
 <main>
 
-	<div id="FondoParticulas"></div>
+  <div id="FondoParticulas" />
 
-	<slot></slot>
+  <slot />
 
 </main>
 
-
-
-<PieMovil/>
+<PieMovil />

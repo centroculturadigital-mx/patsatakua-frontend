@@ -11,14 +11,14 @@
 </script>
 
 <style>
-  section {
+  /* section {
     background-color: transparent;
   }
   section h2 {
     text-align: center;
   }
   #ProyectosSimilares {
-  }
+  } */
 </style>
 
 <!--  -->
