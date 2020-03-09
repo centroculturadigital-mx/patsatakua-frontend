@@ -22,7 +22,7 @@
       "Bajo esta palabra-repositorio se reúnen once proyectos de hablantes de lenguas indígenas de diversas zonas del país que abordan de forma particular el uso de las herramientas tecnológicas. Estos proyectos representan la diversidad lingüística cultural y ofrecen un nuevo mapa de términos y etiquetas. Del uso de plataformas precreadas a la programación desde cero; de prácticas experimentales de escritura a aplicaciones para aprender una lengua, de espacios de memoria visual y oral a la documentación de la evolución del registro gráfico, de la preservación de la lengua y el deseo de mantenerla como bien común ante situaciones migratorias de sus hablantes a la invitación al encuentro con esos otros y otras que desean ampliar la idea sostenida por diversos activistas de las lenguas: entender a nuestro país como un territorio multilingüe.",
     sliderProyectos: [
       "Ayuujkjaaky",
-      "Biblioteca de Investigación Juan de Cordova",
+      "Biblioteca de Investigación Juan de Córdova",
       "COLMIX",
       "Kumoontun",
       "Lengua y Cultura Triqui",
@@ -64,7 +64,28 @@
     introCompleto = !introCompleto;
   };
 
-  $: introClases = "Introduccion" + (introCompleto ? " Completo" : "");
+  const randomizar = (array) => { 
+    let indice = array.length
+    let temporal
+    let indiceAleatorio
+
+    // While there remain elements to shuffle...
+    while (0 !== indice) {
+
+      // Pick a remaining element...
+      indiceAleatorio = Math.floor(Math.random() * indice);
+      indice -= 1;
+
+      // And swap it with the current element.
+      temporal = array[indice];
+      array[indice] = array[indiceAleatorio];
+      array[indiceAleatorio] = temporal;
+    }
+
+    return array;
+  }
+
+  $: introClases = "Introduccion" + (introCompleto ? " Completo" : "")
 
   const shuffle = arr => {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -371,7 +392,7 @@
                 <ChevronLeftIcon />
               </span>
 
-              {#each datos.sliderProyectos as proyecto}
+              {#each randomizar(datos.sliderProyectos) as proyecto}
                 <div class="LogoProyecto">
                   <h4 class="Titulo">{proyecto}</h4>
                 </div>
@@ -406,7 +427,7 @@
 
     <section class="Lista">
       <ul>
-        {#each proyectos as p}
+        {#each randomizar(proyectos) as p}
           <ProyectoVistaPrevia proyecto={p} />
         {/each}
       </ul>
