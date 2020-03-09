@@ -3,7 +3,8 @@
 </script>
 
 <style>
-  .loading {
+  .cargando {
+    background-color: #fff;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -14,15 +15,17 @@
     left: 0;
     z-index: 10000;
   }
-  .loading p {
+  .cargando p {
     margin: 0;
     text-align: center;
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 </style>
 
-<section class="loading" transition:fade>
+<section class="cargando" transition:fade>
   <div>
-    <img src="inali.png" alt="INALI" />
+    <img src="ccd.svg" alt="Centro Cultura Digital México" />
     <p>Cargando ...</p>
   </div>
 </section>
